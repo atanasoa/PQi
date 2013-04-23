@@ -1,2 +1,0 @@
-java -jar ../../pdt/lib/DaStGen.jar --naming PeanoNameTranslator --include /work_fast/atanasoa/Programme/workspace_new/PeanoFramework --plugin PeanoSnippetGenerator dastgen/AnswerConfiguration.def ./records
-java -jar ../../pdt/lib/DaStGen.jar --naming PeanoNameTranslator --include /work_fast/atanasoa/Programme/workspace_new/PeanoFramework --plugin PeanoSnippetGenerator dastgen/Answer.def ./records
