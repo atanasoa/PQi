@@ -1,0 +1,6 @@
+class queries::records::AnswerConfiguration{
+     persistent parallelise int qid;
+     persistent parallelise int scopeid;
+     persistent parallelise int card;
+     
+};

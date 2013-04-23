@@ -1,0 +1,11 @@
+// This file is part of the Peano project. For conditions of distribution and
+// use, please see the copyright notice at www.peano-framework.org
+#include "peano/utils/Globals.h"
+
+Constant: DIMENSIONS hint-value 4;
+
+class queries::records::Answer{ 
+     persistent parallelise double data;
+     persistent parallelise int  data_index;
+     persistent parallelise double position;
+};
