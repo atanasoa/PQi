@@ -1,0 +1,36 @@
+cmake_minimum_required(VERSION 2.8.6)
+PROJECT(PQIDispatcger)
+
+find_package(JNI)
+
+if (JNI_FOUND)
+    message (STATUS "JNI_INCLUDE_DIRS=${JNI_INCLUDE_DIRS}")
+    message (STATUS "JNI_LIBRARIES=${JNI_LIBRARIES}")
+    INCLUDE_DIRECTORIES(${JNI_INCLUDE_DIRS})
+endif()
+
+# Cmake modules/macros are in a subdirectory to keep this file cleaner
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
+FILE(GLOB_RECURSE SRC components/java/de/tum/*.cpp src/de/tum/*.cpp)
+
+option(EXTERNAL_QUERY "Use external Query" ON)
+if(EXTERNAL_QUERY)
+	find_path(QUERY_INCLUDE_PATH "query/include")
+	INCLUDE_DIRECTORIES(${QUERY_INCLUDE_PATH})
+	set(QUERY_LIBDIR "")
+	find_library(QUERY_LIB NAMES query-dev PATHS ${QUERY_LIBDIR})
+else(EXTERNAL_QUERY)
+	message(FATAL_ERROR "For this version of HPVC you need to enable external Query lib")
+endif(EXTERNAL_QUERY)
+
+INCLUDE_DIRECTORIES(commons)
+INCLUDE_DIRECTORIES(src)
+INCLUDE_DIRECTORIES(components/java)
+SET(EXECUTABLE_OUTPUT_PATH "${CMAKE_CURRENT_BINARY_DIR}/bin")
+
+
+
+
+ADD_EXECUTABLE(pqi-dispatcher ${SRC} )
+target_link_libraries(pqi-dispatcher ${QUERY_LIB} rt)
