@@ -169,6 +169,62 @@ JAVA_INCLUDE_PATH2:PATH=/usr/lib/jvm/java-6-openjdk/include
 //Path to a library.
 JAVA_JVM_LIBRARY:FILEPATH=/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server/libjvm.so
 
+//Executable for running MPI programs.
+MPIEXEC:FILEPATH=/usr/bin/mpiexec
+
+//Maximum number of processors available to run MPI applications.
+MPIEXEC_MAX_NUMPROCS:STRING=2
+
+//Flag used by MPI to specify the number of processes for MPIEXEC;
+// the next option will be the number of processes.
+MPIEXEC_NUMPROC_FLAG:STRING=-np
+
+//These flags will come after all flags given to MPIEXEC.
+MPIEXEC_POSTFLAGS:STRING=
+
+//These flags will be directly before the executable that is being
+// run by MPIEXEC.
+MPIEXEC_PREFLAGS:STRING=
+
+//Cleared
+MPI_CXX_COMPILER:FILEPATH=/usr/bin/mpicxx
+
+//MPI CXX compilation flags
+MPI_CXX_COMPILE_FLAGS:STRING=
+
+//MPI CXX include path
+MPI_CXX_INCLUDE_PATH:STRING=/usr/lib/openmpi/include;/usr/lib/openmpi/include/openmpi
+
+//MPI CXX libraries to link against
+MPI_CXX_LIBRARIES:STRING=/usr/lib/openmpi/lib/libmpi_cxx.so;/usr/lib/openmpi/lib/libmpi.so;/usr/lib/openmpi/lib/libopen-rte.so;/usr/lib/openmpi/lib/libopen-pal.so;/usr/lib/x86_64-linux-gnu/libdl.so;/usr/lib/x86_64-linux-gnu/libnsl.so;/usr/lib/x86_64-linux-gnu/libutil.so;/usr/lib/x86_64-linux-gnu/libm.so;/usr/lib/x86_64-linux-gnu/libdl.so
+
+//MPI CXX linking flags
+MPI_CXX_LINK_FLAGS:STRING= -Wl,--export-dynamic
+
+//Cleared
+MPI_C_COMPILER:FILEPATH=/usr/bin/mpicc
+
+//MPI C compilation flags
+MPI_C_COMPILE_FLAGS:STRING=
+
+//MPI C include path
+MPI_C_INCLUDE_PATH:STRING=/usr/lib/openmpi/include;/usr/lib/openmpi/include/openmpi
+
+//MPI C libraries to link against
+MPI_C_LIBRARIES:STRING=/usr/lib/openmpi/lib/libmpi.so;/usr/lib/openmpi/lib/libopen-rte.so;/usr/lib/openmpi/lib/libopen-pal.so;/usr/lib/x86_64-linux-gnu/libdl.so;/usr/lib/x86_64-linux-gnu/libnsl.so;/usr/lib/x86_64-linux-gnu/libutil.so;/usr/lib/x86_64-linux-gnu/libm.so;/usr/lib/x86_64-linux-gnu/libdl.so
+
+//MPI C linking flags
+MPI_C_LINK_FLAGS:STRING= -Wl,--export-dynamic
+
+//Extra MPI libraries to link against
+MPI_EXTRA_LIBRARY:STRING=/usr/lib/openmpi/lib/libmpi.so;/usr/lib/openmpi/lib/libopen-rte.so;/usr/lib/openmpi/lib/libopen-pal.so;/usr/lib/x86_64-linux-gnu/libdl.so;/usr/lib/x86_64-linux-gnu/libnsl.so;/usr/lib/x86_64-linux-gnu/libutil.so;/usr/lib/x86_64-linux-gnu/libm.so;/usr/lib/x86_64-linux-gnu/libdl.so
+
+//MPI library to link against
+MPI_LIBRARY:FILEPATH=/usr/lib/openmpi/lib/libmpi_cxx.so
+
+//shall we build a MPI enabled Query dispatcher
+PARALLEL:BOOL=ON
+
 //Value Computed by CMake
 PQIDispatcger_BINARY_DIR:STATIC=/work/atanasoa/workspace/PQi/PQI-ascodt/build
 
@@ -180,6 +236,9 @@ QUERY_INCLUDE_PATH:PATH=/work/atanasoa/workspace/PQi/src
 
 //Path to a library.
 QUERY_LIB:FILEPATH=/work/atanasoa/workspace/PQi/build/libpqi.a
+
+//Path to a program.
+file_cmd:FILEPATH=/usr/bin/file
 
 
 ########################
@@ -312,6 +371,10 @@ CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding JNI
 FIND_PACKAGE_MESSAGE_DETAILS_JNI:INTERNAL=[/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/libjawt.so][/usr/lib/jvm/java-6-openjdk/jre/lib/amd64/server/libjvm.so][/usr/lib/jvm/java-6-openjdk/include][/usr/lib/jvm/java-6-openjdk/include][/usr/lib/jvm/java-6-openjdk/include][v()]
+//Details about finding MPI_C
+FIND_PACKAGE_MESSAGE_DETAILS_MPI_C:INTERNAL=[/usr/lib/openmpi/lib/libmpi.so;/usr/lib/openmpi/lib/libopen-rte.so;/usr/lib/openmpi/lib/libopen-pal.so;/usr/lib/x86_64-linux-gnu/libdl.so;/usr/lib/x86_64-linux-gnu/libnsl.so;/usr/lib/x86_64-linux-gnu/libutil.so;/usr/lib/x86_64-linux-gnu/libm.so;/usr/lib/x86_64-linux-gnu/libdl.so][/usr/lib/openmpi/include;/usr/lib/openmpi/include/openmpi][v()]
+//Details about finding MPI_CXX
+FIND_PACKAGE_MESSAGE_DETAILS_MPI_CXX:INTERNAL=[/usr/lib/openmpi/lib/libmpi_cxx.so;/usr/lib/openmpi/lib/libmpi.so;/usr/lib/openmpi/lib/libopen-rte.so;/usr/lib/openmpi/lib/libopen-pal.so;/usr/lib/x86_64-linux-gnu/libdl.so;/usr/lib/x86_64-linux-gnu/libnsl.so;/usr/lib/x86_64-linux-gnu/libutil.so;/usr/lib/x86_64-linux-gnu/libm.so;/usr/lib/x86_64-linux-gnu/libdl.so][/usr/lib/openmpi/include;/usr/lib/openmpi/include/openmpi][v()]
 //ADVANCED property for variable: JAVA_AWT_INCLUDE_PATH
 JAVA_AWT_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JAVA_AWT_LIBRARY
@@ -322,4 +385,38 @@ JAVA_INCLUDE_PATH-ADVANCED:INTERNAL=1
 JAVA_INCLUDE_PATH2-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JAVA_JVM_LIBRARY
 JAVA_JVM_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPIEXEC
+MPIEXEC-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPIEXEC_MAX_NUMPROCS
+MPIEXEC_MAX_NUMPROCS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPIEXEC_NUMPROC_FLAG
+MPIEXEC_NUMPROC_FLAG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPIEXEC_POSTFLAGS
+MPIEXEC_POSTFLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPIEXEC_PREFLAGS
+MPIEXEC_PREFLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_COMPILER
+MPI_CXX_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_COMPILE_FLAGS
+MPI_CXX_COMPILE_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_INCLUDE_PATH
+MPI_CXX_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_LIBRARIES
+MPI_CXX_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_CXX_LINK_FLAGS
+MPI_CXX_LINK_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_COMPILER
+MPI_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_COMPILE_FLAGS
+MPI_C_COMPILE_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_INCLUDE_PATH
+MPI_C_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_LIBRARIES
+MPI_C_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_LINK_FLAGS
+MPI_C_LINK_FLAGS-ADVANCED:INTERNAL=1
+//Scratch variable for MPI header detection
+MPI_HEADER_PATH:INTERNAL=MPI_HEADER_PATH-NOTFOUND
+//Scratch variable for MPI lib detection
+MPI_LIB:INTERNAL=MPI_LIB-NOTFOUND
 

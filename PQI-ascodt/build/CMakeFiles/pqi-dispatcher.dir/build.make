@@ -53,15 +53,15 @@ CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.o: ../components/java/de/tum/iQueryNativeDispatcher.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /work/atanasoa/workspace/PQi/PQI-ascodt/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNativeDispatcher.cpp
+	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNativeDispatcher.cpp
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNativeDispatcher.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.i
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNativeDispatcher.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.i
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNativeDispatcher.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.s
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNativeDispatcher.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.s
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.o.requires:
 .PHONY : CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNativeDispatcher.cpp.o.requires
@@ -76,15 +76,15 @@ CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlain
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.o: ../components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /work/atanasoa/workspace/PQi/PQI-ascodt/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp
+	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.i
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.i
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.s
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.s
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.o.requires:
 .PHONY : CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryCxx2SocketClientPlainPort.cpp.o.requires
@@ -99,15 +99,15 @@ CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplem
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.o: ../components/java/de/tum/PQIDispatcherAbstractImplementation.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /work/atanasoa/workspace/PQi/PQI-ascodt/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp
+	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.i
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.i
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.s
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.s
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.o.requires:
 .PHONY : CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherAbstractImplementation.cpp.o.requires
@@ -122,15 +122,15 @@ CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPor
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.o: ../components/java/de/tum/iQueryNative2NativePlainPort.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /work/atanasoa/workspace/PQi/PQI-ascodt/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2NativePlainPort.cpp
+	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2NativePlainPort.cpp
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2NativePlainPort.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.i
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2NativePlainPort.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.i
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2NativePlainPort.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.s
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2NativePlainPort.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.s
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.o.requires:
 .PHONY : CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2NativePlainPort.cpp.o.requires
@@ -145,15 +145,15 @@ CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlai
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.o: ../components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /work/atanasoa/workspace/PQi/PQI-ascodt/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp
+	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.i
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.i
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.s
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.s
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.o.requires:
 .PHONY : CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryC2CxxSocketClientPlainPort.cpp.o.requires
@@ -168,15 +168,15 @@ CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.o: ../components/java/de/tum/iQueryNative2JavaPlainPort.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /work/atanasoa/workspace/PQi/PQI-ascodt/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2JavaPlainPort.cpp
+	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2JavaPlainPort.cpp
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2JavaPlainPort.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.i
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2JavaPlainPort.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.i
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2JavaPlainPort.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.s
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/iQueryNative2JavaPlainPort.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.s
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.o.requires:
 .PHONY : CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/iQueryNative2JavaPlainPort.cpp.o.requires
@@ -191,15 +191,15 @@ CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.o: ../components/java/de/tum/PQIDispatcherC2CxxProxy.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /work/atanasoa/workspace/PQi/PQI-ascodt/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp
+	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.i
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp > CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.i
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.s
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp -o CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.s
 
 CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.o.requires:
 .PHONY : CMakeFiles/pqi-dispatcher.dir/components/java/de/tum/PQIDispatcherC2CxxProxy.cpp.o.requires
@@ -214,15 +214,15 @@ CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.o: CMak
 CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.o: ../src/de/tum/PQIDispatcherImplementation.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /work/atanasoa/workspace/PQi/PQI-ascodt/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/src/de/tum/PQIDispatcherImplementation.cpp
+	/usr/bin/mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.o -c /work/atanasoa/workspace/PQi/PQI-ascodt/src/de/tum/PQIDispatcherImplementation.cpp
 
 CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/src/de/tum/PQIDispatcherImplementation.cpp > CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.i
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /work/atanasoa/workspace/PQi/PQI-ascodt/src/de/tum/PQIDispatcherImplementation.cpp > CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.i
 
 CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/src/de/tum/PQIDispatcherImplementation.cpp -o CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.s
+	/usr/bin/mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /work/atanasoa/workspace/PQi/PQI-ascodt/src/de/tum/PQIDispatcherImplementation.cpp -o CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.s
 
 CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.o.requires:
 .PHONY : CMakeFiles/pqi-dispatcher.dir/src/de/tum/PQIDispatcherImplementation.cpp.o.requires

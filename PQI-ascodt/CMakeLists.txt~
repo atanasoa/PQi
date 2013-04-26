@@ -15,7 +15,7 @@ find_package(MPI)
 	    set(CMAKE_C_COMPILER ${MPI_C_COMPILER})
 	    set(CMAKE_CXX_COMPILER ${MPI_CXX_COMPILER})
 	    add_definitions(-DParallel)
-endif (PARALLEL)
+endif (PEANO_PARALLEL)
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 FILE(GLOB_RECURSE SRC components/java/de/tum/*.cpp src/de/tum/*.cpp)
