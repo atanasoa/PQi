@@ -19,8 +19,8 @@
 
 
 queries::vtkClientQuery::vtkClientQuery():
-	_query_client("localhost",5000,256){
-
+_query("localhost",50000,1024){
+	std::cout<<"query client connection established"<<std::endl;
 
 }
 
@@ -28,24 +28,16 @@ queries::vtkClientQuery::~vtkClientQuery(){
 
 }
 
-void queries::vtkClientQuery::release(){
-	_query_client.release();
+void queries::vtkClientQuery::synchronize(){
+	int numberOfParts=0;
+	std::cout<<"starting sync"<<std::endl;
+	_query.requestAllComm();
+	_query.requestNumberOfParts(numberOfParts);
+	assert(numberOfParts>0);
 }
 
-int queries::vtkClientQuery::getScope(){
-	int scope=0;
-	_query_client.getScope(scope);
-	return scope;
-}
-bool queries::vtkClientQuery::intersectsWithQuery(const tarch::la::Vector<DIMENSIONS,double> voxelOffset,const tarch::la::Vector<DIMENSIONS,double> voxelSize){
-	bool result = false;
-	//_query_client.intersectsWithQuery(voxelOffset.getData(),DIMENSIONS,voxelSize.getData(),DIMENSIONS,result);
-	return result;
-}
 
-void queries::vtkClientQuery::setData(const tarch::la::Vector<DIMENSIONS,double> voxelOffset,const tarch::la::Vector<DIMENSIONS,double> voxelSize,double x){
-	//_query_client.setData(voxelOffset.getData(),DIMENSIONS,voxelSize.getData(),DIMENSIONS,x);
-}
+
 
 
 

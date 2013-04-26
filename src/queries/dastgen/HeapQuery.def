@@ -1,0 +1,10 @@
+// This file is part of the Peano project. For conditions of distribution and
+// use, please see the copyright notice at www.peano-framework.org
+
+class queries::records::HeapQuery{ 
+     persistent parallelise double offset[3];
+     persistent parallelise double size[3];  
+     persistent parallelise int dimenions[3];
+     persistent int queriy_id;
+     persistent int m_id;  	
+};   

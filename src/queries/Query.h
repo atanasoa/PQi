@@ -58,7 +58,9 @@ class queries::Query {
      * @return If there is data in the control volume, the query would like to
      *         have these data.
      */
-    virtual bool intersectsWithQuery(const tarch::la::Vector<DIMENSIONS,double>  voxelOffset,const tarch::la::Vector<DIMENSIONS,double>  voxelSize) = 0;
+    virtual bool intersectsWithQuery(
+    		const tarch::la::Vector<DIMENSIONS,double>&  voxelOffset,
+    		const tarch::la::Vector<DIMENSIONS,double>&  voxelSize) = 0;
 
     /**
      * Write Data as Answer to Query
@@ -81,7 +83,9 @@ class queries::Query {
      * @param value       Value belonging to the control voxel or point,
      *        respectively.
      */
-    virtual void setData(const tarch::la::Vector<DIMENSIONS,double>&  voxelOffset, const tarch::la::Vector<DIMENSIONS,double>&  voxelSize, double value) = 0;
+    virtual void setData(
+    		const tarch::la::Vector<DIMENSIONS,double>&  voxelOffset,
+    		const tarch::la::Vector<DIMENSIONS,double>&  voxelSize, double value) = 0;
 
 };
 
