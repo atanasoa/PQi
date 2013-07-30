@@ -164,10 +164,7 @@ void  queries::DummyQuery::release(std::vector<queries::records::Answer>& answer
 						else
 							out << 0.0 << std::endl;
 	#else
-						if(answerMap.find(j*_resolution[0]+k)!=answerMap.end())
-							out <<answer[answerMap[j*_resolution[0]+k]].getData() << std::endl;
-						else
-							out << 0.0 << std::endl;		
+						out << _data[j*_resolution[0]+k] << std::endl;
 	#endif
 					}
 
