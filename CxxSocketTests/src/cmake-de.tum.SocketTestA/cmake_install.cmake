@@ -1,4 +1,4 @@
-# Install script for directory: /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA
+# Install script for directory: /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

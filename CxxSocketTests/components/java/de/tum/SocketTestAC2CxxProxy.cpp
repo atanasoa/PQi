@@ -343,15 +343,16 @@ int sockfd=-1,clientfd=-1;
   invokers[1]=invoker_destroy_instance;
   client_port=getenv("SOCKETTESTA_PORT");
   daemon_port=getenv("SOCKETTESTA_DAEMON_PORT");
-  open_client(hostname,client_port,sockfd,clientfd);
+  //open_client(hostname,client_port,sockfd,clientfd);
   bind_server(daemon_port,daemon_args.serverfd);
   invokers[0](&daemon_args.ref,clientfd,daemon_args.buffer_size,NULL,NULL);
   for(int i=0;i<5;i++){
      pthread_t task;
      pthread_create(&task,NULL,server_deamon_run,&daemon_args);
   }
-  socket_worker_loop(daemon_args.ref,clientfd,daemon_args.buffer_size);
-  close(sockfd);
+  //socket_worker_loop(daemon_args.ref,clientfd,daemon_args.buffer_size);
+  while(true); 
+  //close(sockfd);
   
  
    

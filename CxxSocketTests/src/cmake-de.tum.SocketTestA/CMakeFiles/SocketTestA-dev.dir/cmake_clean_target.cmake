@@ -1,3 +1,3 @@
 FILE(REMOVE_RECURSE
-  "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a"
+  "/home/atanasoa/workspace/PQi/CxxSocketTests/native/lib/libSocketTestA-dev.a"
 )

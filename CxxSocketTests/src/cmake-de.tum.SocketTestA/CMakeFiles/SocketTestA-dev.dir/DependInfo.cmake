@@ -4,12 +4,22 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp" "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o"
-  "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp" "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o"
-  "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp" "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o"
+  "/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp" "/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA-dev.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o"
+  "/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp" "/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA-dev.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o"
+  "/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp" "/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA-dev.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o"
   )
-SET(CMAKE_CXX_COMPILER_ID "Intel Cxx Compiler")
+SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
   )
+
+# The include file search paths:
+SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "../../commons"
+  "../../src"
+  "../../components/java"
+  )
+SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
+SET(CMAKE_ASM_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

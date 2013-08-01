@@ -175,7 +175,7 @@ void queries::QueryServer::commitQueries() {
     }*/
 
     _pendingQueries.clear();
-    CartesianGridWriterProxy::sendFinishedAcknowledgment(_dataTag);
+    //CartesianGridWriterProxy::sendFinishedAcknowledgment(_dataTag);
   }
   #else
     //for (std::vector<Query>::iterator p = _pendingQueries.begin(); p!=_pendingQueries.end(); p++) {

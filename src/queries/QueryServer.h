@@ -242,6 +242,11 @@ class queries::QueryServer: public tarch::services::Service {
      * Finally, all ranks delete the data writers that were used by the queries.
      */
     void commitQueries();
+    
+    /**
+     * Synchronizes the pending query queues with through socket
+     */
+    void synchronize();	
 };
 
 
