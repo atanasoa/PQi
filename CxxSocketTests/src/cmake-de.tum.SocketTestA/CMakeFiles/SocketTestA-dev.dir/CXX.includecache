@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../components/java/de/tum/SocketTestAAbstractImplementation.h
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/Query.h
+-
+
+../../components/java/de/tum/SocketTestAC2CxxProxy.h
+
+../../src/de/tum/SocketTestAImplementation.h
+de/tum/SocketTestAAbstractImplementation.h
+../../src/de/tum/de/tum/SocketTestAAbstractImplementation.h
+string
+-
+pthread.h
+-
+
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/Query.h
+iostream
+-
+string
+-
+
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp
+de/tum/SocketTestAImplementation.h
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/de/tum/SocketTestAImplementation.h
+de/tum/SocketTestAC2CxxProxy.h
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/de/tum/SocketTestAC2CxxProxy.h
+pthread.h
+-
+

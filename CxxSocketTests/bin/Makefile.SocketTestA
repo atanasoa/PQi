@@ -1,0 +1,20 @@
+CC=gcc
+CXX=g++
+RM=rm -f
+CPPFLAGS= -Icomponents/java -Isrc -I/usr/lib/jvm/java-6-openjdk/include -I/usr/lib/jvm/java-6-openjdk/include/linux -fPIC
+LDFLAGS=
+LDLIBS=
+
+SRCS= components/java/de/tum/SocketTestAAbstractImplementation.cpp src/de/tum/SocketTestAImplementation.cpp components/java/de/tum/SocketTestAJNIProxy.cpp 
+OBJS=$(subst .cpp,.o,$(SRCS))
+
+all: libSocketTestA.so
+
+libSocketTestA.so: $(OBJS)
+	$(CXX) -shared $(OBJS) -o native/libSocketTestA.so
+
+clean:
+	$(RM) $(OBJS)
+
+dist-clean: clean
+	$(RM) libSocketTestA.so

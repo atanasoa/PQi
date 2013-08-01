@@ -1,0 +1,2 @@
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestB/CMakeFiles/SocketTestB.dir
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestB/CMakeFiles/SocketTestB-dev.dir
