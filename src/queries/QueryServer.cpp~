@@ -32,6 +32,9 @@ queries::QueryServer::QueryServer():
 queries::QueryServer::~QueryServer() {
 }
 
+void queries::QueryServer::synchronize(){
+	
+}
 
 queries::QueryServer& queries::QueryServer::getInstance() {
   static QueryServer singleton;

@@ -126,9 +126,7 @@ int queries::QueryServer::getIndexOfQuery( int id ) {
 
 
 void queries::QueryServer::addQuery(
-  const std::string&                                       description,
-  int                                                      recordPerEntry,
-  queries::records::HeapQuery                              newQuery
+  queries::records::HeapQuery newQuery
 ) {
   if(!init)
 #ifdef Parallel
