@@ -9,6 +9,8 @@
 
 
 #include "tarch/services/ServiceFactory.h"
+#include "queries/records/Answer.h"
+#include "peano/heap/Heap.h"
 registerService(queries::QueryServer)
 
 
@@ -48,7 +50,7 @@ void queries::QueryServer::receiveDanglingMessages() {
       if(!init)
         queries::records::HeapQuery::initDatatype();
       init=true;
-      receiveIncomingQueryData();
+      //receiveIncomingQueryData();
   }
   else {
       if(!init)
@@ -92,6 +94,7 @@ void queries::QueryServer::receiveNewQueries() {
     _pendingQueries.push_back(
 	newQuery
      );
+   _heapIds.push_back(peano::heap::Heap<queries::records::Answer>::getInstance().createData()); 
 
   }
 }
@@ -137,6 +140,7 @@ void queries::QueryServer::addQuery(
   _pendingQueries.push_back(
     newQuery
   );
+  _heapIds.push_back(peano::heap::Heap<queries::records::Answer>::getInstance().createData()); 	
   #ifdef Parallel
   assertion( tarch::parallel::Node::getInstance().isGlobalMaster() );
   tarch::parallel::NodePool::getInstance().broadcastToWorkingNodes(newQuery, _managementTag);
@@ -156,6 +160,8 @@ void queries::QueryServer::commitQueries() {
         queries::records::HeapQuery::initDatatype();
 #endif
         init=true;
+  _pendingQueries.clear();
+  return ;
   #ifdef Parallel
   if ( tarch::parallel::Node::getInstance().isGlobalMaster() ) {
     while (_finishedDataSendAcknowledgementsSinceLastReleaseCall < tarch::parallel::NodePool::getInstance().getNumberOfWorkingNodes()) {

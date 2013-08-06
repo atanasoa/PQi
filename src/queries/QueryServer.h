@@ -96,6 +96,7 @@ class queries::QueryServer: public tarch::services::Service {
 	 * A map of the individual queries that are yet to be answered.
 	 */
 	std::vector<queries::records::HeapQuery> _pendingQueries;
+	std::vector<int> _heapIds;
 
 	int _dataTag;
 

@@ -209,8 +209,6 @@ class queries::QueryServer: public tarch::services::Service {
      *                 object is inserted into the map.
      */
     void addQuery(
-      const std::string&                                       description,
-      int                                                      recordPerEntry,
       queries::records::HeapQuery                              newQuery
     );
 
