@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
-../../components/java/de/tum/SocketTestAAbstractImplementation.h
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/Query.h
+../../components/java/de/tum/Query.h
+iostream
 -
+string
+-
+
+../../components/java/de/tum/SocketTestAAbstractImplementation.h
+de/tum/Query.h
+../../components/java/de/tum/de/tum/Query.h
 
 ../../components/java/de/tum/SocketTestAC2CxxProxy.h
 
@@ -20,17 +26,37 @@ string
 pthread.h
 -
 
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/Query.h
+/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp
+de/tum/SocketTestAC2CxxProxy.h
+/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/de/tum/SocketTestAC2CxxProxy.h
+winsock2.h
+-
+ws2tcpip.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+unistd.h
+-
+arpa/inet.h
+-
+stdio.h
+-
+assert.h
+-
+algorithm
+-
 iostream
 -
-string
+string.h
 -
-
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp
+stdlib.h
+-
 de/tum/SocketTestAImplementation.h
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/de/tum/SocketTestAImplementation.h
-de/tum/SocketTestAC2CxxProxy.h
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/de/tum/SocketTestAC2CxxProxy.h
-pthread.h
--
+/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/de/tum/SocketTestAImplementation.h
 

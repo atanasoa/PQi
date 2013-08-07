@@ -96,6 +96,7 @@ class queries::QueryServer: public tarch::services::Service {
 	 * A map of the individual queries that are yet to be answered.
 	 */
 	std::vector<queries::records::HeapQuery> _pendingQueries;
+	std::vector<int> _heapIds;
 
 	int _dataTag;
 
@@ -209,8 +210,6 @@ class queries::QueryServer: public tarch::services::Service {
      *                 object is inserted into the map.
      */
     void addQuery(
-      const std::string&                                       description,
-      int                                                      recordPerEntry,
       queries::records::HeapQuery                              newQuery
     );
 
@@ -242,6 +241,11 @@ class queries::QueryServer: public tarch::services::Service {
      * Finally, all ranks delete the data writers that were used by the queries.
      */
     void commitQueries();
+    
+    /**
+     * Synchronizes the pending query queues with through socket
+     */
+    void synchronize();	
 };
 
 

@@ -9,6 +9,8 @@
 
 
 #include "tarch/services/ServiceFactory.h"
+#include "queries/records/Answer.h"
+#include "peano/heap/Heap.h"
 registerService(queries::QueryServer)
 
 
@@ -32,6 +34,9 @@ queries::QueryServer::QueryServer():
 queries::QueryServer::~QueryServer() {
 }
 
+void queries::QueryServer::synchronize(){
+	
+}
 
 queries::QueryServer& queries::QueryServer::getInstance() {
   static QueryServer singleton;
@@ -45,7 +50,7 @@ void queries::QueryServer::receiveDanglingMessages() {
       if(!init)
         queries::records::HeapQuery::initDatatype();
       init=true;
-      receiveIncomingQueryData();
+      //receiveIncomingQueryData();
   }
   else {
       if(!init)
@@ -89,6 +94,7 @@ void queries::QueryServer::receiveNewQueries() {
     _pendingQueries.push_back(
 	newQuery
      );
+   //_heapIds.push_back(peano::heap::Heap<queries::records::Answer>::getInstance().createData()); 
 
   }
 }
@@ -123,9 +129,7 @@ int queries::QueryServer::getIndexOfQuery( int id ) {
 
 
 void queries::QueryServer::addQuery(
-  const std::string&                                       description,
-  int                                                      recordPerEntry,
-  queries::records::HeapQuery                              newQuery
+  queries::records::HeapQuery newQuery
 ) {
   if(!init)
 #ifdef Parallel
@@ -136,6 +140,7 @@ void queries::QueryServer::addQuery(
   _pendingQueries.push_back(
     newQuery
   );
+  //_heapIds.push_back(peano::heap::Heap<queries::records::Answer>::getInstance().createData()); 	
   #ifdef Parallel
   assertion( tarch::parallel::Node::getInstance().isGlobalMaster() );
   tarch::parallel::NodePool::getInstance().broadcastToWorkingNodes(newQuery, _managementTag);
@@ -155,6 +160,8 @@ void queries::QueryServer::commitQueries() {
         queries::records::HeapQuery::initDatatype();
 #endif
         init=true;
+  _pendingQueries.clear();
+  return ;
   #ifdef Parallel
   if ( tarch::parallel::Node::getInstance().isGlobalMaster() ) {
     while (_finishedDataSendAcknowledgementsSinceLastReleaseCall < tarch::parallel::NodePool::getInstance().getNumberOfWorkingNodes()) {
@@ -175,7 +182,7 @@ void queries::QueryServer::commitQueries() {
     }*/
 
     _pendingQueries.clear();
-    CartesianGridWriterProxy::sendFinishedAcknowledgment(_dataTag);
+    //CartesianGridWriterProxy::sendFinishedAcknowledgment(_dataTag);
   }
   #else
     //for (std::vector<Query>::iterator p = _pendingQueries.begin(); p!=_pendingQueries.end(); p++) {

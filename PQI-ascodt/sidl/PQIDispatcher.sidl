@@ -11,7 +11,7 @@ package tum {
   interface iQuery{
   	requestNumberOfParts(inout int parts);
   	// spoc request
-  	requestPartsInformation(
+  	requestQueryParts(
   		inout double offset[],
   		inout double size[],
   		inout int dimensions[],
