@@ -55,5 +55,7 @@ void de::tum::SocketTestAImplementation::getQueryDescription(double* offset, con
 
 int main(){
 	socket_client_loop_();
+	while(true)
+		;
 }
 

@@ -60,3 +60,11 @@ stdlib.h
 de/tum/SocketTestAImplementation.h
 /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/de/tum/SocketTestAImplementation.h
 
+/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp
+de/tum/SocketTestAImplementation.h
+/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/de/tum/SocketTestAImplementation.h
+de/tum/SocketTestAC2CxxProxy.h
+/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/de/tum/SocketTestAC2CxxProxy.h
+pthread.h
+-
+

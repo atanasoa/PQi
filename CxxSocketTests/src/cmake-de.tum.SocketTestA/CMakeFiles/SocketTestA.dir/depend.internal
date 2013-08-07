@@ -10,6 +10,7 @@ CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components
  ../../src/de/tum/SocketTestAImplementation.h
  /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp
 CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+ ../../components/java/de/tum/Query.h
  ../../components/java/de/tum/SocketTestAAbstractImplementation.h
  ../../components/java/de/tum/SocketTestAC2CxxProxy.h
  ../../src/de/tum/SocketTestAImplementation.h

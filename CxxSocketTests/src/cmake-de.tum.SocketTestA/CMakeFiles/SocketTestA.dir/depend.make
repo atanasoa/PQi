@@ -9,6 +9,7 @@ CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components
 CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o: ../../src/de/tum/SocketTestAImplementation.h
 CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o: /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp
 
+CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o: ../../components/java/de/tum/Query.h
 CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o: ../../components/java/de/tum/SocketTestAAbstractImplementation.h
 CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o: ../../components/java/de/tum/SocketTestAC2CxxProxy.h
 CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o: ../../src/de/tum/SocketTestAImplementation.h
