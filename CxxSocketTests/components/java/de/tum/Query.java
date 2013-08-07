@@ -32,7 +32,7 @@ public interface Query  {
 
   public void getQueryDescription(double offset[],double size[],int resolution[],int mids[]);
 
-  public void forwardAnswer(final double data[],final int rid);
+  public void forwardAnswer(final double data[],final double distance[],final int indices[],final int rid);
 
 
 }

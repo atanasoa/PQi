@@ -57,8 +57,8 @@ void de::tum::QueryNativeDispatcher::getQueryDescription(double* offset, const i
     for(unsigned int i=0;i<_destinations.size();i++)
           _destinations[i]->getQueryDescription(offset,offset_len,size,size_len,resolution,resolution_len,mids,mids_len);
 }
-void de::tum::QueryNativeDispatcher::forwardAnswer(const double* data, const int data_len,const int rid){
+void de::tum::QueryNativeDispatcher::forwardAnswer(const double* data, const int data_len,const double* distance, const int distance_len,const int* indices, const int indices_len,const int rid){
     for(unsigned int i=0;i<_destinations.size();i++)
-          _destinations[i]->forwardAnswer(data,data_len,rid);
+          _destinations[i]->forwardAnswer(data,data_len,distance,distance_len,indices,indices_len,rid);
 }
 

@@ -38,11 +38,17 @@ subroutine  de_tum_query_f2c_nsd_getQueryDescription(self,&
 end subroutine de_tum_query_f2c_nsd_getQueryDescription
 subroutine  de_tum_query_f2c_nsd_forwardAnswer(self,&
 	data,data_len,&
+	distance,distance_len,&
+	indices,indices_len,&
 	rid) bind(c)
      use, intrinsic :: iso_c_binding
      integer(kind=c_long_long)::self
      	real(kind=c_double),intent(in),dimension(*)::data
 	integer(kind=c_int),intent(in)::data_len
+	real(kind=c_double),intent(in),dimension(*)::distance
+	integer(kind=c_int),intent(in)::distance_len
+	integer(kind=c_int),intent(in),dimension(*)::indices
+	integer(kind=c_int),intent(in)::indices_len
 	integer(kind=c_int),intent(in)::rid
 
 end subroutine de_tum_query_f2c_nsd_forwardAnswer

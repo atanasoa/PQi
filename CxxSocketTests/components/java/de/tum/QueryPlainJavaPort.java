@@ -33,10 +33,10 @@ public class QueryPlainJavaPort extends QueryAbstractPort {
   }
   
 
-  public void forwardAnswer(final double data[],final int rid) {
+  public void forwardAnswer(final double data[],final double distance[],final int indices[],final int rid) {
    // if (_destination!=null) {
       //_destination.lock();
-      _destination.forwardAnswer(data,rid);
+      _destination.forwardAnswer(data,distance,indices,rid);
       //_destination.unlock();
     //}
   }

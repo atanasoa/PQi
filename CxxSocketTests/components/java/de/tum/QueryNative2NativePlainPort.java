@@ -70,7 +70,7 @@ public class QueryNative2NativePlainPort extends QueryAbstractPort {
   }
   
 
-  public void forwardAnswer(final double data[],final int rid) {
+  public void forwardAnswer(final double data[],final double distance[],final int indices[],final int rid) {
     //DO NOTHING HERE
   }
   

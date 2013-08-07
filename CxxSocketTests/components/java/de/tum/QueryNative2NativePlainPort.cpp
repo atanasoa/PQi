@@ -42,8 +42,8 @@ void de::tum::QueryNative2NativePlainPort::getQueryDescription(double* offset, c
      assert(_destination!=NULL);
      _destination->getQueryDescription(offset,offset_len,size,size_len,resolution,resolution_len,mids,mids_len);
 }
-void de::tum::QueryNative2NativePlainPort::forwardAnswer(const double* data, const int data_len,const int rid){
+void de::tum::QueryNative2NativePlainPort::forwardAnswer(const double* data, const int data_len,const double* distance, const int distance_len,const int* indices, const int indices_len,const int rid){
      assert(_destination!=NULL);
-     _destination->forwardAnswer(data,data_len,rid);
+     _destination->forwardAnswer(data,data_len,distance,distance_len,indices,indices_len,rid);
 }
 

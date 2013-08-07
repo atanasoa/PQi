@@ -24,7 +24,7 @@ namespace tum {
 class de::tum::Query {
   public:
     virtual ~Query(){}
-     virtual void forwardAnswer(const double* data, const int data_len,const int rid)=0;
+     virtual void forwardAnswer(const double* data, const int data_len,const double* distance, const int distance_len,const int* indices, const int indices_len,const int rid)=0;
      virtual void getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len)=0;
      virtual void getNumberOfParts(int& parts)=0;
 

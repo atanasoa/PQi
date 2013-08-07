@@ -74,21 +74,25 @@ env->GetIntArrayRegion(mids_jni,0,mids_len,(jint*)mids);
 
   }
 }
-void de::tum::QueryNative2JavaPlainPort::forwardAnswer(const double* data, const int data_len,const int rid){
+void de::tum::QueryNative2JavaPlainPort::forwardAnswer(const double* data, const int data_len,const double* distance, const int distance_len,const int* indices, const int indices_len,const int rid){
   JNIEnv* env;
   int status=_jvm->GetEnv((void**)&env,JNI_VERSION_1_6);
   //jfieldID pid =env->GetFieldID(env->GetObjectClass(_obj),_portIdentifier.c_str(), "Lde/tum/QueryDispatcher;");
   //jobject obj= env->GetObjectField(_obj,pid);
   //jclass cls = env->FindClass("Lde/tum/QueryDispatcher;");
   jclass cls=env->GetObjectClass(_obj);
-  jmethodID mid = env->GetMethodID(cls,"forwardAnswer","([DI)V");
+  jmethodID mid = env->GetMethodID(cls,"forwardAnswer","([D[D[II)V");
   
   if(mid){
      jdoubleArray data_jni=env->NewDoubleArray(data_len);
 env->SetDoubleArrayRegion(data_jni,0,data_len,(jdouble*)data);
+jdoubleArray distance_jni=env->NewDoubleArray(distance_len);
+env->SetDoubleArrayRegion(distance_jni,0,distance_len,(jdouble*)distance);
+jintArray indices_jni=env->NewIntArray(indices_len);
+env->SetIntArrayRegion(indices_jni,0,indices_len,(jint*)indices);
 jint rid_jni=rid;
 
-     env->CallVoidMethod(_obj,mid,data_jni,rid_jni);
+     env->CallVoidMethod(_obj,mid,data_jni,distance_jni,indices_jni,rid_jni);
      
   }
 }

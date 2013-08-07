@@ -163,13 +163,17 @@ readIntData(mids,mids_len);
   }
   
 
-  public void forwardAnswer(final double data[],final int rid) {
+  public void forwardAnswer(final double data[],final double distance[],final int indices[],final int rid) {
     //__SWITCH_SYNC_ASYNC__
     try{
          int methodId=7;
          sendIntData(methodId);
          sendIntData(data.length);
 sendDoubleData(data);
+sendIntData(distance.length);
+sendDoubleData(distance);
+sendIntData(indices.length);
+sendIntData(indices);
 sendIntData(rid);
 
            

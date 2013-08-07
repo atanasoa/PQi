@@ -140,13 +140,19 @@ public class QuerySocket2JavaPlainPort extends QueryAbstractSocketPort
      int data_len=readIntData();
 double []data=new double[data_len];
 readDoubleData(data,data_len);
+int distance_len=readIntData();
+double []distance=new double[distance_len];
+readDoubleData(distance,distance_len);
+int indices_len=readIntData();
+int []indices=new int[indices_len];
+readIntData(indices,indices_len);
 int rid=readIntData();
 
-     forwardAnswer(data,rid);
+     forwardAnswer(data,distance,indices,rid);
      
   }
-  public void forwardAnswer(final double data[],final int rid) {
-     _destination.forwardAnswer(data,rid);
+  public void forwardAnswer(final double data[],final double distance[],final int indices[],final int rid) {
+     _destination.forwardAnswer(data,distance,indices,rid);
   }
   
 

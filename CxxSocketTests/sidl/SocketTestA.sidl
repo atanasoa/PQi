@@ -11,7 +11,7 @@ package tum {
   interface Query{
   	getNumberOfParts(inout int parts);
   	getQueryDescription(inout double offset[],inout double size[],inout int resolution[],inout int mids[]);
-    forwardAnswer(in double data [],in int rid);
+    forwardAnswer(in double data [],in double distance [],in int indices[],in int rid);
   } 
 
   @target = reverse_cxx_remote_socket

@@ -81,15 +81,15 @@ public class QueryDispatcher implements Query {
       
     }
   }
-  public void forwardAnswer(final double data[],final int rid) {
+  public void forwardAnswer(final double data[],final double distance[],final int indices[],final int rid) {
     for(Query port: _destinations)
-      port.forwardAnswer(data,rid);
+      port.forwardAnswer(data,distance,indices,rid);
   }
   
-  public void forwardAnswerForIntegerEnums(final double data[],final int rid) {
+  public void forwardAnswerForIntegerEnums(final double data[],final double distance[],final int indices[],final int rid) {
     for(Query port: _destinations){
       
-      port.forwardAnswer(data,rid);
+      port.forwardAnswer(data,distance,indices,rid);
       
     }
   }

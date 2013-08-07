@@ -241,10 +241,6 @@ void de::tum::SimCxx2SocketPlainPort::sim(){
      //assert(_destination!=NULL);
      #ifdef _WIN32
 #else
-int flags;
-flags = fcntl(_newsockfd, F_GETFL, 0);
-flags |= O_NONBLOCK;
-fcntl(_newsockfd, F_SETFL, flags);
 #endif
 
      int methodId=11;

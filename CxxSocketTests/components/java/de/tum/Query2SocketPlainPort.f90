@@ -47,16 +47,24 @@ end subroutine destroyPortInstance
 
 subroutine forwardAnswer(this,&
 	data,data_len,&
+	distance,distance_len,&
+	indices,indices_len,&
 	rid)
      use, intrinsic :: iso_c_binding
      class(Query2SocketPort)::this
      	real(8),intent(in),dimension(*)::data
 	integer,intent(in)::data_len
+	real(8),intent(in),dimension(*)::distance
+	integer,intent(in)::distance_len
+	integer,intent(in),dimension(*)::indices
+	integer,intent(in)::indices_len
 	integer,intent(in)::rid
 
      
      call de_tum_queryc2socket_plain_port_forwardAnswer(this%reference,&
 data,data_len,&
+distance,distance_len,&
+indices,indices_len,&
 rid)
 end subroutine forwardAnswer
 subroutine getQueryDescription(this,&

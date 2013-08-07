@@ -102,7 +102,20 @@ int
         
 }
 
-void accept_on_server(int& sockfd,int& clientfd){
+void accept_on_server(
+#ifdef _WIN32
+SOCKET&
+#else
+int&
+#endif
+sockfd,
+#ifdef _WIN32
+SOCKET&
+#else
+int&
+#endif
+clientfd
+){
            clientfd = accept(sockfd,
                     NULL,
                     NULL);
@@ -287,12 +300,26 @@ int
 #endif
 }
 
+
 struct SOCKETTESTB_arg{
      void *ref;
-     int serverfd;
+     #ifdef _WIN32
+     SOCKET
+     #else
+     int
+     #endif
+     serverfd;
      int buffer_size;
 };
-void socket_worker_loop(void* ref,int clientfd,int bufferSize){
+
+
+void socket_worker_loop(void* ref,
+#ifdef _WIN32
+SOCKET
+#else
+int
+#endif
+clientfd,int bufferSize){
      char *sendBuffer=new char[bufferSize];
      char *rcvBuffer=new char[bufferSize];
      void (*invokers[12])(void**,int,int,char*,char*);
@@ -310,13 +337,23 @@ invokers[11]=invoker_sim;
      }
      delete [] sendBuffer;
      delete [] rcvBuffer;
+#ifdef _WIN32
+     closesocket(clientfd);
+#else
      close(clientfd);    
+#endif    
      
 }
 
 
+#ifdef _WIN32
+DWORD WINAPI server_deamon_run(void* daemon_args){
+      SOCKET clientfd;
+#else  
 void* server_deamon_run(void* daemon_args){
       int clientfd=0;
+#endif
+      
       accept_on_server(((SOCKETTESTB_arg*)daemon_args)->serverfd,clientfd);
       std::cout<<"server accepted"<<std::endl;
       socket_worker_loop(((SOCKETTESTB_arg*)daemon_args)->ref,clientfd,((SOCKETTESTB_arg*)daemon_args)->buffer_size);
@@ -333,7 +370,7 @@ void socket_client_loop_(){
   
 #ifdef _WIN32
 SOCKET sockfd;
-SOCKET newsockfd;
+SOCKET clientfd;
 #else
 int sockfd=-1,clientfd=-1;
 #endif
@@ -343,22 +380,42 @@ int sockfd=-1,clientfd=-1;
   char* hostname;
   char* client_port;
   char* daemon_port;
-  
+  char* java_client_flag_as_str;
+  bool java_client_flag=true;
   hostname=getenv("SOCKETTESTB_HOSTNAME");
   void (*invokers[2])(void**,int,int,char*,char*);
   invokers[0]=invoker_create_instance;
   invokers[1]=invoker_destroy_instance;
   client_port=getenv("SOCKETTESTB_PORT");
   daemon_port=getenv("SOCKETTESTB_DAEMON_PORT");
-  open_client(hostname,client_port,sockfd,clientfd);
+  java_client_flag_as_str=getenv("SOCKETTESTB_JAVA");
+  if(hostname==NULL)
+     hostname="localhost";
+  if(client_port==NULL)
+     client_port="50000";
+  if(daemon_port==NULL)
+     daemon_port="50001";
+  if(java_client_flag_as_str!=NULL&&strcmp(java_client_flag_as_str,"off")==0)
+     java_client_flag=false;
+  if(java_client_flag)         
+     open_client(hostname,client_port,sockfd,clientfd);
   bind_server(daemon_port,daemon_args.serverfd);
   invokers[0](&daemon_args.ref,clientfd,daemon_args.buffer_size,NULL,NULL);
   for(int i=0;i<5;i++){
+#ifdef _WIN32    
+     CreateThread(NULL, 0,server_deamon_run, &daemon_args, 0, NULL);
+#else     
      pthread_t task;
      pthread_create(&task,NULL,server_deamon_run,&daemon_args);
+#endif
   }
-  socket_worker_loop(daemon_args.ref,clientfd,daemon_args.buffer_size);
+  if(java_client_flag)       
+     socket_worker_loop(daemon_args.ref,clientfd,daemon_args.buffer_size);
+#ifdef _WIN32
+  closesocket(sockfd);
+#else
   close(sockfd);
+#endif
   
  
    
@@ -370,51 +427,7 @@ int sockfd=-1,clientfd=-1;
     
 }
 
-#ifdef _WIN32
-void SOCKET_SERVER_LOOP(){
-#else
-void socket_server_loop_(){
-#endif
-  void* ref=NULL;
-#ifdef _WIN32
-SOCKET sockfd;
-SOCKET newsockfd;
-#else
-int sockfd=-1,newsockfd=-1;
-#endif
- 
-  int methodId=0;
-  int bufferSize=atoi(getenv("SOCKETTESTB_BUFFER_SIZE"));
-  char *sendBuffer=new char[bufferSize];
-  char *rcvBuffer=new char[bufferSize];
-  char* port_str;
-  port_str=getenv("SOCKETTESTB_PORT");
-  void (*invokers[12])(void**,int,int,char*,char*);
-  invokers[0]=invoker_create_instance;
-  invokers[1]=invoker_destroy_instance;
-  invokers[4]=invoker_disconnect_client_dispatcher_queryServer;
-invokers[3]=invoker_connect_client_dispatcher_queryServer;
-invokers[2]=invoker_create_client_port_for_queryServer;
-invokers[11]=invoker_sim;
-
-  //open_server(port_str,sockfd,newsockfd);
-  
-  
-  invokers[0](&ref,newsockfd,bufferSize,rcvBuffer,sendBuffer);
-  while(methodId!=1){
-     readData((char*)&methodId,sizeof(int),rcvBuffer,newsockfd,bufferSize);
-     invokers[methodId](&ref,newsockfd,bufferSize,rcvBuffer,sendBuffer);
-     
-  }
-  close(sockfd,newsockfd);   
-  #ifdef _WIN32
-  WSACleanup();
-  #endif  
-
-
-  delete [] sendBuffer;
-  delete [] rcvBuffer;    
-}
+#
 
 }
 
