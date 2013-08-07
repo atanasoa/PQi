@@ -25,13 +25,23 @@ private:
 	 double _offset[2];
 	 double _size[2];
 	 int _dimensions[2];
+	 double *_data;
+	 double *_distances;
 public:
 	SocketTestAImplementation();
 	~SocketTestAImplementation();
 	void getNumberOfParts(int& parts);
 	void getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len);
-	void forwardAnswer(const double* data,const int data_len,const int mid);
+	void forwardAnswer(
+			const double* data,
+			const int data_len,
+			const double* distance,
+			const int distance_len,
+			const int* indices,
+			const int indices_len,
+			const int mid);
 };     
 
 
 #endif
+
