@@ -19,6 +19,7 @@ de::tum::SocketTestAImplementation::SocketTestAImplementation(){
 	_dimensions[0]=33;
 
 	_dimensions[1]=33;
+<<<<<<< HEAD
 	
 	_dimensions[2]=1;
 	_data= new double[_dimensions[0]*_dimensions[1]];
@@ -36,6 +37,10 @@ double* de::tum::SocketTestAImplementation::getSize(){
 
 int* de::tum::SocketTestAImplementation::getDimensions(){
 	return _dimensions;
+=======
+	_data= new double[_dimensions[0]*_dimensions[1]];
+	_distances= new double[_dimensions[0]*_dimensions[1]];
+>>>>>>> 68ac2ec4f96e64f9241e63ba304da324fc1ca7d9
 }
 
 de::tum::SocketTestAImplementation::~SocketTestAImplementation(){
