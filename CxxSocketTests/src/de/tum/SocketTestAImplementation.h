@@ -22,11 +22,12 @@ class SocketTestAImplementation;
 class de::tum::SocketTestAImplementation : public de::tum::SocketTestAAbstractImplementation{
 private:
 	 pthread_mutex_t _lock;
-	 double _offset[2];
-	 double _size[2];
-	 int _dimensions[2];
+	 double _offset[3];
+	 double _size[3];
+	 int _dimensions[3];
 	 double *_data;
 	 double *_distances;
+	 int *_timesteps;
 public:
 	SocketTestAImplementation();
 	~SocketTestAImplementation();
@@ -40,8 +41,12 @@ public:
 			const int* indices,
 			const int indices_len,
 			const int mid);
+    double* getOffset();
+	double* getSize();
+	void cloneData(double* targetData);
+	int* getDimensions();
+
 };     
 
 
 #endif
-

@@ -301,16 +301,7 @@ int
 }
 
 
-struct SOCKETTESTB_arg{
-     void *ref;
-     #ifdef _WIN32
-     SOCKET
-     #else
-     int
-     #endif
-     serverfd;
-     int buffer_size;
-};
+
 
 
 void socket_worker_loop(void* ref,
@@ -360,74 +351,87 @@ void* server_deamon_run(void* daemon_args){
 }
 extern "C"{
 
-
-
 #ifdef _WIN32
-void SOCKET_CLIENT_LOOP(){
+void INITIALISE(SOCKETTESTB_arg& arg){
 #else
-void socket_client_loop_(){
+void initialise_(SOCKETTESTB_arg& arg){
 #endif
-  
-#ifdef _WIN32
-SOCKET sockfd;
-SOCKET clientfd;
-#else
-int sockfd=-1,clientfd=-1;
-#endif
-  SOCKETTESTB_arg daemon_args;
-  daemon_args.ref=NULL;
-  daemon_args.buffer_size=atoi(getenv("SOCKETTESTB_BUFFER_SIZE"));
-  char* hostname;
-  char* client_port;
-  char* daemon_port;
-  char* java_client_flag_as_str;
-  bool java_client_flag=true;
-  hostname=getenv("SOCKETTESTB_HOSTNAME");
-  void (*invokers[2])(void**,int,int,char*,char*);
-  invokers[0]=invoker_create_instance;
-  invokers[1]=invoker_destroy_instance;
-  client_port=getenv("SOCKETTESTB_PORT");
-  daemon_port=getenv("SOCKETTESTB_DAEMON_PORT");
-  java_client_flag_as_str=getenv("SOCKETTESTB_JAVA");
-  if(hostname==NULL)
-     hostname="localhost";
-  if(client_port==NULL)
-     client_port="50000";
-  if(daemon_port==NULL)
-     daemon_port="50001";
-  if(java_client_flag_as_str!=NULL&&strcmp(java_client_flag_as_str,"off")==0)
-     java_client_flag=false;
-  if(java_client_flag)         
-     open_client(hostname,client_port,sockfd,clientfd);
-  bind_server(daemon_port,daemon_args.serverfd);
-  invokers[0](&daemon_args.ref,clientfd,daemon_args.buffer_size,NULL,NULL);
-  for(int i=0;i<5;i++){
+   const char* client_port = getenv("SOCKETTESTB_PORT"); 
+   const char* daemon_port = getenv("SOCKETTESTB_DAEMON_PORT");
+   const char* buffer_size = getenv("SOCKETTESTB_SIZE");
+   const char* hostname = getenv("SOCKETTESTB_HOSTNAME");
+   const char* java_client_flag = getenv("SOCKETTESTB_JAVA");
+   arg.buffer_size = (buffer_size!=NULL)?atoi(buffer_size):4096;
+   arg.hostname = (hostname!=NULL)?hostname:"localhost";
+   arg.client_port = (client_port!=NULL)?client_port:"50000";
+   arg.daemon_port = (daemon_port!=NULL)?daemon_port:"50001";
+   arg.java_client_flag=(java_client_flag!=NULL&&strcmp(java_client_flag,"off")==0)?false:true;
+   
+   invoker_create_instance(&arg.ref,0,0,NULL,NULL);
+   if(arg.java_client_flag)         
+     open_client(arg.hostname,client_port,arg.java_serverfd,arg.java_clientfd);
+   bind_server(arg.daemon_port,arg.daemon_serverfd);
+   for(int i=0;i<10;i++){
 #ifdef _WIN32    
-     CreateThread(NULL, 0,server_deamon_run, &daemon_args, 0, NULL);
+     CreateThread(NULL, 0,server_deamon_run, &arg, 0, NULL);
 #else     
      pthread_t task;
-     pthread_create(&task,NULL,server_deamon_run,&daemon_args);
+     pthread_create(&task,NULL,server_deamon_run,&arg);
 #endif
-  }
-  if(java_client_flag)       
-     socket_worker_loop(daemon_args.ref,clientfd,daemon_args.buffer_size);
-#ifdef _WIN32
-  closesocket(sockfd);
-#else
-  close(sockfd);
-#endif
-  
- 
-   
-  #ifdef _WIN32
-  WSACleanup();
-  #endif   
-
-
-    
+   } 
 }
 
-#
+#ifdef _WIN32
+void SOCKET_LOOP(SOCKETTESTB_arg& arg){
+#else
+void socket_loop_(SOCKETTESTB_arg& arg){
+#endif
+  if(java_client_flag)       
+     socket_worker_loop(arg.ref,clientfd,arg.buffer_size);
+}
+
+#ifdef _WIN32
+void MAIN_LOOP(){
+#else
+void main_loop_(){
+#endif
+  
+
+  SOCKETTESTB_arg daemon_args;
+#ifdef _WIN32
+  INITIALISE(daemon_args);
+  DESTROY(daemon_args);     
+#else  
+  initialise_(daemon_args);
+  socket_loop_(daemon_args);
+  destroy_(daemon_args);  
+#endif
+  
+}
+
+#ifdef _WIN32
+void DESTROY(SOCKETTESTB_arg& arg){
+#else
+void destroy_(SOCKETTESTB_arg& arg){
+#endif
+#ifdef _WIN32
+  closesocket(arg.daemon_serverfd);
+  if(arg.java_client_flag)
+     closesocket(arg.java_serverfd);    
+#else
+  close(arg.daemon_serverfd);
+  if(arg.java_client_flag)
+     close(arg.java_serverfd);
+#endif
+  
+  
+   
+#ifdef _WIN32
+  WSACleanup();
+#endif   
+
+}
+
 
 }
 

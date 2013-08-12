@@ -102,7 +102,20 @@ int
         
 }
 
-void accept_on_server(int& sockfd,int& clientfd){
+void accept_on_server(
+#ifdef _WIN32
+SOCKET&
+#else
+int&
+#endif
+sockfd,
+#ifdef _WIN32
+SOCKET&
+#else
+int&
+#endif
+clientfd
+){
            clientfd = accept(sockfd,
                     NULL,
                     NULL);
@@ -210,10 +223,18 @@ void invoker_forwardAnswer(void** ref,int newsockfd, int buffer_size,char* rcvBu
 readData((char*)&data_len,sizeof(int),rcvBuffer,newsockfd,buffer_size);
 double* data=new double[data_len];
 readData((char*)data,sizeof(double)*data_len,rcvBuffer,newsockfd,buffer_size);
+int distance_len=0;
+readData((char*)&distance_len,sizeof(int),rcvBuffer,newsockfd,buffer_size);
+double* distance=new double[distance_len];
+readData((char*)distance,sizeof(double)*distance_len,rcvBuffer,newsockfd,buffer_size);
+int indices_len=0;
+readData((char*)&indices_len,sizeof(int),rcvBuffer,newsockfd,buffer_size);
+int* indices=new int[indices_len];
+readData((char*)indices,sizeof(int)*indices_len,rcvBuffer,newsockfd,buffer_size);
 int rid;
 readData((char*)&rid,sizeof(int),rcvBuffer,newsockfd,buffer_size);
 
-  ((de::tum::SocketTestAImplementation*)*ref)->forwardAnswer(data,data_len,rid);
+  ((de::tum::SocketTestAImplementation*)*ref)->forwardAnswer(data,data_len,distance,distance_len,indices,indices_len,rid);
   
 }
 void invoker_getQueryDescription(void** ref,int newsockfd, int buffer_size,char* rcvBuffer, char* sendBuffer){
@@ -281,12 +302,17 @@ int
 #endif
 }
 
-struct SOCKETTESTA_arg{
-     void *ref;
-     int serverfd;
-     int buffer_size;
-};
-void socket_worker_loop(void* ref,int clientfd,int bufferSize){
+
+
+
+
+void socket_worker_loop(void* ref,
+#ifdef _WIN32
+SOCKET
+#else
+int
+#endif
+clientfd,int bufferSize){
      char *sendBuffer=new char[bufferSize];
      char *rcvBuffer=new char[bufferSize];
      void (*invokers[12])(void**,int,int,char*,char*);
@@ -303,110 +329,110 @@ invokers[5]=invoker_getNumberOfParts;
      }
      delete [] sendBuffer;
      delete [] rcvBuffer;
+#ifdef _WIN32
+     closesocket(clientfd);
+#else
      close(clientfd);    
+#endif    
      
 }
 
 
+#ifdef _WIN32
+DWORD WINAPI server_deamon_run(void* daemon_args){
+      SOCKET clientfd;
+#else  
 void* server_deamon_run(void* daemon_args){
       int clientfd=0;
+#endif
+      
       accept_on_server(((SOCKETTESTA_arg*)daemon_args)->serverfd,clientfd);
       std::cout<<"server accepted"<<std::endl;
       socket_worker_loop(((SOCKETTESTA_arg*)daemon_args)->ref,clientfd,((SOCKETTESTA_arg*)daemon_args)->buffer_size);
 }
 extern "C"{
 
-
-
 #ifdef _WIN32
-void SOCKET_CLIENT_LOOP(){
+void INITIALISE(SOCKETTESTA_arg& arg){
 #else
-void socket_client_loop_(){
+void initialise_(SOCKETTESTA_arg& arg){
 #endif
-  
-#ifdef _WIN32
-SOCKET sockfd;
-SOCKET newsockfd;
-#else
-int sockfd=-1,clientfd=-1;
-#endif
-  SOCKETTESTA_arg daemon_args;
-  daemon_args.ref=NULL;
-  daemon_args.buffer_size=atoi(getenv("SOCKETTESTA_BUFFER_SIZE"));
-  char* hostname;
-  char* client_port;
-  char* daemon_port;
-  
-  hostname=getenv("SOCKETTESTA_HOSTNAME");
-  void (*invokers[2])(void**,int,int,char*,char*);
-  invokers[0]=invoker_create_instance;
-  invokers[1]=invoker_destroy_instance;
-  client_port=getenv("SOCKETTESTA_PORT");
-  daemon_port=getenv("SOCKETTESTA_DAEMON_PORT");
-  open_client(hostname,client_port,sockfd,clientfd);
-  bind_server(daemon_port,daemon_args.serverfd);
-  invokers[0](&daemon_args.ref,clientfd,daemon_args.buffer_size,NULL,NULL);
-  for(int i=0;i<5;i++){
-     pthread_t task;
-     pthread_create(&task,NULL,server_deamon_run,&daemon_args);
-  }
-  socket_worker_loop(daemon_args.ref,clientfd,daemon_args.buffer_size);
-  close(sockfd);
-  
- 
+   const char* client_port = getenv("SOCKETTESTA_PORT"); 
+   const char* daemon_port = getenv("SOCKETTESTA_DAEMON_PORT");
+   const char* buffer_size = getenv("SOCKETTESTA_SIZE");
+   const char* hostname = getenv("SOCKETTESTA_HOSTNAME");
+   const char* java_client_flag = getenv("SOCKETTESTA_JAVA");
+   arg.buffer_size = (buffer_size!=NULL)?atoi(buffer_size):4096;
+   arg.hostname = (hostname!=NULL)?hostname:"localhost";
+   arg.client_port = (client_port!=NULL)?client_port:"50000";
+   arg.daemon_port = (daemon_port!=NULL)?daemon_port:"50001";
+   arg.java_client_flag=(java_client_flag!=NULL&&strcmp(java_client_flag,"off")==0)?false:true;
    
-  #ifdef _WIN32
-  WSACleanup();
-  #endif   
-
-
-    
+   invoker_create_instance(&arg.ref,0,0,NULL,NULL);
+   if(arg.java_client_flag)         
+     open_client(arg.hostname,client_port,arg.java_serverfd,arg.java_clientfd);
+   bind_server(arg.daemon_port,arg.daemon_serverfd);
+   for(int i=0;i<10;i++){
+#ifdef _WIN32    
+     CreateThread(NULL, 0,server_deamon_run, &arg, 0, NULL);
+#else     
+     pthread_t task;
+     pthread_create(&task,NULL,server_deamon_run,&arg);
+#endif
+   } 
 }
 
 #ifdef _WIN32
-void SOCKET_SERVER_LOOP(){
+void SOCKET_LOOP(SOCKETTESTA_arg& arg){
 #else
-void socket_server_loop_(){
+void socket_loop_(SOCKETTESTA_arg& arg){
 #endif
-  void* ref=NULL;
-#ifdef _WIN32
-SOCKET sockfd;
-SOCKET newsockfd;
-#else
-int sockfd=-1,newsockfd=-1;
-#endif
- 
-  int methodId=0;
-  int bufferSize=atoi(getenv("SOCKETTESTA_BUFFER_SIZE"));
-  char *sendBuffer=new char[bufferSize];
-  char *rcvBuffer=new char[bufferSize];
-  char* port_str;
-  port_str=getenv("SOCKETTESTA_PORT");
-  void (*invokers[12])(void**,int,int,char*,char*);
-  invokers[0]=invoker_create_instance;
-  invokers[1]=invoker_destroy_instance;
-  invokers[7]=invoker_forwardAnswer;
-invokers[6]=invoker_getQueryDescription;
-invokers[5]=invoker_getNumberOfParts;
-
-  //open_server(port_str,sockfd,newsockfd);
-  
-  
-  invokers[0](&ref,newsockfd,bufferSize,rcvBuffer,sendBuffer);
-  while(methodId!=1){
-     readData((char*)&methodId,sizeof(int),rcvBuffer,newsockfd,bufferSize);
-     invokers[methodId](&ref,newsockfd,bufferSize,rcvBuffer,sendBuffer);
-     
-  }
-  close(sockfd,newsockfd);   
-  #ifdef _WIN32
-  WSACleanup();
-  #endif  
-
-
-  delete [] sendBuffer;
-  delete [] rcvBuffer;    
+  if(java_client_flag)       
+     socket_worker_loop(arg.ref,clientfd,arg.buffer_size);
 }
+
+#ifdef _WIN32
+void MAIN_LOOP(){
+#else
+void main_loop_(){
+#endif
+  
+
+  SOCKETTESTA_arg daemon_args;
+#ifdef _WIN32
+  INITIALISE(daemon_args);
+  DESTROY(daemon_args);     
+#else  
+  initialise_(daemon_args);
+  socket_loop_(daemon_args);
+  destroy_(daemon_args);  
+#endif
+  
+}
+
+#ifdef _WIN32
+void DESTROY(SOCKETTESTA_arg& arg){
+#else
+void destroy_(SOCKETTESTA_arg& arg){
+#endif
+#ifdef _WIN32
+  closesocket(arg.daemon_serverfd);
+  if(arg.java_client_flag)
+     closesocket(arg.java_serverfd);    
+#else
+  close(arg.daemon_serverfd);
+  if(arg.java_client_flag)
+     close(arg.java_serverfd);
+#endif
+  
+  
+   
+#ifdef _WIN32
+  WSACleanup();
+#endif   
+
+}
+
 
 }
 

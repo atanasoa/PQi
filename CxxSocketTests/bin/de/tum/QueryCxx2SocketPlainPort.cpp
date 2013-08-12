@@ -241,10 +241,6 @@ void de::tum::QueryCxx2SocketPlainPort::getNumberOfParts(int& parts){
      //assert(_destination!=NULL);
      #ifdef _WIN32
 #else
-int flags;
-flags = fcntl(_newsockfd, F_GETFL, 0);
-flags ^= O_NONBLOCK;
-fcntl(_newsockfd, F_SETFL, flags);
 #endif
 
      int methodId=5;
@@ -258,10 +254,6 @@ void de::tum::QueryCxx2SocketPlainPort::getQueryDescription(double* offset, cons
      //assert(_destination!=NULL);
      #ifdef _WIN32
 #else
-int flags;
-flags = fcntl(_newsockfd, F_GETFL, 0);
-flags ^= O_NONBLOCK;
-fcntl(_newsockfd, F_SETFL, flags);
 #endif
 
      int methodId=6;
@@ -285,20 +277,20 @@ readData((char*)&mids_len,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
 readData((char*)mids,sizeof(int)*mids_len,_rcvBuffer,_newsockfd,_buffer_size);
 
 }
-void de::tum::QueryCxx2SocketPlainPort::forwardAnswer(const double* data, const int data_len,const int rid){
+void de::tum::QueryCxx2SocketPlainPort::forwardAnswer(const double* data, const int data_len,const double* distance, const int distance_len,const int* indices, const int indices_len,const int rid){
      //assert(_destination!=NULL);
      #ifdef _WIN32
 #else
-int flags;
-flags = fcntl(_newsockfd, F_GETFL, 0);
-flags |= O_NONBLOCK;
-fcntl(_newsockfd, F_SETFL, flags);
 #endif
 
      int methodId=7;
      sendData((char*) &methodId, sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
      sendData((char*)&data_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)data,sizeof(double)*data_len,_sendBuffer,_newsockfd,_buffer_size);
+sendData((char*)&distance_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
+sendData((char*)distance,sizeof(double)*distance_len,_sendBuffer,_newsockfd,_buffer_size);
+sendData((char*)&indices_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
+sendData((char*)indices,sizeof(int)*indices_len,_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)&rid,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
 
      

@@ -71,14 +71,14 @@ void de_tum_queryc2socket_plain_port_getquerydescription_(long long* ref,double*
 }
 #endif
 #ifdef _WIN32
-void DE_TUM_QUERYC2SOCKET_PLAIN_PORT_FORWARDANSWER(long long* ref,double* data, int* data_len,int* rid){
+void DE_TUM_QUERYC2SOCKET_PLAIN_PORT_FORWARDANSWER(long long* ref,double* data, int* data_len,double* distance, int* distance_len,int* indices,int* indices_len,int* rid){
      
-     ((de::tum::QueryCxx2SocketPlainPort*)*ref)->forwardAnswer(data,*data_len,*rid);
+     ((de::tum::QueryCxx2SocketPlainPort*)*ref)->forwardAnswer(data,*data_len,distance,*distance_len,indices,*indices_len,*rid);
 }
 #else
-void de_tum_queryc2socket_plain_port_forwardanswer_(long long* ref,double* data, int* data_len,int* rid){
+void de_tum_queryc2socket_plain_port_forwardanswer_(long long* ref,double* data, int* data_len,double* distance, int* distance_len,int* indices,int* indices_len,int* rid){
      
-     ((de::tum::QueryCxx2SocketPlainPort*)*ref)->forwardAnswer(data,*data_len,*rid);
+     ((de::tum::QueryCxx2SocketPlainPort*)*ref)->forwardAnswer(data,*data_len,distance,*distance_len,indices,*indices_len,*rid);
 }
 #endif
 }

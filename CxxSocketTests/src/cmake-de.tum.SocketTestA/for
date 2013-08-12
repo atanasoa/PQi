@@ -1,0 +1,1494 @@
+Script started on Mon 12 Aug 2013 03:02:03 PM CEST
+
+0 contributors
+executable file 2 lines (1 sloc) 0.147 kb
+1 	
+
+SOCKETTESTA_HOSTNAME=localhost SOCKETTESTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFER_SIZE=256 ./SocketTestA
+
+    Status
+    API
+    Training
+    Shop
+    Blog
+    About
+
+    © 2013 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Contact
+
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ 
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ 0 contributors
+0: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ executable file 2 lines (1 sloc) 0.147 k b
+bash: syntax error near unexpected token `('
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ 1 
+1: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ 
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTES TA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUF FER_SIZE=256 ./SocketTestA
+bash: ./SocketTestA: No such file or directory
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ 
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     Status
+No command 'Status' found, did you mean:
+ Command 'status' from package 'upstart' (main)
+Status: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     API
+API: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     Training
+Training: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     Shop
+Shop: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     Blog
+No command 'Blog' found, did you mean:
+ Command 'plog' from package 'ppp' (main)
+ Command 'rlog' from package 'rcs' (universe)
+ Command 'flog' from package 'flog' (universe)
+ Command 'vlog' from package 'atfs' (universe)
+ Command 'xlog' from package 'xlog' (universe)
+ Command 'klog' from package 'openafs-krb5' (universe)
+ Command 'klog' from package 'klog' (universe)
+ Command 'klog' from package 'openafs-client' (universe)
+Blog: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     About
+About: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ 
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     © 2013 GitHub, Inc.
+©: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     Terms
+Terms: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     Privacy
+Privacy: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     Security
+Security: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     Contact
+No command 'Contact' found, did you mean:
+ Command 'kontact' from package 'kontact' (main)
+Contact: command not found
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ 
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$     Contact[K^C
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTES TA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUF FER_SIZE=256 ./SocketTestA
+bash: ./SocketTestA: No such file or directory
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ 
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTES TA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUF FER_SIZE=256 ./SocketTestA
+bash: ./SocketTestA: No such file or directory
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ 
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ./SocketTestA./SocketTestA[C/SocketTestA./SocketTestA[C/SocketTestA.//SocketTestA[C[C[1PSocketTestAnSocketTestAaSocketTestAtive/SocketTestA
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11P/SocketTestA[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C    Contact[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CSecurity[1PPrivacy^C
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11P/SocketTestA^C
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ [A(reverse-i-search)`': [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm':     Termsa': make clean all[C[C[C[C[C[6Pallatanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make all
+[35m[1mScanning dependencies of target SocketTestA
+[0m[  5%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+[0m[ 11%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[ 94%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA[A[A[C[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[  5%] [34m[1mGenerating __/de/tum/moc_MyTimer.cxx
+[0m[35m[1mScanning dependencies of target SocketTestA
+[0m[ 11%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp: In function ‘int main(int, char**)’:
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp:101:25: error: invalid use of incomplete type ‘struct QTimer’
+/usr/include/qt4/QtGui/qwindowdefs.h:82:7: error: forward declaration of ‘struct QTimer’
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp:103:65: error: no matching function for call to ‘QObject::connect(QTimer*&, const char [11], MyTimer*, const char [10])’
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp:103:65: note: candidates are:
+/usr/include/qt4/QtCore/qobject.h:204:17: note: static bool QObject::connect(const QObject*, const char*, const QObject*, const char*, Qt::ConnectionType)
+/usr/include/qt4/QtCore/qobject.h:204:17: note:   no known conversion for argument 1 from ‘QTimer*’ to ‘const QObject*’
+/usr/include/qt4/QtCore/qobject.h:217:17: note: static bool QObject::connect(const QObject*, const QMetaMethod&, const QObject*, const QMetaMethod&, Qt::ConnectionType)
+/usr/include/qt4/QtCore/qobject.h:217:17: note:   no known conversion for argument 1 from ‘QTimer*’ to ‘const QObject*’
+/usr/include/qt4/QtCore/qobject.h:337:13: note: bool QObject::connect(const QObject*, const char*, const char*, Qt::ConnectionType) const
+/usr/include/qt4/QtCore/qobject.h:337:13: note:   no known conversion for argument 1 from ‘QTimer*’ to ‘const QObject*’
+make[2]: *** [CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/SocketTestA.dir/all] Error 2
+make: *** [all] Error 2
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make all
+[  5%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[ 11%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA[A[A[C[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[  5%] [34m[1mGenerating __/de/tum/moc_MyTimer.cxx
+[0m[35m[1mScanning dependencies of target SocketTestA
+[0m[ 11%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[ 17%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA
+^C
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA[A[A[C[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[35m[1mScanning dependencies of target SocketTestA
+[0m[  5%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+^C
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA[A[A[C[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[35m[1mScanning dependencies of target SocketTestA
+[0m[  5%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp: In function ‘int main(int, char**)’:
+/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp:105:15: error: ‘myStatsView’ was not declared in this scope
+make[2]: *** [CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/SocketTestA.dir/all] Error 2
+make: *** [all] Error 2
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA[A[A[C[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[  5%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+singnal received
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA[A[A[C[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[  5%] [34m[1mGenerating __/de/tum/moc_MyTimer.cxx
+[0m[35m[1mScanning dependencies of target SocketTestA
+[0m[ 11%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[ 17%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make all
+[  5%] [34m[1mGenerating __/de/tum/moc_MyTimer.cxx
+[0m[ 11%] [34m[1mGenerating __/de/tum/moc_vtkMyImageData.cxx
+[0m/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/vtkMyImageData.h:0: Note: No relevant classes found. No output generated.
+[35m[1mScanning dependencies of target SocketTestA
+[0m[ 17%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+[0m[ 23%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[ 29%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SimpleView.cxx.o
+[0m[ 35%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o
+[0m[ 41%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o
+[0m[ 47%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o
+[0m[ 52%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[ 94%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x113c5e0)
+  Debug: Off
+  Modified Time: 2403
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x113c5e0)
+  Debug: Off
+  Modified Time: 2403
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x113c5e0)
+  Debug: Off
+  Modified Time: 2403
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x113c5e0)
+  Debug: Off
+  Modified Time: 2403
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x113c5e0)
+  Debug: Off
+  Modified Time: 2403
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x10e2390)
+  Debug: Off
+  Modified Time: 11321
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_DATA
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_AFTER_FORWARD: 1
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1142530): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1189410) for the recursive request:
+vtkInformation (0x11272c0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+ERROR: In /build/buildd/vtk-5.8.0/Common/vtkMultiThreader.cxx, line 628
+vtkMultiThreader (0x137ba70): You have too many active threads!
+
+UPDATE vtkDataSetMapper
+Release now
+^C
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA > out.txt
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x279ea60): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x27ea510) for the recursive request:
+vtkInformation (0x2751490)
+  Debug: Off
+  Modified Time: 1887
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  ALGORITHM_AFTER_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x279ea60): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x27ea510) for the recursive request:
+vtkInformation (0x2751490)
+  Debug: Off
+  Modified Time: 1887
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  ALGORITHM_AFTER_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x279ea60): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x27ea510) for the recursive request:
+vtkInformation (0x2757410)
+  Debug: Off
+  Modified Time: 2403
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  ALGORITHM_AFTER_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x279ea60): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x27ea510) for the recursive request:
+vtkInformation (0x27b4ab0)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x279ea60): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x27ea510) for the recursive request:
+vtkInformation (0x276e9f0)
+  Debug: Off
+  Modified Time: 4445
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+  FROM_OUTPUT_PORT: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+*** glibc detected *** ../../native/SocketTestA: double free or corruption (!prev): 0x00007fa5ec00b110 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x7eb96)[0x7fa63007ab96]
+/usr/lib/libvtkCommon.so.5.8(_ZN20vtkDataArrayTemplateIdE11DeleteArrayEv+0x55)[0x7fa630f37825]
+/usr/lib/libvtkCommon.so.5.8(_ZN20vtkDataArrayTemplateIdED1Ev+0x1c)[0x7fa630f39afc]
+/usr/lib/libvtkCommon.so.5.8(_ZN14vtkDoubleArrayD0Ev+0x9)[0x7fa630f368b9]
+/usr/lib/libvtkCommon.so.5.8(_ZN9vtkObject18UnRegisterInternalEP13vtkObjectBasei+0x55)[0x7fa630fb0ef5]
+/usr/lib/libvtkFiltering.so.5.8(_ZN12vtkFieldData11RemoveArrayEi+0x5c)[0x7fa630a29f7c]
+/usr/lib/libvtkFiltering.so.5.8(_ZN20vtkDataSetAttributes11RemoveArrayEi+0x25)[0x7fa630a10975]
+/usr/lib/libvtkFiltering.so.5.8(_ZN20vtkDataSetAttributes12SetAttributeEP16vtkAbstractArrayi+0x303)[0x7fa630a11ff3]
+../../native/SocketTestA(_ZN14vtkMyImageData11RequestDataEP14vtkInformationPP20vtkInformationVectorS3_+0x2a2)[0x40f3ca]
+/usr/lib/libvtkFiltering.so.5.8(_ZN12vtkExecutive13CallAlgorithmEP14vtkInformationiPP20vtkInformationVectorS3_+0x54)[0x7fa630a26204]
+/usr/lib/libvtkFiltering.so.5.8(_ZN23vtkDemandDrivenPipeline11ExecuteDataEP14vtkInformationPP20vtkInformationVectorS3_+0x4c)[0x7fa630a1a75c]
+/usr/lib/libvtkFiltering.so.5.8(_ZN24vtkCompositeDataPipeline11ExecuteDataEP14vtkInformationPP20vtkInformationVectorS3_+0xd1)[0x7fa6309fc6b1]
+/usr/lib/libvtkFiltering.so.5.8(_ZN23vtkDemandDrivenPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0x14d)[0x7fa630a1d79d]
+/usr/lib/libvtkFiltering.so.5.8(_ZN32vtkStreamingDemandDrivenPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0xbc)[0x7fa630b59cac]
+/usr/lib/libvtkFiltering.so.5.8(_ZN24vtkCompositeDataPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0x221)[0x7fa6309fa261]
+/usr/lib/libvtkFiltering.so.5.8(_ZN28vtkThreadedStreamingPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0x84)[0x7fa630b6e3e4]
+/usr/lib/libvtkFiltering.so.5.8(_ZN24vtkCompositeDataPipeline15ForwardUpstreamEP14vtkInformation+0x23e)[0x7fa6309fad5e]
+/usr/lib/libvtkFiltering.so.5.8(_ZN23vtkDemandDrivenPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0x107)[0x7fa630a1d757]
+/usr/lib/libvtkFiltering.so.5.8(_ZN32vtkStreamingDemandDrivenPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0xbc)[0x7fa630b59cac]
+/usr/lib/libvtkFiltering.so.5.8(_ZN24vtkCompositeDataPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0x221)[0x7fa6309fa261]
+/usr/lib/libvtkFiltering.so.5.8(_ZN28vtkThreadedStreamingPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0x84)[0x7fa630b6e3e4]
+/usr/lib/libvtkFiltering.so.5.8(_ZN23vtkDemandDrivenPipeline10UpdateDataEi+0x1d7)[0x7fa630a1c2a7]
+/usr/lib/libvtkFiltering.so.5.8(_ZN32vtkStreamingDemandDrivenPipeline6UpdateEi+0xa5)[0x7fa630b5b485]
+/usr/lib/libvtkFiltering.so.5.8(_ZN21vtkComputingResources6DeployEP28vtkThreadedStreamingPipelineP14vtkInformation+0xa8)[0x7fa630a02838]
+/usr/lib/libvtkFiltering.so.5.8(+0x151dec)[0x7fa630a22dec]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x7e9a)[0x7fa632e13e9a]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d)[0x7fa6300efccd]
+======= Memory map: ========
+00400000-00415000 r-xp 00000000 08:04 11290                              /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+00615000-00616000 r--p 00015000 08:04 11290                              /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+00616000-00617000 rw-p 00016000 08:04 11290                              /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+024eb000-02bdb000 rw-p 00000000 00:00 0                                  [heap]
+40783000-40785000 r-xs 00000000 08:03 82                                 /tmp/glfbEsvH (deleted)
+40b30000-40bae000 rw-p 00000000 00:00 0 
+7fa5e2de6000-7fa5e2de7000 ---p 00000000 00:00 0 
+7fa5e2de7000-7fa5e35e7000 rw-p 00000000 00:00 0 
+7fa5e35e7000-7fa5e35e8000 ---p 00000000 00:00 0 
+7fa5e35e8000-7fa5e3de8000 rw-p 00000000 00:00 0 
+7fa5e3de8000-7fa5e3de9000 ---p 00000000 00:00 0 
+7fa5e3de9000-7fa5e45e9000 rw-p 00000000 00:00 0 
+7fa5e45e9000-7fa5e45ea000 ---p 00000000 00:00 0 
+7fa5e45ea000-7fa5e4dea000 rw-p 00000000 00:00 0 
+7fa5e4dea000-7fa5e4deb000 ---p 00000000 00:00 0 
+7fa5e4deb000-7fa5e55eb000 rw-p 00000000 00:00 0 
+7fa5e55eb000-7fa5e55ec000 ---p 00000000 00:00 0 
+7fa5e55ec000-7fa5e5dec000 rw-p 00000000 00:00 0 
+7fa5e5dec000-7fa5e5ded000 ---p 00000000 00:00 0 
+7fa5e5ded000-7fa5e65ed000 rw-p 00000000 00:00 0 
+7fa5e65ed000-7fa5e65ee000 ---p 00000000 00:00 0 
+7fa5e65ee000-7fa5e6dee000 rw-p 00000000 00:00 0 
+7fa5e6dee000-7fa5e6def000 ---p 00000000 00:00 0 
+7fa5e6def000-7fa5e75ef000 rw-p 00000000 00:00 0 
+7fa5e75ef000-7fa5e75f0000 ---p 00000000 00:00 0 
+7fa5e75f0000-7fa5e7df0000 rw-p 00000000 00:00 0 
+7fa5e7df0000-7fa5e7df1000 ---p 00000000 00:00 0 
+7fa5e7df1000-7fa5e85f1000 rw-p 00000000 00:00 0 
+7fa5e85f1000-7fa5e85f2000 ---p 00000000 00:00 0 
+7fa5e85f2000-7fa5e8df2000 rw-p 00000000 00:00 0 
+7fa5e8df2000-7fa5e8df3000 ---p 00000000 00:00 0 
+7fa5e8df3000-7fa5e95f3000 rw-p 00000000 00:00 0 
+7fa5e95f3000-7fa5e95f4000 ---p 00000000 00:00 0 
+7fa5e95f4000-7fa5e9df4000 rw-p 00000000 00:00 0 
+7fa5e9df4000-7fa5e9df5000 ---p 00000000 00:00 0 
+7fa5e9df5000-7fa5ea5f5000 rw-p 00000000 00:00 0 
+7fa5ea5f5000-7fa5ea5f6000 ---p 00000000 00:00 0 
+7fa5ea5f6000-7fa5eadf6000 rw-p 00000000 00:00 0 
+7fa5eadf6000-7fa5eadf7000 ---p 00000000 00:00 0 
+7fa5eadf7000-7fa5eb5f7000 rw-p 00000000 00:00 0 
+7fa5eb5f7000-7fa5eb5f8000 ---p 00000000 00:00 0 
+7fa5eb5f8000-7fa5ebdf8000 rw-p 00000000 00:00 0 
+7fa5ebdf8000-7fa5ebdff000 r-xp 00000000 08:01 286066                     /usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqtiff.so
+7fa5ebdff000-7fa5ebffe000 ---p 00007000 08:01 286066                     /usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqtiff.so
+7fa5ebffe000-7fa5ebfff000 r--p 00006000 08:01 286066                     /usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqtiff.so
+7fa5ebfff000-7fa5ec000000 rw-p 00007000 08:01 286066                     /usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqtiff.so
+7fa5ec000000-7fa5ec02b000 rw-p 00000000 00:00 0 
+7fa5ec02b000-7fa5f0000000 ---p 00000000 00:00 0 
+7fa5f01e6000-7fa5f023b000 r-xp 00000000 08:01 287114                     /usr/lib/x86_64-linux-gnu/libQtSvg.so.4.8.1
+7fa5f023b000-7fa5f043b000 ---p 00055000 08:01 287114                     /usr/lib/x86_64-linux-gnu/libQtSvg.so.4.8.1
+7fa5f043b000-7fa5f043d000 r--p 00055000 08:01 287114                     /usr/lib/x86_64-linux-gnu/libQtSvg.so.4.8.1Aborted (core dumped)
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ gedit out.txt &
+[1] 7712
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ gedit out.txt &SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA > out.txt
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1998f80): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1a117c0) for the recursive request:
+vtkInformation (0x1989060)
+  Debug: Off
+  Modified Time: 2425
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+
+
+
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1998f80): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1a117c0) for the recursive request:
+vtkInformation (0x1995df0)
+  Debug: Off
+  Modified Time: 2403
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  ALGORITHM_AFTER_FORWARD: 1
+  FROM_OUTPUT_PORT: 0
+  FORWARD_DIRECTION: 0
+
+
+
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1998f80): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1a117c0) for the recursive request:
+vtkInformation (0x19bc9d0)
+  Debug: Off
+  Modified Time: 3835
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_UPDATE_EXTENT
+  FROM_OUTPUT_PORT: 0
+  ALGORITHM_BEFORE_FORWARD: 1
+  FORWARD_DIRECTION: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+ERROR: In /build/buildd/vtk-5.8.0/Filtering/vtkExecutive.cxx, line 776
+vtkThreadedStreamingPipeline (0x1998f80): ProcessRequest invoked during another request.  Returning failure to algorithm vtkMyImageData(0x1a117c0) for the recursive request:
+vtkInformation (0x1968f90)
+  Debug: Off
+  Modified Time: 1887
+  Reference Count: 1
+  Registered Events: (none)
+  Request: REQUEST_INFORMATION
+  ALGORITHM_AFTER_FORWARD: 1
+  FROM_OUTPUT_PORT: 0
+  FORWARD_DIRECTION: 0
+
+
+
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+pure virtual method called
+Release now
+terminate called without an active exception
+[1]+  Done                    gedit out.txt
+Aborted (core dumped)
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA > out.txt[A[A[25Pgedit out.txt &
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA > out.txt[K[A[A[C[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[  5%] [34m[1mGenerating __/de/tum/moc_MyTimer.cxx
+[0m[35m[1mScanning dependencies of target SocketTestA
+[0m[ 11%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[ 17%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA > out.txt[K[K[K[K[K[K[K[K[K
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+ERROR: In /build/buildd/vtk-5.8.0/Common/vtkMultiThreader.cxx, line 628
+vtkMultiThreader (0x1c0dbd0): You have too many active threads!
+
+Release now
+^C
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA [A[A[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[35m[1mScanning dependencies of target SocketTestA
+[0m[  5%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA 
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+ERROR: In /build/buildd/vtk-5.8.0/Common/vtkMultiThreader.cxx, line 628
+vtkMultiThreader (0xf7afb0): You have too many active threads!
+
+^C
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA [A[A[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[35m[1mScanning dependencies of target SocketTestA
+[0m[  5%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA 
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetSurfaceFilter
+UPDATE vtkDataSetMapper
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+UPDATE vtkDataSetMapper
+Release now
+UPDATE vtkDataSetMapper
+UPDATE vtkDataSetSurfaceFilter
+Release now
+Release now
+UPDATE vtkDataSetSurfaceFilter
+Release now
+ERROR: In /build/buildd/vtk-5.8.0/Common/vtkMultiThreader.cxx, line 628
+vtkMultiThreader (0x1915e70): You have too many active threads!
+
+^C
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA [A[A[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[ 82%] Built target SocketTestA
+[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make all
+[35m[1mScanning dependencies of target SocketTestA
+[0m[  5%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make all
+[  5%] [34m[1mGenerating __/de/tum/moc_MyTimer.cxx
+[0m[35m[1mScanning dependencies of target SocketTestA
+[0m[ 11%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[ 17%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA [A[A[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA 
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA [A[A[C[Cmake all[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[35m[1mScanning dependencies of target SocketTestA
+[0m[  5%] [32mBuilding CXX object CMakeFiles/SocketTestA.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX executable /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/SocketTestA
+[0m[ 82%] Built target SocketTestA
+[35m[1mScanning dependencies of target SocketTestA-dev
+[0m[ 88%] [32mBuilding CXX object CMakeFiles/SocketTestA-dev.dir/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+[0m[31m[1mLinking CXX static library /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/native/lib/libSocketTestA-dev.a
+[0m[100%] Built target SocketTestA-dev
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ make allSOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKETTESTA_BUFFFER_SIZE=256 ../../native/SocketTestA 
+atanasoa@atsccs55:/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSoccketTests/src/cmake-de.tum.SocketTestA$ SOCKETTESTA_HOSTNAME=localhost SOCKETTESTTA_JAVA=off SOCKETTESTA_PORT=50000 SOCKETTESTA_DAEMON_PORT=50000 SOCKET

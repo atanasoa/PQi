@@ -57,13 +57,13 @@ void de_tum_query_f2c_nsd_getquerydescription_(long long* ref,double* offset, in
      ((de::tum::QueryNativeSocketDispatcher*)*ref)->getQueryDescription(offset,*offset_len,size,*size_len,resolution,*resolution_len,mids,*mids_len);
 }
 #ifdef _WIN32
-void DE_TUM_QUERY_F2C_NSD_FORWARDANSWER(long long* ref,double* data, int* data_len,int* rid){
+void DE_TUM_QUERY_F2C_NSD_FORWARDANSWER(long long* ref,double* data, int* data_len,double* distance, int* distance_len,int* indices,int* indices_len,int* rid){
 #else
-void de_tum_query_f2c_nsd_forwardanswer_(long long* ref,double* data, int* data_len,int* rid){
+void de_tum_query_f2c_nsd_forwardanswer_(long long* ref,double* data, int* data_len,double* distance, int* distance_len,int* indices,int* indices_len,int* rid){
 #endif
     
      
-     ((de::tum::QueryNativeSocketDispatcher*)*ref)->forwardAnswer(data,*data_len,*rid);
+     ((de::tum::QueryNativeSocketDispatcher*)*ref)->forwardAnswer(data,*data_len,distance,*distance_len,indices,*indices_len,*rid);
 }
 
 

@@ -51,29 +51,45 @@ end subroutine destroyDispatcherInstance
 
 subroutine forwardAnswer_internal(this,&
 	data,data_len,&
+	distance,distance_len,&
+	indices,indices_len,&
 	rid)
      use, intrinsic :: iso_c_binding
      class(QueryNativeSocketDispatcher)::this
      	real(kind=c_double),intent(in),dimension(*)::data
 	integer(kind=c_int),intent(in)::data_len
+	real(kind=c_double),intent(in),dimension(*)::distance
+	integer(kind=c_int),intent(in)::distance_len
+	integer(kind=c_int),intent(in),dimension(*)::indices
+	integer(kind=c_int),intent(in)::indices_len
 	integer(kind=c_int),intent(in)::rid
 
      call de_tum_query_f2c_nsd_forwardAnswer(this%reference,&
 data,data_len,&
+distance,distance_len,&
+indices,indices_len,&
 rid)
 end subroutine forwardAnswer_internal
 
 subroutine forwardAnswer(this,&
 	data,data_len,&
+	distance,distance_len,&
+	indices,indices_len,&
 	rid)
      use, intrinsic :: iso_c_binding
      class(QueryNativeSocketDispatcher)::this
      	real(8),intent(in),dimension(*)::data
 	integer,intent(in)::data_len
+	real(8),intent(in),dimension(*)::distance
+	integer,intent(in)::distance_len
+	integer,intent(in),dimension(*)::indices
+	integer,intent(in)::indices_len
 	integer,intent(in)::rid
 
      call this%forwardAnswer_internal(&
 data,data_len,&
+distance,distance_len,&
+indices,indices_len,&
 rid)
 end subroutine forwardAnswer
 subroutine getQueryDescription_internal(this,&

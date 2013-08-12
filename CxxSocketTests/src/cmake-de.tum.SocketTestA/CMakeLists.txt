@@ -9,6 +9,39 @@ if (JNI_FOUND)
     INCLUDE_DIRECTORIES(${JNI_INCLUDE_DIRS})
 endif()
 
+IF(NOT VTK_BINARY_DIR)
+FIND_PACKAGE(VTK)
+IF(NOT VTK_DIR)
+  MESSAGE(FATAL_ERROR "Please set VTK_DIR.")
+ENDIF(NOT VTK_DIR)
+INCLUDE(${VTK_USE_FILE})
+ENDIF(NOT VTK_BINARY_DIR)
+
+# use what QVTK built with
+SET(QT_MOC_EXECUTABLE ${VTK_QT_MOC_EXECUTABLE} CACHE FILEPATH "")
+SET(QT_UIC_EXECUTABLE ${VTK_QT_UIC_EXECUTABLE} CACHE FILEPATH "")
+SET(QT_QMAKE_EXECUTABLE ${VTK_QT_QMAKE_EXECUTABLE} CACHE FILEPATH "")
+FIND_PACKAGE(Qt4 REQUIRED)
+INCLUDE(${QT_USE_FILE})
+
+# Use the include path and library for Qt that is used by VTK.
+INCLUDE_DIRECTORIES(
+  ${QT_INCLUDE_DIR}
+  ${CMAKE_CURRENT_BINARY_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+SET(SimpleViewSrcs ../../src/de/tum/SimpleView.cxx ../../src/de/tum/vtkMyImageData.cxx )
+SET(SimpleViewUI ../../src/de/tum/SimpleView.ui)
+SET(SimpleViewHeaders ../../src/de/tum/SimpleView.h ../../src/de/tum/MyTimer.hpp ../../src/de/tum/vtkMyImageData.h)
+SET(SimpleViewResources ../../src/de/tum/Icons/icons.qrc)
+
+# The rest should just work (sure...)
+QT4_WRAP_UI(UISrcs ${SimpleViewUI})
+QT4_WRAP_CPP(MOCSrcs ${SimpleViewHeaders} )
+QT4_ADD_RESOURCES(ResourceSrcs ${SimpleViewResources})
+
+
 include(CMakeForceCompiler)	
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 #CMAKE_FORCE_CXX_COMPILER(icpc "Intel Cxx Compiler") 
@@ -47,6 +80,15 @@ SET(SRC_COMP_LIB
      ../../components/java/de/tum/SocketTestAC2CxxProxy.cpp)
 
  	 
-ADD_EXECUTABLE(SocketTestA ${SRC_COMP_EXEC} )
+ADD_EXECUTABLE(SocketTestA ${SRC_COMP_EXEC} ${SimpleViewSrcs} ${UISrcs} ${MOCSrcs} ${ResourceSrcs})
 ADD_LIBRARY(SocketTestA-dev STATIC ${SRC_COMP_LIB} )
-target_link_libraries(SocketTestA pthread)
+target_link_libraries(SocketTestA 
+  pthread 
+  QVTK
+  ${QT_LIBRARIES}
+  vtkRendering
+  vtkGraphics
+  vtkIO
+  vtkCommon
+  vtkInfovis
+  vtkViews)

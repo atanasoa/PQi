@@ -1,0 +1,38 @@
+#ifndef MYTIMER_HPP
+#define MYTIMER_HPP
+#include <iostream>
+#include <QObject>
+#include <vtkSmartPointer.h>
+#include "de/tim/vtkMyImageData.h"
+#include <vtkExecutive.h>
+#include <vtkThreadedStreamingPipeline.h>
+#include <vtkRenderWindow.h>
+class MyTimer: public QObject{
+Q_OBJECT
+	private:
+		vtkSmartPointer<vtkMyImageData> _data;
+		vtkSmartPointer<vtkRenderWindow> _renderer;
+		int _counter;	
+	public:
+                MyTimer(){
+			_counter=2;		
+		}
+		void setRenderer(vtkSmartPointer<vtkRenderWindow> renderer){
+			_renderer=renderer;
+		}
+		void setData(vtkSmartPointer<vtkMyImageData> data){
+			_data=data;
+                        
+		}
+	public slots:
+		void update(){
+			//std::cout<<"singnal received"<<std::endl;
+			_data->SetDimensions((_counter+2),(_counter+2),(_counter+2));
+			_counter=(_counter+1)%10;				
+			_data->Modified();
+       			((vtkThreadedStreamingPipeline*)(_data->GetExecutive()))->Push();
+			_renderer->Render();
+ 		}
+
+};
+#endif
