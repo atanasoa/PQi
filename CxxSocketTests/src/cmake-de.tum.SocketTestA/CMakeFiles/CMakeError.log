@@ -1,84 +1,90 @@
 Determining if the Q_WS_WIN exist failed with the following output:
-Change Dir: /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp
+Change Dir: /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
-make[1]: Entering directory `/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o -c /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main()’:
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:25: error: ‘Q_WS_WIN’ was not declared in this scope
-make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o] Error 1
-make[1]: Leaving directory `/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec/fast] Error 2
+Run Build Command:/usr/bin/make "cmTryCompileExec1557085145/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1557085145.dir/build.make CMakeFiles/cmTryCompileExec1557085145.dir/build
+make[1]: Entering directory `/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1557085145.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec1557085145.dir/CheckSymbolExists.cxx.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+make[1]: Leaving directory `/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1557085145.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTryCompileExec1557085145/fast] Error 2
 
-File /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
 #include <QtCore/qglobal.h>
 
-void cmakeRequireSymbol(int dummy,...){(void)dummy;}
-int main()
+int main(int argc, char** argv)
 {
+  (void)argv;
 #ifndef Q_WS_WIN
-  cmakeRequireSymbol(0,&Q_WS_WIN);
-#endif
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
 
 Determining if the Q_WS_QWS exist failed with the following output:
-Change Dir: /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp
+Change Dir: /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
-make[1]: Entering directory `/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o -c /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main()’:
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:25: error: ‘Q_WS_QWS’ was not declared in this scope
-make[1]: Leaving directory `/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
-make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o] Error 1
-make: *** [cmTryCompileExec/fast] Error 2
+Run Build Command:/usr/bin/make "cmTryCompileExec22032053/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec22032053.dir/build.make CMakeFiles/cmTryCompileExec22032053.dir/build
+make[1]: Entering directory `/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec22032053.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec22032053.dir/CheckSymbolExists.cxx.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+make[1]: *** [CMakeFiles/cmTryCompileExec22032053.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec22032053/fast] Error 2
 
-File /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
 #include <QtCore/qglobal.h>
 
-void cmakeRequireSymbol(int dummy,...){(void)dummy;}
-int main()
+int main(int argc, char** argv)
 {
+  (void)argv;
 #ifndef Q_WS_QWS
-  cmakeRequireSymbol(0,&Q_WS_QWS);
-#endif
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
 
 Determining if the Q_WS_MAC exist failed with the following output:
-Change Dir: /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp
+Change Dir: /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
-make[1]: Entering directory `/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o -c /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main()’:
-/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:25: error: ‘Q_WS_MAC’ was not declared in this scope
-make[1]: Leaving directory `/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
-make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckSymbolExists.cxx.o] Error 1
-make: *** [cmTryCompileExec/fast] Error 2
+Run Build Command:/usr/bin/make "cmTryCompileExec3772557681/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3772557681.dir/build.make CMakeFiles/cmTryCompileExec3772557681.dir/build
+make[1]: Entering directory `/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3772557681.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-deprecated   -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3772557681.dir/CheckSymbolExists.cxx.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+make[1]: *** [CMakeFiles/cmTryCompileExec3772557681.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec3772557681/fast] Error 2
 
-File /work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
 #include <QtCore/qglobal.h>
 
-void cmakeRequireSymbol(int dummy,...){(void)dummy;}
-int main()
+int main(int argc, char** argv)
 {
+  (void)argv;
 #ifndef Q_WS_MAC
-  cmakeRequireSymbol(0,&Q_WS_MAC);
-#endif
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
 

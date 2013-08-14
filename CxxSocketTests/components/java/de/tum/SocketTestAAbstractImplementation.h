@@ -9,7 +9,7 @@
 // Authors: Tobias Weinzierl, Atanas Atanasov   
 //
 
-#include "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/Query.h"
+#include "de/tum/Query.h"
 
 namespace de { 
 namespace tum { 

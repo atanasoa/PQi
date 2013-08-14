@@ -7,10 +7,10 @@
 #include "tarch/services/Service.h"
 #include "tarch/logging/Log.h"
 #include "queries/records/HeapQuery.h"
-
+#include "de/tum/QueryCxx2SocketPlainPort.h"
 
 #include <vector>
-
+#include <unordered_map>
 
 namespace queries {
   class QueryServer;
@@ -97,7 +97,8 @@ class queries::QueryServer: public tarch::services::Service {
 	 */
 	std::vector<queries::records::HeapQuery> _pendingQueries;
 	std::vector<int> _heapIds;
-
+	std::vector<std::unordered_map<int,std::pair<double,double> >*> _data;
+	de::tum::QueryCxx2SocketPlainPort *_queryServer;
 	int _dataTag;
 
 	int _managementTag;
@@ -106,6 +107,7 @@ class queries::QueryServer: public tarch::services::Service {
 
 	int _finishedDataSendAcknowledgementsSinceLastReleaseCall;
 	bool init;
+	int _timestep;	
 	/**
 	 * Private Standard Constructor
 	 *
@@ -242,6 +244,17 @@ class queries::QueryServer: public tarch::services::Service {
      */
     void commitQueries();
     
+    bool intersectsWithQuery(int index, const tarch::la::Vector<2,double> voxelOffset,const tarch::la::Vector<2,double> voxelSize);
+    bool holdsFullQuery(int index, const tarch::la::Vector<2,double> voxelOffset,const tarch::la::Vector<2,double> voxelSize);
+    void setData(const int index,const tarch::la::Vector<2,double> &voxelOffset,const tarch::la::Vector<2,double> &voxelSize,const double x);	
+    bool isInVoxel(const tarch::la::Vector<2,double> &voxelOffset,
+		const tarch::la::Vector<2,double> &voxelSize,
+		double x,
+		double y);
+    void swapBuffers(const int index);
+    void sendData(const int index,const tarch::la::Vector<2,double> &voxelOffset,int level);
+    void receiveData(const int index,const tarch::la::Vector<2,double> &voxelOffset,const int level,const int worker);
+    void fireAnswers(const int index);
     /**
      * Synchronizes the pending query queues with through socket
      */

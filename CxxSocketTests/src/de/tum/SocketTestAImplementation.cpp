@@ -27,6 +27,7 @@ de::tum::SocketTestAImplementation::SocketTestAImplementation(){
 	_timesteps =  new int[_dimensions[0]*_dimensions[1]];
 	for(int i=0;i<_dimensions[0]*_dimensions[1];i++){
 		_timesteps[i]=0;
+		_distances[i]=20000000;
 	}
 }
 
@@ -64,10 +65,9 @@ void de::tum::SocketTestAImplementation::forwardAnswer(
 		const int mid
 		){
 	 pthread_mutex_lock( &_lock );
-	 for(int i=0;i<data_len;i++)
+	 for(int i=0;i<indices_len;i++)
 	 {
-		 if(_timesteps[indices[i]]<mid||
-		               distance[i]<_distances[indices[i]]){
+		 if(_timesteps[indices[i]]<mid && distance[i]<=_distances[indices[i]]){
 			 _distances[indices[i]]=distance[i];
 			 _data[indices[i]]=data[i];
 			 _timesteps[indices[i]]=mid;
@@ -78,8 +78,18 @@ void de::tum::SocketTestAImplementation::forwardAnswer(
 
 void de::tum::SocketTestAImplementation::cloneData(double* targetData){
 	pthread_mutex_lock( &_lock );
+	double min= 200000000;
+	double max= -200000000;
 	for(int i=0;i<_dimensions[0]*_dimensions[1];i++){
 		targetData[i]=_data[i];
+		if(min>_data[i])
+			min=_data[i];
+		if(max<_data[i])
+			max=_data[i];
+			
+	}
+	for(int i=0;i<_dimensions[0]*_dimensions[1];i++){
+		targetData[i]=(_data[i]-min)/(max-min);
 	}
 	pthread_mutex_unlock( &_lock );
 }

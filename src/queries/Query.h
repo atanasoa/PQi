@@ -59,6 +59,7 @@ class queries::Query {
      *         have these data.
      */
     virtual bool intersectsWithQuery(
+		const int index,
     		const tarch::la::Vector<DIMENSIONS,double>&  voxelOffset,
     		const tarch::la::Vector<DIMENSIONS,double>&  voxelSize) = 0;
 
