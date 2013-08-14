@@ -234,6 +234,16 @@ void queries::QueryServer::receiveData(
 	}
 }
 
+void queries::QueryServer::clearHeapBuffer(const int index){
+	peano::heap::Heap<queries::records::Answer>::getInstance().getData(_heapIds[index]).clear();
+	
+		
+}
+
+void queries::QueryServer::clearQueryBuffer(const int index){
+	_data[index]->clear();
+		
+}
 void queries::QueryServer::fireAnswers(const int index){
 	std::vector<queries::records::Answer>& masterAnswer = peano::heap::Heap<queries::records::Answer>::getInstance().getData(_heapIds[index]);
 	int size=masterAnswer.size();	

@@ -255,6 +255,9 @@ class queries::QueryServer: public tarch::services::Service {
     void sendData(const int index,const tarch::la::Vector<2,double> &voxelOffset,int level);
     void receiveData(const int index,const tarch::la::Vector<2,double> &voxelOffset,const int level,const int worker);
     void fireAnswers(const int index);
+    void clearHeapBuffer(const int index);
+    
+    void clearQueryBuffer(const int index);	
     /**
      * Synchronizes the pending query queues with through socket
      */

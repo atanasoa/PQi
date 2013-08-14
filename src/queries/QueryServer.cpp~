@@ -234,6 +234,16 @@ void queries::QueryServer::receiveData(
 	}
 }
 
+void queries::QueryServer::clearHeapBuffer(const int index){
+	peano::heap::Heap<queries::records::Answer>::getInstance().getData(_heapIds[index]).clear();
+	_data[index]->clear();
+		
+}
+
+void queries::QueryServer::clearQueryBuffer(const int index){
+	_data[index]->clear();
+		
+}
 void queries::QueryServer::fireAnswers(const int index){
 	std::vector<queries::records::Answer>& masterAnswer = peano::heap::Heap<queries::records::Answer>::getInstance().getData(_heapIds[index]);
 	int size=masterAnswer.size();	
@@ -281,7 +291,7 @@ void queries::QueryServer::setData(
 				dist=ddx*ddx+ddy*ddy;
 				std::unordered_map< int,std::pair<double,double > >::const_iterator got
 					=_data[index]->find(i*_pendingQueries[index].getDimenions()[0]+j);		
-			  	if(got!=_data[index]->end()){
+			  	if(got==_data[index]->end()){
 					(*_data[index])[i*_pendingQueries[index].getDimenions()[0]+j]=std::make_pair<double,double>(0.0,0.0);
 					(*_data[index])[i*_pendingQueries[index].getDimenions()[0]+j].second=x;
 					(*_data[index])[i*_pendingQueries[index].getDimenions()[0]+j].first=sqrt(dist);

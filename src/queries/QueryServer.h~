@@ -7,7 +7,7 @@
 #include "tarch/services/Service.h"
 #include "tarch/logging/Log.h"
 #include "queries/records/HeapQuery.h"
-
+#include "de/tum/QueryCxx2SocketPlainPort.h"
 
 #include <vector>
 #include <unordered_map>
@@ -98,7 +98,7 @@ class queries::QueryServer: public tarch::services::Service {
 	std::vector<queries::records::HeapQuery> _pendingQueries;
 	std::vector<int> _heapIds;
 	std::vector<std::unordered_map<int,std::pair<double,double> >*> _data;
-
+	de::tum::QueryCxx2SocketPlainPort *_queryServer;
 	int _dataTag;
 
 	int _managementTag;
@@ -255,6 +255,7 @@ class queries::QueryServer: public tarch::services::Service {
     void sendData(const int index,const tarch::la::Vector<2,double> &voxelOffset,int level);
     void receiveData(const int index,const tarch::la::Vector<2,double> &voxelOffset,const int level,const int worker);
     void fireAnswers(const int index);
+    void clearBuffers(const int index);
     /**
      * Synchronizes the pending query queues with through socket
      */
