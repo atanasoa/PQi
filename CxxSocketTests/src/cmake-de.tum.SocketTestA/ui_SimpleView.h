@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'SimpleView.ui'
 **
-** Created: Mon Aug 12 16:46:39 2013
-**      by: Qt User Interface Compiler version 4.8.3
+** Created: Wed Aug 14 15:00:24 2013
+**      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/

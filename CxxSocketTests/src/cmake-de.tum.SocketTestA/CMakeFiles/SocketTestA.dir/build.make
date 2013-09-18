@@ -4,7 +4,7 @@
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canonical targets will work.
+# Disable implicit rules so canoncical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -26,22 +26,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /lrz/mnt/sys.x86_64/tools/cmake/2.8.5_sles11/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
-
-# Escaping for special characters.
-EQUALS = =
+RM = /lrz/mnt/sys.x86_64/tools/cmake/2.8.5_sles11/bin/cmake -E remove -f
 
 # The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
+CMAKE_EDIT_COMMAND = /lrz/mnt/sys.x86_64/tools/cmake/2.8.5_sles11/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA
+CMAKE_SOURCE_DIR = /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA
+CMAKE_BINARY_DIR = /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SocketTestA.dir/depend.make
@@ -52,344 +49,106 @@ include CMakeFiles/SocketTestA.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SocketTestA.dir/flags.make
 
-ui_SimpleView.h: /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.ui
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ui_SimpleView.h"
-	/usr/bin/uic-qt4 -o /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/ui_SimpleView.h /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.ui
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o: CMakeFiles/SocketTestA.dir/flags.make
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o: /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o"
+	mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o -c /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp
 
-__/de/tum/moc_SimpleView.cxx: /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating __/de/tum/moc_SimpleView.cxx"
-	/usr/bin/moc-qt4 -I/home/atanasoa/Programme/VTK5.10.1/build -I/home/atanasoa/Programme/VTK5.10.1/build/Common -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities -I/home/atanasoa/Programme/VTK5.10.1/build/VolumeRendering -I/home/atanasoa/Programme/VTK5.10.1/build/Rendering -I/home/atanasoa/Programme/VTK5.10.1/build/Charts -I/home/atanasoa/Programme/VTK5.10.1/build/Chemistry -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkalglib -I/home/atanasoa/Programme/VTK5.10.1/Infovis -I/home/atanasoa/Programme/VTK5.10.1/Geovis -I/home/atanasoa/Programme/VTK5.10.1/Views -I/home/atanasoa/Programme/VTK5.10.1/VolumeRendering -I/home/atanasoa/Programme/VTK5.10.1/Hybrid -I/home/atanasoa/Programme/VTK5.10.1/Widgets -I/home/atanasoa/Programme/VTK5.10.1/Rendering -I/home/atanasoa/Programme/VTK5.10.1/Charts -I/home/atanasoa/Programme/VTK5.10.1/Chemistry -I/home/atanasoa/Programme/VTK5.10.1/Rendering/Testing/Cxx -I/home/atanasoa/Programme/VTK5.10.1/IO -I/home/atanasoa/Programme/VTK5.10.1/Imaging -I/home/atanasoa/Programme/VTK5.10.1/Graphics -I/home/atanasoa/Programme/VTK5.10.1/GenericFiltering -I/home/atanasoa/Programme/VTK5.10.1/Filtering -I/home/atanasoa/Programme/VTK5.10.1/Common -I/home/atanasoa/Programme/VTK5.10.1/Utilities -I/home/atanasoa/Programme/VTK5.10.1/Common/Testing/Cxx -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtknetcdf -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtknetcdf -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtknetcdf/include -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtklibproj4 -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtklibproj4 -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/DICOMParser -I/home/atanasoa/Programme/VTK5.10.1/Utilities/DICOMParser -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkfreetype/include -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkfreetype/include -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/LSDyna -I/home/atanasoa/Programme/VTK5.10.1/Utilities/LSDyna -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/MaterialLibrary -I/home/atanasoa/Programme/VTK5.10.1/Utilities/MaterialLibrary -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkmetaio -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkmetaio -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/verdict -I/home/atanasoa/Programme/VTK5.10.1/Utilities/verdict -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkhdf5 -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkhdf5 -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkhdf5/src -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkhdf5/src -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkhdf5/hl/src -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkhdf5/hl/src -I/home/atanasoa/Programme/VTK5.10.1/Utilities/utf8/source -I/home/atanasoa/Programme/VTK5.10.1/GUISupport/Qt -I/home/atanasoa/Programme/VTK5.10.1/build/GUISupport/Qt -I/home/atanasoa/Programme/VTK5.10.1/GUISupport/Qt/Chart -I/home/atanasoa/Programme/VTK5.10.1/build/GUISupport/Qt/Chart -I/home/atanasoa/Programme/VTK5.10.1/Infovis -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkalglib -I/home/atanasoa/Programme/VTK5.10.1/Geovis -I/home/atanasoa/Programme/VTK5.10.1/Views -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/include/qt4 -I/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA -I/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -o /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_SimpleView.cxx /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.h
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.i"
+	mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp > CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.i
 
-__/de/tum/moc_MyTimer.cxx: /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/MyTimer.hpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating __/de/tum/moc_MyTimer.cxx"
-	/usr/bin/moc-qt4 -I/home/atanasoa/Programme/VTK5.10.1/build -I/home/atanasoa/Programme/VTK5.10.1/build/Common -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities -I/home/atanasoa/Programme/VTK5.10.1/build/VolumeRendering -I/home/atanasoa/Programme/VTK5.10.1/build/Rendering -I/home/atanasoa/Programme/VTK5.10.1/build/Charts -I/home/atanasoa/Programme/VTK5.10.1/build/Chemistry -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkalglib -I/home/atanasoa/Programme/VTK5.10.1/Infovis -I/home/atanasoa/Programme/VTK5.10.1/Geovis -I/home/atanasoa/Programme/VTK5.10.1/Views -I/home/atanasoa/Programme/VTK5.10.1/VolumeRendering -I/home/atanasoa/Programme/VTK5.10.1/Hybrid -I/home/atanasoa/Programme/VTK5.10.1/Widgets -I/home/atanasoa/Programme/VTK5.10.1/Rendering -I/home/atanasoa/Programme/VTK5.10.1/Charts -I/home/atanasoa/Programme/VTK5.10.1/Chemistry -I/home/atanasoa/Programme/VTK5.10.1/Rendering/Testing/Cxx -I/home/atanasoa/Programme/VTK5.10.1/IO -I/home/atanasoa/Programme/VTK5.10.1/Imaging -I/home/atanasoa/Programme/VTK5.10.1/Graphics -I/home/atanasoa/Programme/VTK5.10.1/GenericFiltering -I/home/atanasoa/Programme/VTK5.10.1/Filtering -I/home/atanasoa/Programme/VTK5.10.1/Common -I/home/atanasoa/Programme/VTK5.10.1/Utilities -I/home/atanasoa/Programme/VTK5.10.1/Common/Testing/Cxx -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtknetcdf -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtknetcdf -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtknetcdf/include -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtklibproj4 -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtklibproj4 -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/DICOMParser -I/home/atanasoa/Programme/VTK5.10.1/Utilities/DICOMParser -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkfreetype/include -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkfreetype/include -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/LSDyna -I/home/atanasoa/Programme/VTK5.10.1/Utilities/LSDyna -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/MaterialLibrary -I/home/atanasoa/Programme/VTK5.10.1/Utilities/MaterialLibrary -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkmetaio -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkmetaio -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/verdict -I/home/atanasoa/Programme/VTK5.10.1/Utilities/verdict -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkhdf5 -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkhdf5 -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkhdf5/src -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkhdf5/src -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkhdf5/hl/src -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkhdf5/hl/src -I/home/atanasoa/Programme/VTK5.10.1/Utilities/utf8/source -I/home/atanasoa/Programme/VTK5.10.1/GUISupport/Qt -I/home/atanasoa/Programme/VTK5.10.1/build/GUISupport/Qt -I/home/atanasoa/Programme/VTK5.10.1/GUISupport/Qt/Chart -I/home/atanasoa/Programme/VTK5.10.1/build/GUISupport/Qt/Chart -I/home/atanasoa/Programme/VTK5.10.1/Infovis -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkalglib -I/home/atanasoa/Programme/VTK5.10.1/Geovis -I/home/atanasoa/Programme/VTK5.10.1/Views -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/include/qt4 -I/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA -I/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -o /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_MyTimer.cxx /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/MyTimer.hpp
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.s"
+	mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp -o CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.s
 
-__/de/tum/moc_vtkMyImageData.cxx: /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating __/de/tum/moc_vtkMyImageData.cxx"
-	/usr/bin/moc-qt4 -I/home/atanasoa/Programme/VTK5.10.1/build -I/home/atanasoa/Programme/VTK5.10.1/build/Common -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities -I/home/atanasoa/Programme/VTK5.10.1/build/VolumeRendering -I/home/atanasoa/Programme/VTK5.10.1/build/Rendering -I/home/atanasoa/Programme/VTK5.10.1/build/Charts -I/home/atanasoa/Programme/VTK5.10.1/build/Chemistry -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkalglib -I/home/atanasoa/Programme/VTK5.10.1/Infovis -I/home/atanasoa/Programme/VTK5.10.1/Geovis -I/home/atanasoa/Programme/VTK5.10.1/Views -I/home/atanasoa/Programme/VTK5.10.1/VolumeRendering -I/home/atanasoa/Programme/VTK5.10.1/Hybrid -I/home/atanasoa/Programme/VTK5.10.1/Widgets -I/home/atanasoa/Programme/VTK5.10.1/Rendering -I/home/atanasoa/Programme/VTK5.10.1/Charts -I/home/atanasoa/Programme/VTK5.10.1/Chemistry -I/home/atanasoa/Programme/VTK5.10.1/Rendering/Testing/Cxx -I/home/atanasoa/Programme/VTK5.10.1/IO -I/home/atanasoa/Programme/VTK5.10.1/Imaging -I/home/atanasoa/Programme/VTK5.10.1/Graphics -I/home/atanasoa/Programme/VTK5.10.1/GenericFiltering -I/home/atanasoa/Programme/VTK5.10.1/Filtering -I/home/atanasoa/Programme/VTK5.10.1/Common -I/home/atanasoa/Programme/VTK5.10.1/Utilities -I/home/atanasoa/Programme/VTK5.10.1/Common/Testing/Cxx -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtknetcdf -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtknetcdf -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtknetcdf/include -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtklibproj4 -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtklibproj4 -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/DICOMParser -I/home/atanasoa/Programme/VTK5.10.1/Utilities/DICOMParser -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkfreetype/include -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkfreetype/include -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/LSDyna -I/home/atanasoa/Programme/VTK5.10.1/Utilities/LSDyna -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/MaterialLibrary -I/home/atanasoa/Programme/VTK5.10.1/Utilities/MaterialLibrary -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkmetaio -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkmetaio -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/verdict -I/home/atanasoa/Programme/VTK5.10.1/Utilities/verdict -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkhdf5 -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkhdf5 -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkhdf5/src -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkhdf5/src -I/home/atanasoa/Programme/VTK5.10.1/build/Utilities/vtkhdf5/hl/src -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkhdf5/hl/src -I/home/atanasoa/Programme/VTK5.10.1/Utilities/utf8/source -I/home/atanasoa/Programme/VTK5.10.1/GUISupport/Qt -I/home/atanasoa/Programme/VTK5.10.1/build/GUISupport/Qt -I/home/atanasoa/Programme/VTK5.10.1/GUISupport/Qt/Chart -I/home/atanasoa/Programme/VTK5.10.1/build/GUISupport/Qt/Chart -I/home/atanasoa/Programme/VTK5.10.1/Infovis -I/home/atanasoa/Programme/VTK5.10.1/Utilities/vtkalglib -I/home/atanasoa/Programme/VTK5.10.1/Geovis -I/home/atanasoa/Programme/VTK5.10.1/Views -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore -I/usr/include/qt4 -I/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA -I/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -o /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_vtkMyImageData.cxx /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.h
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.requires:
+.PHONY : CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.requires
 
-qrc_icons.cxx: /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/Icons/fileopen.png
-qrc_icons.cxx: __/de/tum/Icons/icons.qrc.depends
-qrc_icons.cxx: /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/Icons/icons.qrc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating qrc_icons.cxx"
-	/usr/bin/rcc -name icons -o /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/qrc_icons.cxx /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/Icons/icons.qrc
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.provides: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.provides.build
+.PHONY : CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.provides
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o: CMakeFiles/SocketTestA.dir/flags.make
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o: /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.provides.build: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp > CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.i
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o: CMakeFiles/SocketTestA.dir/flags.make
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o: /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o"
+	mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o -c /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp -o CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.s
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.i"
+	mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp > CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.i
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.requires:
-.PHONY : CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.requires
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.s"
+	mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp -o CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.s
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.provides: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.requires
-	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.provides.build
-.PHONY : CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.provides
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.requires:
+.PHONY : CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.requires
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.provides.build: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.provides: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.provides.build
+.PHONY : CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.provides
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o: CMakeFiles/SocketTestA.dir/flags.make
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o: /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.provides.build: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp > CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.i
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o: CMakeFiles/SocketTestA.dir/flags.make
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o: /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o"
+	mpicxx   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o -c /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp -o CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.s
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.i"
+	mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp > CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.i
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.requires:
-.PHONY : CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.requires
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.s"
+	mpicxx  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp -o CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.s
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.provides: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.requires
-	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.provides.build
-.PHONY : CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.provides
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.requires:
+.PHONY : CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.requires
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.provides.build: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.provides: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.provides.build
+.PHONY : CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.provides
 
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o: CMakeFiles/SocketTestA.dir/flags.make
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o: /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp > CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.i
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp -o CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.s
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.requires:
-.PHONY : CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.requires
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.provides: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.requires
-	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.provides.build
-.PHONY : CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.provides
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.provides.build: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o: CMakeFiles/SocketTestA.dir/flags.make
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o: /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx > CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.i
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx -o CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.s
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o.requires:
-.PHONY : CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o.requires
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o.provides: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o.requires
-	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o.provides.build
-.PHONY : CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o.provides
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o.provides.build: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o: CMakeFiles/SocketTestA.dir/flags.make
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o: /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx > CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.i
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx -o CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.s
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o.requires:
-.PHONY : CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o.requires
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o.provides: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o.requires
-	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o.provides.build
-.PHONY : CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o.provides
-
-CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o.provides.build: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o: CMakeFiles/SocketTestA.dir/flags.make
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o: __/de/tum/moc_SimpleView.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_SimpleView.cxx
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_SimpleView.cxx > CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.i
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_SimpleView.cxx -o CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.s
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o.requires:
-.PHONY : CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o.requires
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o.provides: CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o.requires
-	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o.provides.build
-.PHONY : CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o.provides
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o.provides.build: CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o: CMakeFiles/SocketTestA.dir/flags.make
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o: __/de/tum/moc_MyTimer.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_MyTimer.cxx
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_MyTimer.cxx > CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.i
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_MyTimer.cxx -o CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.s
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o.requires:
-.PHONY : CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o.requires
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o.provides: CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o.requires
-	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o.provides.build
-.PHONY : CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o.provides
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o.provides.build: CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o: CMakeFiles/SocketTestA.dir/flags.make
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o: __/de/tum/moc_vtkMyImageData.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_vtkMyImageData.cxx
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_vtkMyImageData.cxx > CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.i
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/__/de/tum/moc_vtkMyImageData.cxx -o CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.s
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o.requires:
-.PHONY : CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o.requires
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o.provides: CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o.requires
-	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o.provides.build
-.PHONY : CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o.provides
-
-CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o.provides.build: CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o
-
-CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o: CMakeFiles/SocketTestA.dir/flags.make
-CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o: qrc_icons.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles $(CMAKE_PROGRESS_14)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o -c /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/qrc_icons.cxx
-
-CMakeFiles/SocketTestA.dir/qrc_icons.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SocketTestA.dir/qrc_icons.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/qrc_icons.cxx > CMakeFiles/SocketTestA.dir/qrc_icons.cxx.i
-
-CMakeFiles/SocketTestA.dir/qrc_icons.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SocketTestA.dir/qrc_icons.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/qrc_icons.cxx -o CMakeFiles/SocketTestA.dir/qrc_icons.cxx.s
-
-CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o.requires:
-.PHONY : CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o.requires
-
-CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o.provides: CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o.requires
-	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o.provides.build
-.PHONY : CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o.provides
-
-CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o.provides.build: CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o
+CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.provides.build: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
 
 # Object files for target SocketTestA
 SocketTestA_OBJECTS = \
-"CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o" \
-"CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o" \
-"CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o" \
-"CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o" \
-"CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o" \
-"CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o" \
-"CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o" \
-"CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o" \
-"CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o"
+"CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o" \
+"CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o" \
+"CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o"
 
 # External object files for target SocketTestA
 SocketTestA_EXTERNAL_OBJECTS =
 
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/build.make
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libQVTK.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libQtGui.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libQtCore.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkRendering.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkGraphics.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkIO.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkCommon.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkInfovis.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkViews.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkInfovis.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkWidgets.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkHybrid.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkexoIIc.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkVolumeRendering.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkRendering.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkGraphics.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkverdict.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkftgl.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkfreetype.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libXt.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkIO.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkDICOMParser.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkNetCDF_cxx.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkNetCDF.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkhdf5_hl.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkhdf5.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libLSDyna.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkmetaio.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtksqlite.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkpng.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtktiff.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkjpeg.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkexpat.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libGL.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtklibxml2.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkzlib.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkalglib.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libQtWebKit.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libQtXmlPatterns.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libQtGui.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libQtSql.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libQtNetwork.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libQtCore.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkImaging.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkFiltering.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtkCommon.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /home/atanasoa/Programme/VTK5.10.1/build/bin/libvtksys.a
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libSM.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libICE.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libX11.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: /usr/lib/x86_64-linux-gnu/libXext.so
-/home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA"
+/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o
+/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o
+/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o
+/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/build.make
+/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/native/SocketTestA: CMakeFiles/SocketTestA.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/native/SocketTestA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SocketTestA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/SocketTestA.dir/build: /home/atanasoa/workspace/PQi/CxxSocketTests/native/SocketTestA
+CMakeFiles/SocketTestA.dir/build: /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/native/SocketTestA
 .PHONY : CMakeFiles/SocketTestA.dir/build
 
-CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.requires
-CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.requires
-CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.requires
-CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/SimpleView.cxx.o.requires
-CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/vtkMyImageData.cxx.o.requires
-CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/__/de/tum/moc_SimpleView.cxx.o.requires
-CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/__/de/tum/moc_MyTimer.cxx.o.requires
-CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/__/de/tum/moc_vtkMyImageData.cxx.o.requires
-CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/qrc_icons.cxx.o.requires
+CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAC2CxxProxy.cpp.o.requires
+CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/components/java/de/tum/SocketTestAAbstractImplementation.cpp.o.requires
+CMakeFiles/SocketTestA.dir/requires: CMakeFiles/SocketTestA.dir/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/SocketTestAImplementation.cpp.o.requires
 .PHONY : CMakeFiles/SocketTestA.dir/requires
 
 CMakeFiles/SocketTestA.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/SocketTestA.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/SocketTestA.dir/clean
 
-CMakeFiles/SocketTestA.dir/depend: ui_SimpleView.h
-CMakeFiles/SocketTestA.dir/depend: __/de/tum/moc_SimpleView.cxx
-CMakeFiles/SocketTestA.dir/depend: __/de/tum/moc_MyTimer.cxx
-CMakeFiles/SocketTestA.dir/depend: __/de/tum/moc_vtkMyImageData.cxx
-CMakeFiles/SocketTestA.dir/depend: qrc_icons.cxx
-	cd /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA.dir/DependInfo.cmake --color=$(COLOR)
+CMakeFiles/SocketTestA.dir/depend:
+	cd /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SocketTestA.dir/depend
 

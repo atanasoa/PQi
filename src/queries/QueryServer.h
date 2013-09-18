@@ -10,7 +10,7 @@
 #include "de/tum/QueryCxx2SocketPlainPort.h"
 
 #include <vector>
-#include <unordered_map>
+#include <hash_map>
 
 namespace queries {
   class QueryServer;
@@ -97,7 +97,7 @@ class queries::QueryServer: public tarch::services::Service {
 	 */
 	std::vector<queries::records::HeapQuery> _pendingQueries;
 	std::vector<int> _heapIds;
-	std::vector<std::unordered_map<int,std::pair<double,double> >*> _data;
+	std::vector<__gnu_cxx::hash_map<int,std::pair<double,double> >*> _data;
 	de::tum::QueryCxx2SocketPlainPort *_queryServer;
 	int _dataTag;
 
@@ -145,6 +145,7 @@ class queries::QueryServer: public tarch::services::Service {
 	 * Used by receiveDanglingMessages().
 	 */
 	void receiveNewQueries();
+        bool _sendFlag;
    // #endif
   public:
 	virtual ~QueryServer();
@@ -183,7 +184,8 @@ class queries::QueryServer: public tarch::services::Service {
      *   getNumberOfPendingQueries() and getPendingQuery().
      */
     int getNumberOfPendingQueries() const;
-
+    void close();
+    void setSendFlag(bool flag);  
     /**
      * @see getNumberOfPendingQueries()
      */

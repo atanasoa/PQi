@@ -1,7 +1,9 @@
-cmake_minimum_required(VERSION 2.8.6)
+cmake_minimum_required(VERSION 2.8.5)
 PROJECT(SocketTestA)
-
+include(CMakeForceCompiler)
 find_package(JNI)
+
+SET(PARALLEL "1" CACHE STRING "parallel mode")
 
 if (JNI_FOUND)
     message (STATUS "JNI_INCLUDE_DIRS=${JNI_INCLUDE_DIRS}")
@@ -9,6 +11,15 @@ if (JNI_FOUND)
     INCLUDE_DIRECTORIES(${JNI_INCLUDE_DIRS})
 endif()
 
+
+IF(PARALLEL)
+    message (STATUS "Prorgam is able to run parallel") 
+    add_definitions(-DPARALLEL)
+    CMAKE_FORCE_CXX_COMPILER(mpicxx "mpi compiler") 
+ENDIF()
+
+#no qt in parallel mode
+IF(NOT PARALLEL)
 IF(NOT VTK_BINARY_DIR)
 FIND_PACKAGE(VTK)
 IF(NOT VTK_DIR)
@@ -17,6 +28,7 @@ ENDIF(NOT VTK_DIR)
 INCLUDE(${VTK_USE_FILE})
 ENDIF(NOT VTK_BINARY_DIR)
 
+	
 # use what QVTK built with
 SET(QT_MOC_EXECUTABLE ${VTK_QT_MOC_EXECUTABLE} CACHE FILEPATH "")
 SET(QT_UIC_EXECUTABLE ${VTK_QT_UIC_EXECUTABLE} CACHE FILEPATH "")
@@ -40,9 +52,9 @@ SET(SimpleViewResources ../../src/de/tum/Icons/icons.qrc)
 QT4_WRAP_UI(UISrcs ${SimpleViewUI})
 QT4_WRAP_CPP(MOCSrcs ${SimpleViewHeaders} )
 QT4_ADD_RESOURCES(ResourceSrcs ${SimpleViewResources})
+ENDIF(NOT PARALLEL)
 
-
-include(CMakeForceCompiler)	
+	
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 #CMAKE_FORCE_CXX_COMPILER(icpc "Intel Cxx Compiler") 
 #CMAKE_FORCE_C_COMPILER(icc "Intel C Compiler")     
@@ -82,6 +94,11 @@ SET(SRC_COMP_LIB
  	 
 ADD_EXECUTABLE(SocketTestA ${SRC_COMP_EXEC} ${SimpleViewSrcs} ${UISrcs} ${MOCSrcs} ${ResourceSrcs})
 ADD_LIBRARY(SocketTestA-dev STATIC ${SRC_COMP_LIB} )
+IF(PARALLEL)
+target_link_libraries(SocketTestA 
+  pthread)
+ENDIF(PARALLEL)
+IF(NOT PARALLEL)
 target_link_libraries(SocketTestA 
   pthread 
   QVTK
@@ -92,3 +109,4 @@ target_link_libraries(SocketTestA
   vtkCommon
   vtkInfovis
   vtkViews)
+ENDIF(NOT PARALLEL)

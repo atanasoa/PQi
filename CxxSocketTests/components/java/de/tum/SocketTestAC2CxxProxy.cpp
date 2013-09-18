@@ -1,3 +1,4 @@
+#include <mpi.h>
 #include "de/tum/SocketTestAC2CxxProxy.h"
 #ifdef _WIN32
 	#include <winsock2.h>
@@ -14,7 +15,6 @@
 	#include <unistd.h>
 	#include <arpa/inet.h>
 #endif
-
 #include <stdio.h>
 #include <assert.h>
 #include <algorithm>
@@ -97,7 +97,7 @@ int
           assert (sockfd>=0);
           bind(sockfd, result->ai_addr, (int)result->ai_addrlen);
 		  
-          listen(sockfd,5);
+          listen(sockfd,32);
          
         
 }
@@ -218,6 +218,8 @@ void invoker_destroy_instance(void** ref,int,int,char*,char*){
       delete ((de::tum::SocketTestAImplementation*)*ref);
   
 }
+
+
 void invoker_forwardAnswer(void** ref,int newsockfd, int buffer_size,char* rcvBuffer, char* sendBuffer){
   int data_len=0;
 readData((char*)&data_len,sizeof(int),rcvBuffer,newsockfd,buffer_size);
@@ -235,7 +237,6 @@ int rid;
 readData((char*)&rid,sizeof(int),rcvBuffer,newsockfd,buffer_size);
 
   ((de::tum::SocketTestAImplementation*)*ref)->forwardAnswer(data,data_len,distance,distance_len,indices,indices_len,rid);
-  
 }
 void invoker_getQueryDescription(void** ref,int newsockfd, int buffer_size,char* rcvBuffer, char* sendBuffer){
   int offset_len=0;
@@ -271,7 +272,7 @@ void invoker_getNumberOfParts(void** ref,int newsockfd, int buffer_size,char* rc
 readData((char*)&parts,sizeof(int),rcvBuffer,newsockfd,buffer_size);
 
   ((de::tum::SocketTestAImplementation*)*ref)->getNumberOfParts(parts);
-  sendData((char*)&parts,sizeof(int),sendBuffer,newsockfd,buffer_size);
+ // sendData((char*)&parts,sizeof(int),sendBuffer,newsockfd,buffer_size);
 
 }
 
@@ -320,8 +321,8 @@ clientfd,int bufferSize){
      invokers[1]=invoker_destroy_instance;
      int methodId=0;
      invokers[7]=invoker_forwardAnswer;
-invokers[6]=invoker_getQueryDescription;
-invokers[5]=invoker_getNumberOfParts;
+     invokers[6]=invoker_getQueryDescription;
+     invokers[5]=invoker_getNumberOfParts;
 
      while(methodId!=1){
           readData((char*)&methodId,sizeof(int),rcvBuffer,clientfd,bufferSize);
@@ -372,7 +373,7 @@ void initialise_(SOCKETTESTA_arg& arg){
    if(arg.java_client_flag)         
      open_client(arg.hostname,client_port,arg.java_serverfd,arg.java_clientfd);
    bind_server(arg.daemon_port,arg.daemon_serverfd);
-   for(int i=0;i<5;i++){
+   for(int i=0;i<32;i++){
 #ifdef _WIN32    
      CreateThread(NULL, 0,server_deamon_run, &arg, 0, NULL);
 #else     

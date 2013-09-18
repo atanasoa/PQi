@@ -26,6 +26,11 @@ de::tum::QueryCxx2SocketPlainPort::QueryCxx2SocketPlainPort(char* host,int port,
      _buffer_size(buffer_size){
      _rcvBuffer=new char[_buffer_size];
      _sendBuffer=new char[_buffer_size];
+     int rank;
+     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+     std::stringstream stream;
+     stream<<"log_client_"<<rank<<".txt";
+     _logFile.open(stream.str().c_str() );
      de::tum::QueryCxx2SocketPlainPort::open_client(host,port,_sockfd,_newsockfd);
      
 }
@@ -45,7 +50,8 @@ de::tum::QueryCxx2SocketPlainPort::~QueryCxx2SocketPlainPort(){
      delete [] _sendBuffer;
      
      de::tum::QueryCxx2SocketPlainPort::close(_sockfd,_newsockfd);
-     
+     _logFile.flush();
+     _logFile.close();	     
 }
 
 
@@ -134,7 +140,7 @@ newsockfd,int bufferSize){
      //clear buffer
      bzero(sendBuffer,bufferSize);
      while(total_send_bytes<numberOfBytes){
-          remaining_bytes_to_send=(numberOfBytes-send_bytes<=bufferSize)?numberOfBytes-send_bytes:bufferSize;
+          remaining_bytes_to_send=(numberOfBytes-total_send_bytes<=bufferSize)?numberOfBytes-total_send_bytes:bufferSize;
           memcpy(sendBuffer,data_ptr,remaining_bytes_to_send);
           send_bytes=0;
           char* send_buffer_ptr=sendBuffer;
@@ -242,12 +248,11 @@ void de::tum::QueryCxx2SocketPlainPort::getNumberOfParts(int& parts){
      #ifdef _WIN32
 #else
 #endif
-
-     int methodId=5;
+    int methodId=5;	
      sendData((char*) &methodId, sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
      sendData((char*)&parts,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
 
-     readData((char*)&parts,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
+     //readData((char*)&parts,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
 
 }
 void de::tum::QueryCxx2SocketPlainPort::getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len){
@@ -277,14 +282,30 @@ readData((char*)&mids_len,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
 readData((char*)mids,sizeof(int)*mids_len,_rcvBuffer,_newsockfd,_buffer_size);
 
 }
+
+//includes used for logging
+#include <mpi.h>
+#include <sys/time.h>
+#include <fstream>
+
 void de::tum::QueryCxx2SocketPlainPort::forwardAnswer(const double* data, const int data_len,const double* distance, const int distance_len,const int* indices, const int indices_len,const int rid){
      //assert(_destination!=NULL);
      #ifdef _WIN32
 #else
 #endif
 
+//time logging before send
+  int rank; 
+  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+  timeval start;
+  gettimeofday(&start, 0);
+  _logFile << "rank:" << rank <<"#rid:" << rid <<"#start_time:" << start.tv_sec << "." << start.tv_usec <<"#size:" << data_len<< std::endl;
      int methodId=7;
-     sendData((char*) &methodId, sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
+    int flags;
+flags = fcntl(_newsockfd, F_GETFL, 0);
+flags |= O_NONBLOCK;
+fcntl(_newsockfd, F_SETFL, flags);
+sendData((char*) &methodId, sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
      sendData((char*)&data_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)data,sizeof(double)*data_len,_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)&distance_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
@@ -292,6 +313,6 @@ sendData((char*)distance,sizeof(double)*distance_len,_sendBuffer,_newsockfd,_buf
 sendData((char*)&indices_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)indices,sizeof(int)*indices_len,_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)&rid,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
-
+  
      
 }

@@ -1,2 +1,2 @@
-/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA.dir
-/home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA-dev.dir
+/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA.dir
+/home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles/SocketTestA-dev.dir

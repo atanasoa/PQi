@@ -16,7 +16,7 @@ preinstall:
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canonical targets will work.
+# Disable implicit rules so canoncical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -38,22 +38,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/cmake
+CMAKE_COMMAND = /lrz/mnt/sys.x86_64/tools/cmake/2.8.5_sles11/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/cmake -E remove -f
-
-# Escaping for special characters.
-EQUALS = =
+RM = /lrz/mnt/sys.x86_64/tools/cmake/2.8.5_sles11/bin/cmake -E remove -f
 
 # The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
+CMAKE_EDIT_COMMAND = /lrz/mnt/sys.x86_64/tools/cmake/2.8.5_sles11/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA
+CMAKE_SOURCE_DIR = /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA
+CMAKE_BINARY_DIR = /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA
 
 #=============================================================================
 # Target rules for target CMakeFiles/SocketTestA.dir
@@ -62,7 +59,7 @@ CMAKE_BINARY_DIR = /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.
 CMakeFiles/SocketTestA.dir/all:
 	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/depend
 	$(MAKE) -f CMakeFiles/SocketTestA.dir/build.make CMakeFiles/SocketTestA.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles  1 2 3
 	@echo "Built target SocketTestA"
 .PHONY : CMakeFiles/SocketTestA.dir/all
 
@@ -72,9 +69,9 @@ all: CMakeFiles/SocketTestA.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SocketTestA.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SocketTestA.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles 0
 .PHONY : CMakeFiles/SocketTestA.dir/rule
 
 # Convenience name for target.
@@ -97,7 +94,7 @@ clean: CMakeFiles/SocketTestA.dir/clean
 CMakeFiles/SocketTestA-dev.dir/all:
 	$(MAKE) -f CMakeFiles/SocketTestA-dev.dir/build.make CMakeFiles/SocketTestA-dev.dir/depend
 	$(MAKE) -f CMakeFiles/SocketTestA-dev.dir/build.make CMakeFiles/SocketTestA-dev.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles  15 16 17
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles  4 5 6
 	@echo "Built target SocketTestA-dev"
 .PHONY : CMakeFiles/SocketTestA-dev.dir/all
 
@@ -107,9 +104,9 @@ all: CMakeFiles/SocketTestA-dev.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SocketTestA-dev.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SocketTestA-dev.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/atanasoa/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/cmake-de.tum.SocketTestA/CMakeFiles 0
 .PHONY : CMakeFiles/SocketTestA-dev.dir/rule
 
 # Convenience name for target.

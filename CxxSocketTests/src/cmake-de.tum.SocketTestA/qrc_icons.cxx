@@ -1,8 +1,8 @@
 /****************************************************************************
 ** Resource object code
 **
-** Created: Mon Aug 12 16:46:39 2013
-**      by: The Resource Compiler for Qt version 4.8.3
+** Created: Wed Aug 14 15:00:24 2013
+**      by: The Resource Compiler for Qt version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -10,7 +10,7 @@
 #include <QtCore/qglobal.h>
 
 static const unsigned char qt_resource_data[] = {
-  // /home/atanasoa/workspace/PQi/CxxSocketTests/src/de/tum/Icons/fileopen.png
+  // /home_local/guder/workspace/PQi/CxxSocketTests/src/de/tum/Icons/fileopen.png
   0x0,0x0,0x2,0xa9,
   0x89,
   0x50,0x4e,0x47,0xd,0xa,0x1a,0xa,0x0,0x0,0x0,0xd,0x49,0x48,0x44,0x52,0x0,

@@ -29,7 +29,8 @@ queries::QueryServer::QueryServer():
   _managementTag = tarch::parallel::Node::reserveFreeTag( "queries::QueryServer[management-tag]" );
   #endif
   _timestep=0;
-  _queryServer=NULL; 	
+  _queryServer=NULL;
+  _sendFlag=false; 	
 }
 
 
@@ -97,7 +98,7 @@ void queries::QueryServer::receiveNewQueries() {
 	newQuery
     );
     _heapIds.push_back(peano::heap::Heap<queries::records::Answer>::getInstance().createData()); 
-    _data.push_back(new std::unordered_map<int,std::pair<double,double> >);
+    _data.push_back(new __gnu_cxx::hash_map<int,std::pair<double,double> >);
   }
 }
 #endif
@@ -133,21 +134,12 @@ int queries::QueryServer::getIndexOfQuery( int id ) {
 void queries::QueryServer::addQuery(
   queries::records::HeapQuery newQuery
 ) {
-  if(!init)
-#ifdef Parallel
-        queries::records::HeapQuery::initDatatype();
-#endif
-        init=true;
   //newQuery.setId( getNumberOfPendingQueries() );
   _pendingQueries.push_back(
     newQuery
   );
   _heapIds.push_back(peano::heap::Heap<queries::records::Answer>::getInstance().createData()); 	
-  _data.push_back(new std::unordered_map<int,std::pair<double,double> >);
-  #ifdef Parallel
-  assertion( tarch::parallel::Node::getInstance().isGlobalMaster() );
-  tarch::parallel::NodePool::getInstance().broadcastToWorkingNodes(newQuery, _managementTag);
-  #endif
+  _data.push_back(new __gnu_cxx::hash_map<int,std::pair<double,double> >);
 }
 
 
@@ -181,7 +173,8 @@ bool queries::QueryServer::isInVoxel(
 void queries::QueryServer::swapBuffers(const int index){
 	std::vector<queries::records::Answer>& answers=peano::heap::Heap<queries::records::Answer>::getInstance().getData(_heapIds[index]);	
 	queries::records::Answer a;
-	for(std::unordered_map< int,std::pair<double,double > >::iterator it=_data[index]->begin();it!=_data[index]->end();it++)
+        if(!_data[index]->empty())
+	for(__gnu_cxx::hash_map< int,std::pair<double,double > >::iterator it=_data[index]->begin();it!=_data[index]->end();it++)
 	{
 		a.setData((*it).second.second);
 
@@ -189,13 +182,14 @@ void queries::QueryServer::swapBuffers(const int index){
 		a.setDataIndex((*it).first);
 		answers.push_back(a);
 	}
-	_data[index]->clear();
 }
 
 
 void queries::QueryServer::sendData(const int index,
 	const tarch::la::Vector<2,double> &voxelOffset,
 	const int level){
+         std::vector<queries::records::Answer>& masterAnswer = peano::heap::Heap<queries::records::Answer>::getInstance().getData(_heapIds[index]);
+
 	peano::heap::Heap<queries::records::Answer>::getInstance().sendData(
 		_heapIds[index],
 		tarch::parallel::NodePool::getInstance().getMasterRank(),
@@ -204,6 +198,18 @@ void queries::QueryServer::sendData(const int index,
 	
 }
 
+void queries::QueryServer::setSendFlag(bool flag){
+	_sendFlag=flag;
+
+}
+
+
+void queries::QueryServer::close(){
+	if(_queryServer!=NULL){
+		std::cout<<"qs closing"<<std::endl;
+ 		delete _queryServer;
+	}
+}
 void queries::QueryServer::receiveData(
 	const int index,
 	const tarch::la::Vector<2,double> &voxelOffset,
@@ -216,7 +222,8 @@ void queries::QueryServer::receiveData(
 		level,
 		peano::heap::MasterWorkerCommunication);
         std::vector<queries::records::Answer>& masterAnswer = peano::heap::Heap<queries::records::Answer>::getInstance().getData(_heapIds[index]);
-	std::unordered_map<int,int> masterAnswerMap;
+	std::cout<<"received:"<<workerAnswer.size()<<std::endl;
+        __gnu_cxx::hash_map<int,int> masterAnswerMap;
 	for(unsigned int i=0;i<masterAnswer.size();i++)
 		masterAnswerMap[masterAnswer[i].getDataIndex()]=i;
 	for (unsigned int i=0;i<workerAnswer.size();i++){
@@ -241,28 +248,38 @@ void queries::QueryServer::clearHeapBuffer(const int index){
 }
 
 void queries::QueryServer::clearQueryBuffer(const int index){
-	_data[index]->clear();
+		
+   _data[index]->clear();
 		
 }
 void queries::QueryServer::fireAnswers(const int index){
+	if(_sendFlag){
 	std::vector<queries::records::Answer>& masterAnswer = peano::heap::Heap<queries::records::Answer>::getInstance().getData(_heapIds[index]);
-	int size=masterAnswer.size();	
-	double *data = new double [size];
-	double *dist = new double [size];
-	int *indices = new int [size];
-	for(unsigned int i=0;i<size;i++){
-		data[i]=masterAnswer[i].getData();
-		dist[i]=masterAnswer[i].getPosition();
-		indices[i]=masterAnswer[i].getDataIndex();	
-	}
-	if(_queryServer==NULL)
-		_queryServer=new de::tum::QueryCxx2SocketPlainPort("localhost",50000,256);		
-	_queryServer->forwardAnswer(data,size,dist,size,indices,size,_timestep++);
-	masterAnswer.clear();
-	delete []data;
-	delete []dist;
-	delete []indices;	
+	unsigned int size=masterAnswer.size();	
+	if(size>0){
+		double *data = new double [size];
+		double *dist = new double [size];
+		int *indices = new int [size];
+		for(unsigned int i=0;i<size;i++){
+			data[i]=masterAnswer[i].getData();
+			dist[i]=masterAnswer[i].getPosition();
+			indices[i]=masterAnswer[i].getDataIndex();	
+		}
+		if(_queryServer==NULL){
+		      char* hostname = getenv("HPVC_HOSTNAME");
+		    		
+        	     _queryServer=new de::tum::QueryCxx2SocketPlainPort(hostname,50000,8192);
 	
+		
+		}
+        	_queryServer->forwardAnswer(data,size,dist,size,indices,size,_timestep);
+		_timestep++;	
+		delete []data;
+		delete []dist;
+		delete []indices;	
+	}
+	}
+	_sendFlag=false;
 
 }
 void queries::QueryServer::setData(
@@ -275,8 +292,21 @@ void queries::QueryServer::setData(
         double ddx=0.0;
         double ddy=0.0;
 	double dist=0.0;
-	for(int i = 0 ;i<_pendingQueries[index].getDimenions()[1];i++)
-		for(int j = 0;j<_pendingQueries[index].getDimenions()[0];j++)
+        int starti=0;
+	int startj=0;
+        int endi=0;
+	int endj=0;
+
+        if(_pendingQueries[index].getOffset()[0]<voxelOffset[0])
+		startj=(voxelOffset[0]-_pendingQueries[index].getOffset()[0])/dx;
+	if(_pendingQueries[index].getOffset()[1]<voxelOffset[1])
+                starti=(voxelOffset[1]-_pendingQueries[index].getOffset()[1])/dy;
+	if(voxelOffset[0]+voxelSize[0]<=_pendingQueries[index].getOffset()[0]+_pendingQueries[index].getSize()[0])
+		endj=(voxelOffset[0]+voxelSize[0]-_pendingQueries[index].getOffset()[0])/dx+1;
+	if(voxelOffset[1]+voxelSize[1]<=_pendingQueries[index].getOffset()[1]+_pendingQueries[index].getSize()[1])
+                endi=(voxelOffset[1]+voxelSize[1]-_pendingQueries[index].getOffset()[1])/dy+1;
+	for(int i = starti ;i<endi;i++)
+		for(int j = startj;j<endj;j++)
 		{
 			if(
 				isInVoxel(
@@ -289,7 +319,7 @@ void queries::QueryServer::setData(
 			  	ddx=(voxelOffset[0]-_pendingQueries[index].getOffset()[0]-(double)j*dx);
 				ddy=(voxelOffset[1]-_pendingQueries[index].getOffset()[1]-(double)i*dy);
 				dist=ddx*ddx+ddy*ddy;
-				std::unordered_map< int,std::pair<double,double > >::const_iterator got
+				__gnu_cxx::hash_map< int,std::pair<double,double > >::const_iterator got
 					=_data[index]->find(i*_pendingQueries[index].getDimenions()[0]+j);		
 			  	if(got==_data[index]->end()){
 					(*_data[index])[i*_pendingQueries[index].getDimenions()[0]+j]=std::make_pair<double,double>(0.0,0.0);

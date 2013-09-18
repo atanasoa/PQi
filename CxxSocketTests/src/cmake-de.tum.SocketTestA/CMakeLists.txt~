@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.6)
 PROJECT(SocketTestA)
-
+include(CMakeForceCompiler)
 find_package(JNI)
 
 if (JNI_FOUND)
@@ -9,6 +9,15 @@ if (JNI_FOUND)
     INCLUDE_DIRECTORIES(${JNI_INCLUDE_DIRS})
 endif()
 
+
+IF(PARALLEL)
+    message (STATUS "Prorgam is able to run parallel") 
+    add_definitions(-DPARALLEL)
+    CMAKE_FORCE_CXX_COMPILER(mpicxx) 
+ENDIF()
+
+#no qt in parallel mode
+IF(NOT PARALLEL)
 IF(NOT VTK_BINARY_DIR)
 FIND_PACKAGE(VTK)
 IF(NOT VTK_DIR)
@@ -17,6 +26,7 @@ ENDIF(NOT VTK_DIR)
 INCLUDE(${VTK_USE_FILE})
 ENDIF(NOT VTK_BINARY_DIR)
 
+	
 # use what QVTK built with
 SET(QT_MOC_EXECUTABLE ${VTK_QT_MOC_EXECUTABLE} CACHE FILEPATH "")
 SET(QT_UIC_EXECUTABLE ${VTK_QT_UIC_EXECUTABLE} CACHE FILEPATH "")
@@ -31,7 +41,7 @@ INCLUDE_DIRECTORIES(
   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-SET(SimpleViewSrcs ../../src/de/tum/main.cxx ../../src/de/tum/SimpleView.cxx ../../src/de/tum/vtkMyImageData.cxx )
+SET(SimpleViewSrcs ../../src/de/tum/SimpleView.cxx ../../src/de/tum/vtkMyImageData.cxx )
 SET(SimpleViewUI ../../src/de/tum/SimpleView.ui)
 SET(SimpleViewHeaders ../../src/de/tum/SimpleView.h ../../src/de/tum/MyTimer.hpp ../../src/de/tum/vtkMyImageData.h)
 SET(SimpleViewResources ../../src/de/tum/Icons/icons.qrc)
@@ -40,9 +50,9 @@ SET(SimpleViewResources ../../src/de/tum/Icons/icons.qrc)
 QT4_WRAP_UI(UISrcs ${SimpleViewUI})
 QT4_WRAP_CPP(MOCSrcs ${SimpleViewHeaders} )
 QT4_ADD_RESOURCES(ResourceSrcs ${SimpleViewResources})
+ENDIF(NOT PARALLEL)
 
-
-include(CMakeForceCompiler)	
+	
 IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 #CMAKE_FORCE_CXX_COMPILER(icpc "Intel Cxx Compiler") 
 #CMAKE_FORCE_C_COMPILER(icc "Intel C Compiler")     

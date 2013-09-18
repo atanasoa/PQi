@@ -8,10 +8,11 @@
 //
 // Authors: Tobias Weinzierl, Atanas Atanasov   
 //
-
+#include "mpi.h"
 #include "de/tum/SocketTestAAbstractImplementation.h"
 #include <string>
 #include <pthread.h>
+#include <fstream>
 namespace de { 
 namespace tum { 
 
@@ -21,6 +22,9 @@ class SocketTestAImplementation;
 
 class de::tum::SocketTestAImplementation : public de::tum::SocketTestAAbstractImplementation{
 private:
+	 const static double global_offset;
+	 const static double global_size;
+	 const static int global_dimension;
 	 pthread_mutex_t _lock;
 	 double _offset[3];
 	 double _size[3];
@@ -28,6 +32,8 @@ private:
 	 double *_data;
 	 double *_distances;
 	 int *_timesteps;
+	 std::ofstream _log_file;
+         int _iter;
 public:
 	SocketTestAImplementation();
 	~SocketTestAImplementation();
@@ -45,7 +51,8 @@ public:
 	double* getSize();
 	void cloneData(double* targetData);
 	int* getDimensions();
-
+        void initialiseParallel(int hor, int ver);
+	void constructorToString();
 };     
 
 
