@@ -29,6 +29,8 @@ pthread.h
 -
 fstream
 -
+chrono
+-
 
 ../../src/de/tum/vtkMyImageData.h
 vtkImageAlgorithm.h
@@ -89,7 +91,7 @@ MyTimer.hpp
 /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/MyTimer.hpp
 mpi.h
 /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/mpi.h
-sys/time.h
+chrono
 -
 de/tum/SocketTestAImplementation.h
 /home/hpc/pr63so/lu26hij3/workspace/PQi/CxxSocketTests/src/de/tum/de/tum/SocketTestAImplementation.h

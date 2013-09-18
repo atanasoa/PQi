@@ -17,7 +17,7 @@ IF(PARALLEL)
     add_definitions(-DPARALLEL)
     CMAKE_FORCE_CXX_COMPILER(mpicxx "mpi compiler") 
 ENDIF()
-
+set(CMAKE_CXX_FLAGS "-std=c++0x")
 #no qt in parallel mode
 IF(NOT PARALLEL)
 IF(NOT VTK_BINARY_DIR)

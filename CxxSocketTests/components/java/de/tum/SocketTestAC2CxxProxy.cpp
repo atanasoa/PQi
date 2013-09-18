@@ -272,7 +272,7 @@ void invoker_getNumberOfParts(void** ref,int newsockfd, int buffer_size,char* rc
 readData((char*)&parts,sizeof(int),rcvBuffer,newsockfd,buffer_size);
 
   ((de::tum::SocketTestAImplementation*)*ref)->getNumberOfParts(parts);
- // sendData((char*)&parts,sizeof(int),sendBuffer,newsockfd,buffer_size);
+  sendData((char*)&parts,sizeof(int),sendBuffer,newsockfd,buffer_size);
 
 }
 

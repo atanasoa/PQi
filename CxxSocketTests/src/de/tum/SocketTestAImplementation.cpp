@@ -9,8 +9,7 @@
 #else
 #include "mpi.h"
 #endif
-
-#include <sys/time.h>
+#include <chrono>
 
 #include "de/tum/SocketTestAImplementation.h"
 #include "de/tum/SocketTestAC2CxxProxy.h"
@@ -28,6 +27,7 @@ de::tum::SocketTestAImplementation::SocketTestAImplementation(){
 	pthread_mutex_init(&_lock2,NULL);
         _log_file.open("log_file.txt");
 	_iter=-1;
+        _start=std::chrono::high_resolution_clock::now();
 	
 }
 
@@ -101,10 +101,13 @@ void de::tum::SocketTestAImplementation::constructorToString(){
 	std::cout <<rank  << " - " << "size: "<< _size[0] << " " << _size[1] << " " << _size[2] << std::endl;
 	std::cout <<rank  << " - " << "dimensions: "<< _dimensions[0] << " " << _dimensions[1] << " " << _dimensions[2] << std::endl;
 	std::cout <<rank  << " - " << "offset: "<< _offset[0] << " " << _offset[1] << " " << _offset[2] << std::endl;
+	double t= std::chrono::duration_cast<std::chrono::duration<double> >(std::chrono::high_resolution_clock::now()-_start).count();
+        std::cout<<"time of decomp:"<<t<<std::endl;
+
 }
 
 void de::tum::SocketTestAImplementation::getNumberOfParts(int& parts){
- pthread_mutex_lock( &_lock2 );
+ pthread_mutex_lock( &_lock );
 #ifdef PARALLEL
 	MPI_Comm_size(MPI_COMM_WORLD,&parts);  
 #else
@@ -112,12 +115,11 @@ void de::tum::SocketTestAImplementation::getNumberOfParts(int& parts){
 #endif
         int rank;
         MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-        timeval end;
-        gettimeofday(&end, 0);
+        double t= std::chrono::duration_cast<std::chrono::duration<double> >(std::chrono::high_resolution_clock::now()-_start).count();
 	if(_iter>=0)
-        _log_file << "rank:" << rank <<"#rid:" << _iter <<"#start_time:" << end.tv_sec << "." << end.tv_usec << std::endl;
+        _log_file << "rank:" << rank <<"#rid:" << _iter <<"#start_time:" << t << std::endl;
 	_iter++;
- pthread_mutex_unlock( &_lock2 );
+ pthread_mutex_unlock( &_lock );
 }
 
 //includes used for logging
@@ -135,16 +137,12 @@ void de::tum::SocketTestAImplementation::forwardAnswer(
 		const int indices_len,
 		const int mid
 		){
-         pthread_mutex_lock( &_lock2 );
+         pthread_mutex_lock( &_lock );
 
-         timeval end;
-         gettimeofday(&end, 0);
          int rank;
          MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-         pthread_mutex_unlock( &_lock2 );
-         
-	 pthread_mutex_lock( &_lock );
-        _log_file << "rank:" << rank <<"#rid:" << mid <<"#end_time:" << end.tv_sec << "." << end.tv_usec <<"#size:"<<data_len<< std::endl; 
+        double t= std::chrono::duration_cast<std::chrono::duration<double> >(std::chrono::high_resolution_clock::now()-_start).count(); 
+        _log_file << "rank:" << rank <<"#rid:" << mid <<"#end_time:" << t <<"#size:"<<data_len<< std::endl; 
 	//time logging after send
 	 for(int i=0;i<indices_len;i++)
 	 {

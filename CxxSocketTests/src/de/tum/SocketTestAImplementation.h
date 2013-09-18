@@ -13,6 +13,8 @@
 #include <string>
 #include <pthread.h>
 #include <fstream>
+#include <chrono>
+
 namespace de { 
 namespace tum { 
 
@@ -33,6 +35,7 @@ private:
 	 double *_data;
 	 double *_distances;
 	 int *_timesteps;
+	 std::chrono::high_resolution_clock::time_point _start;
 	 std::ofstream _log_file;
          int _iter;
 public:

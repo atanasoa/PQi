@@ -248,11 +248,16 @@ void de::tum::QueryCxx2SocketPlainPort::getNumberOfParts(int& parts){
      #ifdef _WIN32
 #else
 #endif
-    int methodId=5;	
+    int methodId=5;
+    int flags;
+flags = fcntl(_newsockfd, F_GETFL, 0);
+flags ^= O_NONBLOCK;
+fcntl(_newsockfd, F_SETFL, flags);
+	
      sendData((char*) &methodId, sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
      sendData((char*)&parts,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
 
-     //readData((char*)&parts,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
+     readData((char*)&parts,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
 
 }
 void de::tum::QueryCxx2SocketPlainPort::getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len){
@@ -295,11 +300,6 @@ void de::tum::QueryCxx2SocketPlainPort::forwardAnswer(const double* data, const 
 #endif
 
 //time logging before send
-  int rank; 
-  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-  timeval start;
-  gettimeofday(&start, 0);
-  _logFile << "rank:" << rank <<"#rid:" << rid <<"#start_time:" << start.tv_sec << "." << start.tv_usec <<"#size:" << data_len<< std::endl;
      int methodId=7;
     int flags;
 flags = fcntl(_newsockfd, F_GETFL, 0);
