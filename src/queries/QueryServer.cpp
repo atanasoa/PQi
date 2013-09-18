@@ -222,7 +222,6 @@ void queries::QueryServer::receiveData(
 		level,
 		peano::heap::MasterWorkerCommunication);
         std::vector<queries::records::Answer>& masterAnswer = peano::heap::Heap<queries::records::Answer>::getInstance().getData(_heapIds[index]);
-	std::cout<<"received:"<<workerAnswer.size()<<std::endl;
         __gnu_cxx::hash_map<int,int> masterAnswerMap;
 	for(unsigned int i=0;i<masterAnswer.size();i++)
 		masterAnswerMap[masterAnswer[i].getDataIndex()]=i;

@@ -20,12 +20,13 @@
 
 const double de::tum::SocketTestAImplementation::global_offset=0.0;
 const double de::tum::SocketTestAImplementation::global_size=1.0;
-const int de::tum::SocketTestAImplementation::global_dimension=257;
+const int de::tum::SocketTestAImplementation::global_dimension=1025;
 
 
 de::tum::SocketTestAImplementation::SocketTestAImplementation(){
 	pthread_mutex_init(&_lock,NULL);
-	_log_file.open("log_file.txt");
+	pthread_mutex_init(&_lock2,NULL);
+        _log_file.open("log_file.txt");
 	_iter=-1;
 	
 }
@@ -51,7 +52,7 @@ de::tum::SocketTestAImplementation::~SocketTestAImplementation(){
 	_log_file.flush();
 	_log_file.close();
         pthread_mutex_destroy(&_lock);
-
+	pthread_mutex_destroy(&_lock2);
 }
 
 //sinngemäße Implementierung. Form der Übergabe müsste angepasst werden
@@ -103,7 +104,7 @@ void de::tum::SocketTestAImplementation::constructorToString(){
 }
 
 void de::tum::SocketTestAImplementation::getNumberOfParts(int& parts){
- pthread_mutex_lock( &_lock );
+ pthread_mutex_lock( &_lock2 );
 #ifdef PARALLEL
 	MPI_Comm_size(MPI_COMM_WORLD,&parts);  
 #else
@@ -116,7 +117,7 @@ void de::tum::SocketTestAImplementation::getNumberOfParts(int& parts){
 	if(_iter>=0)
         _log_file << "rank:" << rank <<"#rid:" << _iter <<"#start_time:" << end.tv_sec << "." << end.tv_usec << std::endl;
 	_iter++;
- pthread_mutex_unlock( &_lock );
+ pthread_mutex_unlock( &_lock2 );
 }
 
 //includes used for logging
@@ -134,14 +135,16 @@ void de::tum::SocketTestAImplementation::forwardAnswer(
 		const int indices_len,
 		const int mid
 		){
+         pthread_mutex_lock( &_lock2 );
+
          timeval end;
          gettimeofday(&end, 0);
          int rank;
          MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-         _log_file << "rank:" << rank <<"#rid:" << mid <<"#end_time:" << end.tv_sec << "." << end.tv_usec <<"#size:"<<data_len<< std::endl;
-
+         pthread_mutex_unlock( &_lock2 );
+         
 	 pthread_mutex_lock( &_lock );
-        
+        _log_file << "rank:" << rank <<"#rid:" << mid <<"#end_time:" << end.tv_sec << "." << end.tv_usec <<"#size:"<<data_len<< std::endl; 
 	//time logging after send
 	 for(int i=0;i<indices_len;i++)
 	 {

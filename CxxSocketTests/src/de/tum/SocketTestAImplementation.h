@@ -26,7 +26,8 @@ private:
 	 const static double global_size;
 	 const static int global_dimension;
 	 pthread_mutex_t _lock;
-	 double _offset[3];
+	 pthread_mutex_t _lock2;
+         double _offset[3];
 	 double _size[3];
 	 int _dimensions[3];
 	 double *_data;
