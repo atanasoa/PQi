@@ -14,6 +14,7 @@
 #include <pthread.h>
 #include <fstream>
 #include <chrono>
+#include <vector>
 
 namespace de { 
 namespace tum { 
@@ -28,21 +29,27 @@ private:
 	 const static double global_size;
 	 const static int global_dimension;
 	 pthread_mutex_t _lock;
-	 pthread_mutex_t _lock2;
-         double _offset[3];
-	 double _size[3];
-	 int _dimensions[3];
+         std::vector<double> _offset;
+	 std::vector<double> _size;
+	 std::vector<int> _dimensions;
+         std::vector<double> _offset0;
+         std::vector<double> _size0;
+         std::vector<int> _dimensions0;
+	 std::vector<std::string> _mids;
 	 double *_data;
 	 double *_distances;
 	 int *_timesteps;
 	 std::chrono::high_resolution_clock::time_point _start;
 	 std::ofstream _log_file;
          int _iter;
+	 int _rank;
+	 int _pieces;
 public:
 	SocketTestAImplementation();
 	~SocketTestAImplementation();
+        void gatherMIds();
 	void getNumberOfParts(int& parts);
-	void getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len);
+	void getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,std::string* mids, const int mids_len);
 	void forwardAnswer(
 			const double* data,
 			const int data_len,

@@ -98,7 +98,7 @@ class queries::QueryServer: public tarch::services::Service {
 	std::vector<queries::records::HeapQuery> _pendingQueries;
 	std::vector<int> _heapIds;
 	std::vector<__gnu_cxx::hash_map<int,std::pair<double,double> >*> _data;
-	de::tum::QueryCxx2SocketPlainPort *_queryServer;
+	std::vector<de::tum::QueryCxx2SocketPlainPort *>_queryServer;
 	int _dataTag;
 
 	int _managementTag;
@@ -146,6 +146,7 @@ class queries::QueryServer: public tarch::services::Service {
 	 */
 	void receiveNewQueries();
         bool _sendFlag;
+	std::vector<std::string> _mids;
    // #endif
   public:
 	virtual ~QueryServer();
@@ -214,7 +215,8 @@ class queries::QueryServer: public tarch::services::Service {
      *                 object is inserted into the map.
      */
     void addQuery(
-      queries::records::HeapQuery                              newQuery
+      queries::records::HeapQuery                              newQuery,
+      std::string mid
     );
 
     /**
@@ -256,7 +258,7 @@ class queries::QueryServer: public tarch::services::Service {
     void swapBuffers(const int index);
     void sendData(const int index,const tarch::la::Vector<2,double> &voxelOffset,int level);
     void receiveData(const int index,const tarch::la::Vector<2,double> &voxelOffset,const int level,const int worker);
-    void fireAnswers(const int index);
+    void fireAnswers(const int index,int iter);
     void clearHeapBuffer(const int index);
     
     void clearQueryBuffer(const int index);	

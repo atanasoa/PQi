@@ -69,12 +69,12 @@ public class QueryDispatcher implements Query {
       
     }
   }
-  public void getQueryDescription(double offset[],double size[],int resolution[],int mids[]) {
+  public void getQueryDescription(double offset[],double size[],int resolution[],String mids[]) {
     for(Query port: _destinations)
       port.getQueryDescription(offset,size,resolution,mids);
   }
   
-  public void getQueryDescriptionForIntegerEnums(double offset[],double size[],int resolution[],int mids[]) {
+  public void getQueryDescriptionForIntegerEnums(double offset[],double size[],int resolution[],String mids[]) {
     for(Query port: _destinations){
       
       port.getQueryDescription(offset,size,resolution,mids);

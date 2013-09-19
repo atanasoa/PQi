@@ -10,7 +10,7 @@
 //
 #include "de/tum/QueryNativeDispatcher.h"
 
-#include "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/Sim.h"
+#include "de/tum/Sim.h"
 
 namespace de { 
 namespace tum { 

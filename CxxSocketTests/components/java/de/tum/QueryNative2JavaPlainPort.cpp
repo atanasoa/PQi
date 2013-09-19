@@ -47,14 +47,14 @@ env->SetIntArrayRegion(parts_jni,0,1,(jint*)&parts);
 
   }
 }
-void de::tum::QueryNative2JavaPlainPort::getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len){
+void de::tum::QueryNative2JavaPlainPort::getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,std::string* mids, const int mids_len){
   JNIEnv* env;
   int status=_jvm->GetEnv((void**)&env,JNI_VERSION_1_6);
   //jfieldID pid =env->GetFieldID(env->GetObjectClass(_obj),_portIdentifier.c_str(), "Lde/tum/QueryDispatcher;");
   //jobject obj= env->GetObjectField(_obj,pid);
   //jclass cls = env->FindClass("Lde/tum/QueryDispatcher;");
   jclass cls=env->GetObjectClass(_obj);
-  jmethodID mid = env->GetMethodID(cls,"getQueryDescription","([D[D[I[I)V");
+  jmethodID mid = env->GetMethodID(cls,"getQueryDescription","([D[D[I[Ljava/lang/String;)V");
   
   if(mid){
      jdoubleArray offset_jni=env->NewDoubleArray(offset_len);
@@ -63,14 +63,14 @@ jdoubleArray size_jni=env->NewDoubleArray(size_len);
 env->SetDoubleArrayRegion(size_jni,0,size_len,(jdouble*)size);
 jintArray resolution_jni=env->NewIntArray(resolution_len);
 env->SetIntArrayRegion(resolution_jni,0,resolution_len,(jint*)resolution);
-jintArray mids_jni=env->NewIntArray(mids_len);
-env->SetIntArrayRegion(mids_jni,0,mids_len,(jint*)mids);
+jobjectArray mids_jni=env->NewObjectArray(mids_len,env->FindClass("Ljava/lang/String;"),0);
+for(int i=0;i<mids_len;i++)
+	env->SetObjectArrayElement(mids_jni,i, env->NewStringUTF(mids[i].c_str()));
 
      env->CallVoidMethod(_obj,mid,offset_jni,size_jni,resolution_jni,mids_jni);
      env->GetDoubleArrayRegion(offset_jni,0,offset_len,(jdouble*)offset);
 env->GetDoubleArrayRegion(size_jni,0,size_len,(jdouble*)size);
 env->GetIntArrayRegion(resolution_jni,0,resolution_len,(jint*)resolution);
-env->GetIntArrayRegion(mids_jni,0,mids_len,(jint*)mids);
 
   }
 }

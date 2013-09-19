@@ -65,7 +65,7 @@ public class QueryNative2NativePlainPort extends QueryAbstractPort {
   }
   
 
-  public void getQueryDescription(double offset[],double size[],int resolution[],int mids[]) {
+  public void getQueryDescription(double offset[],double size[],int resolution[],String mids[]) {
     //DO NOTHING HERE
   }
   

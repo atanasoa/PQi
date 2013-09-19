@@ -1,5 +1,5 @@
-#include <mpi.h>
 #include "de/tum/SocketTestAC2CxxProxy.h"
+#include <mpi.h>
 #ifdef _WIN32
 	#include <winsock2.h>
 	#include <ws2tcpip.h>
@@ -15,13 +15,14 @@
 	#include <unistd.h>
 	#include <arpa/inet.h>
 #endif
+
 #include <stdio.h>
 #include <assert.h>
 #include <algorithm>
 #include <iostream>
 #include <string.h>
 #include <stdlib.h>
-	
+#include <sstream>	
 #include "de/tum/SocketTestAImplementation.h"
 
 void open_client(const char* hostname,const char* port,
@@ -91,12 +92,13 @@ int
           hints.ai_socktype = SOCK_STREAM;
 		  hints.ai_protocol = IPPROTO_TCP;
 		  hints.ai_flags = AI_PASSIVE;
-          getaddrinfo(NULL, port, &hints, &result);
+          std::cout<<"server port:"<<port<<std::endl;
+	  getaddrinfo(NULL, port, &hints, &result);
 		  
 		  sockfd = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
           assert (sockfd>=0);
           bind(sockfd, result->ai_addr, (int)result->ai_addrlen);
-		  
+	  
           listen(sockfd,32);
          
         
@@ -135,7 +137,7 @@ newsockfd,int bufferSize){
      //clear buffer
      bzero(sendBuffer,bufferSize);
      while(total_send_bytes<numberOfBytes){
-          remaining_bytes_to_send=(numberOfBytes-send_bytes<=bufferSize)?numberOfBytes-send_bytes:bufferSize;
+          remaining_bytes_to_send=(numberOfBytes-total_send_bytes<=bufferSize)?numberOfBytes-total_send_bytes:bufferSize;
           memcpy(sendBuffer,data_ptr,remaining_bytes_to_send);
           send_bytes=0;
           char* send_buffer_ptr=sendBuffer;
@@ -218,8 +220,6 @@ void invoker_destroy_instance(void** ref,int,int,char*,char*){
       delete ((de::tum::SocketTestAImplementation*)*ref);
   
 }
-
-
 void invoker_forwardAnswer(void** ref,int newsockfd, int buffer_size,char* rcvBuffer, char* sendBuffer){
   int data_len=0;
 readData((char*)&data_len,sizeof(int),rcvBuffer,newsockfd,buffer_size);
@@ -237,6 +237,7 @@ int rid;
 readData((char*)&rid,sizeof(int),rcvBuffer,newsockfd,buffer_size);
 
   ((de::tum::SocketTestAImplementation*)*ref)->forwardAnswer(data,data_len,distance,distance_len,indices,indices_len,rid);
+  
 }
 void invoker_getQueryDescription(void** ref,int newsockfd, int buffer_size,char* rcvBuffer, char* sendBuffer){
   int offset_len=0;
@@ -253,18 +254,33 @@ int* resolution=new int[resolution_len];
 readData((char*)resolution,sizeof(int)*resolution_len,rcvBuffer,newsockfd,buffer_size);
 int mids_len=0;
 readData((char*)&mids_len,sizeof(int),rcvBuffer,newsockfd,buffer_size);
-int* mids=new int[mids_len];
-readData((char*)mids,sizeof(int)*mids_len,rcvBuffer,newsockfd,buffer_size);
+char (* mids_data)[255]=new char[mids_len][255];
+std::string* mids=new std::string[mids_len];
+for(int i=0;i<mids_len;i++){
+	int mids_data_len=0;
+	readData((char*)&mids_data_len,sizeof(int),rcvBuffer,newsockfd,buffer_size);
+	readData((char*)mids_data[i],mids_data_len<255?mids_data_len:255,rcvBuffer,newsockfd,buffer_size);
+	mids[i]=mids_data[i];
+}
 
   ((de::tum::SocketTestAImplementation*)*ref)->getQueryDescription(offset,offset_len,size,size_len,resolution,resolution_len,mids,mids_len);
   sendData((char*)&offset_len,sizeof(int),sendBuffer,newsockfd,buffer_size);
 sendData((char*)offset,sizeof(double)*offset_len,sendBuffer,newsockfd,buffer_size);
+delete [] offset;
 sendData((char*)&size_len,sizeof(int),sendBuffer,newsockfd,buffer_size);
 sendData((char*)size,sizeof(double)*size_len,sendBuffer,newsockfd,buffer_size);
+delete [] size;
 sendData((char*)&resolution_len,sizeof(int),sendBuffer,newsockfd,buffer_size);
 sendData((char*)resolution,sizeof(int)*resolution_len,sendBuffer,newsockfd,buffer_size);
+delete [] resolution;
 sendData((char*)&mids_len,sizeof(int),sendBuffer,newsockfd,buffer_size);
-sendData((char*)mids,sizeof(int)*mids_len,sendBuffer,newsockfd,buffer_size);
+for(int i=0;i<mids_len;i++){
+	int data_size=mids[i].size();
+	sendData((char*)&data_size,sizeof(int),sendBuffer,newsockfd,buffer_size);
+	sendData((char*)mids[i].c_str(),mids[i].size()>255?255:mids[i].size(),sendBuffer,newsockfd,buffer_size);
+}
+delete [] mids_data;
+delete [] mids;
 
 }
 void invoker_getNumberOfParts(void** ref,int newsockfd, int buffer_size,char* rcvBuffer, char* sendBuffer){
@@ -321,8 +337,8 @@ clientfd,int bufferSize){
      invokers[1]=invoker_destroy_instance;
      int methodId=0;
      invokers[7]=invoker_forwardAnswer;
-     invokers[6]=invoker_getQueryDescription;
-     invokers[5]=invoker_getNumberOfParts;
+invokers[6]=invoker_getQueryDescription;
+invokers[5]=invoker_getNumberOfParts;
 
      while(methodId!=1){
           readData((char*)&methodId,sizeof(int),rcvBuffer,clientfd,bufferSize);
@@ -360,7 +376,7 @@ void initialise_(SOCKETTESTA_arg& arg){
 #endif
    const char* client_port = getenv("SOCKETTESTA_PORT"); 
    const char* daemon_port = getenv("SOCKETTESTA_DAEMON_PORT");
-   const char* buffer_size = getenv("SOCKETTESTA_SIZE");
+   const char* buffer_size = getenv("SOCKETTESTA_BUFFER_SIZE");
    const char* hostname = getenv("SOCKETTESTA_HOSTNAME");
    const char* java_client_flag = getenv("SOCKETTESTA_JAVA");
    arg.buffer_size = (buffer_size!=NULL)?atoi(buffer_size):4096;
@@ -372,6 +388,11 @@ void initialise_(SOCKETTESTA_arg& arg){
    invoker_create_instance(&arg.ref,0,0,NULL,NULL);
    if(arg.java_client_flag)         
      open_client(arg.hostname,client_port,arg.java_serverfd,arg.java_clientfd);
+   int rank; 
+   MPI_Comm_rank(MPI_COMM_WORLD,&rank);
+   std::stringstream st;
+   st<<atoi(arg.daemon_port)+rank;
+   arg.daemon_port=st.str().c_str();
    bind_server(arg.daemon_port,arg.daemon_serverfd);
    for(int i=0;i<32;i++){
 #ifdef _WIN32    
@@ -380,9 +401,8 @@ void initialise_(SOCKETTESTA_arg& arg){
      pthread_t task;
      pthread_create(&task,NULL,server_deamon_run,&arg);
 #endif
-   }
+   } 
 }
-
 
 #ifdef _WIN32
 void DESTROY(SOCKETTESTA_arg& arg){
@@ -392,18 +412,18 @@ void destroy_(SOCKETTESTA_arg& arg){
 #ifdef _WIN32
   closesocket(arg.daemon_serverfd);
   if(arg.java_client_flag)
-     closesocket(arg.java_serverfd);
+     closesocket(arg.java_serverfd);    
 #else
   close(arg.daemon_serverfd);
   if(arg.java_client_flag)
      close(arg.java_serverfd);
 #endif
-
-
-
+  
+  
+   
 #ifdef _WIN32
   WSACleanup();
-#endif
+#endif   
 
 }
 
@@ -412,7 +432,7 @@ void SOCKET_LOOP(SOCKETTESTA_arg& arg){
 #else
 void socket_loop_(SOCKETTESTA_arg& arg){
 #endif
-  if(arg.java_client_flag)
+  if(arg.java_client_flag)       
      socket_worker_loop(arg.ref,arg.java_clientfd,arg.buffer_size);
 }
 
@@ -434,6 +454,7 @@ void main_loop_(){
 #endif
   
 }
+
 
 
 

@@ -53,7 +53,7 @@ void de::tum::QueryNativeDispatcher::getNumberOfParts(int& parts){
     for(unsigned int i=0;i<_destinations.size();i++)
           _destinations[i]->getNumberOfParts(parts);
 }
-void de::tum::QueryNativeDispatcher::getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len){
+void de::tum::QueryNativeDispatcher::getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,std::string* mids, const int mids_len){
     for(unsigned int i=0;i<_destinations.size();i++)
           _destinations[i]->getQueryDescription(offset,offset_len,size,size_len,resolution,resolution_len,mids,mids_len);
 }

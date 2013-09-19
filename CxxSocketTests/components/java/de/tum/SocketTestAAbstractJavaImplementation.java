@@ -130,7 +130,7 @@ public abstract class SocketTestAAbstractJavaImplementation extends SocketCompon
   }
   
 
-  public void getQueryDescription(double offset[],double size[],int resolution[],int mids[]) {
+  public void getQueryDescription(double offset[],double size[],int resolution[],String mids[]) {
     //__SWITCH_SYNC_ASYNC__
     try{
          int methodId=6;
@@ -142,7 +142,7 @@ sendDoubleData(size);
 sendIntData(resolution.length);
 sendIntData(resolution);
 sendIntData(mids.length);
-sendIntData(mids);
+sendStringData(mids);
 
          int offset_len;
 offset_len=readIntData();
@@ -155,7 +155,7 @@ resolution_len=readIntData();
 readIntData(resolution,resolution_len);
 int mids_len;
 mids_len=readIntData();
-readIntData(mids,mids_len);
+readStringData(mids,mids_len);
   
     }catch(de.tum.ascodt.utils.exceptions.ASCoDTException e){
        de.tum.ascodt.plugin.utils.exceptions.ErrorWriterDevice.getInstance().showError( getClass().getName() , "getQueryDescription()", e);

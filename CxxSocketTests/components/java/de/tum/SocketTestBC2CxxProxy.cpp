@@ -135,7 +135,7 @@ newsockfd,int bufferSize){
      //clear buffer
      bzero(sendBuffer,bufferSize);
      while(total_send_bytes<numberOfBytes){
-          remaining_bytes_to_send=(numberOfBytes-send_bytes<=bufferSize)?numberOfBytes-send_bytes:bufferSize;
+          remaining_bytes_to_send=(numberOfBytes-total_send_bytes<=bufferSize)?numberOfBytes-total_send_bytes:bufferSize;
           memcpy(sendBuffer,data_ptr,remaining_bytes_to_send);
           send_bytes=0;
           char* send_buffer_ptr=sendBuffer;
@@ -345,7 +345,7 @@ void* server_deamon_run(void* daemon_args){
       int clientfd=0;
 #endif
       
-      accept_on_server(((SOCKETTESTB_arg*)daemon_args)->serverfd,clientfd);
+      accept_on_server(((SOCKETTESTB_arg*)daemon_args)->daemon_serverfd,clientfd);
       std::cout<<"server accepted"<<std::endl;
       socket_worker_loop(((SOCKETTESTB_arg*)daemon_args)->ref,clientfd,((SOCKETTESTB_arg*)daemon_args)->buffer_size);
 }
@@ -358,7 +358,7 @@ void initialise_(SOCKETTESTB_arg& arg){
 #endif
    const char* client_port = getenv("SOCKETTESTB_PORT"); 
    const char* daemon_port = getenv("SOCKETTESTB_DAEMON_PORT");
-   const char* buffer_size = getenv("SOCKETTESTB_SIZE");
+   const char* buffer_size = getenv("SOCKETTESTB_BUFFER_SIZE");
    const char* hostname = getenv("SOCKETTESTB_HOSTNAME");
    const char* java_client_flag = getenv("SOCKETTESTB_JAVA");
    arg.buffer_size = (buffer_size!=NULL)?atoi(buffer_size):4096;
@@ -379,34 +379,6 @@ void initialise_(SOCKETTESTB_arg& arg){
      pthread_create(&task,NULL,server_deamon_run,&arg);
 #endif
    } 
-}
-
-#ifdef _WIN32
-void SOCKET_LOOP(SOCKETTESTB_arg& arg){
-#else
-void socket_loop_(SOCKETTESTB_arg& arg){
-#endif
-  if(java_client_flag)       
-     socket_worker_loop(arg.ref,clientfd,arg.buffer_size);
-}
-
-#ifdef _WIN32
-void MAIN_LOOP(){
-#else
-void main_loop_(){
-#endif
-  
-
-  SOCKETTESTB_arg daemon_args;
-#ifdef _WIN32
-  INITIALISE(daemon_args);
-  DESTROY(daemon_args);     
-#else  
-  initialise_(daemon_args);
-  socket_loop_(daemon_args);
-  destroy_(daemon_args);  
-#endif
-  
 }
 
 #ifdef _WIN32
@@ -431,6 +403,36 @@ void destroy_(SOCKETTESTB_arg& arg){
 #endif   
 
 }
+
+#ifdef _WIN32
+void SOCKET_LOOP(SOCKETTESTB_arg& arg){
+#else
+void socket_loop_(SOCKETTESTB_arg& arg){
+#endif
+  if(arg.java_client_flag)       
+     socket_worker_loop(arg.ref,arg.java_clientfd,arg.buffer_size);
+}
+
+#ifdef _WIN32
+void MAIN_LOOP(){
+#else
+void main_loop_(){
+#endif
+  
+
+  SOCKETTESTB_arg daemon_args;
+#ifdef _WIN32
+  INITIALISE(daemon_args);
+  DESTROY(daemon_args);     
+#else  
+  initialise_(daemon_args);
+  socket_loop_(daemon_args);
+  destroy_(daemon_args);  
+#endif
+  
+}
+
+
 
 
 }

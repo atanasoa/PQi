@@ -168,8 +168,8 @@ int resolution_len=readIntData();
 int []resolution=new int[resolution_len];
 readIntData(resolution,resolution_len);
 int mids_len=readIntData();
-int []mids=new int[mids_len];
-readIntData(mids,mids_len);
+String []mids=new String[mids_len];
+readStringData(mids,mids_len);
 
      getQueryDescription(offset,size,resolution,mids);
      sendIntData(offset.length);
@@ -179,10 +179,10 @@ sendDoubleData(size);
 sendIntData(resolution.length);
 sendIntData(resolution);
 sendIntData(mids.length);
-sendIntData(mids);
+sendStringData(mids);
 
   }
-  public void getQueryDescription(double offset[],double size[],int resolution[],int mids[]) {
+  public void getQueryDescription(double offset[],double size[],int resolution[],String mids[]) {
      _destination.getQueryDescription(offset,size,resolution,mids);
   }
   

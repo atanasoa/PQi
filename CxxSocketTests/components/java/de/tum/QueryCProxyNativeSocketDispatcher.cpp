@@ -48,13 +48,16 @@ void de_tum_query_f2c_nsd_getnumberofparts_(long long* ref,int* parts){
      ((de::tum::QueryNativeSocketDispatcher*)*ref)->getNumberOfParts(*parts);
 }
 #ifdef _WIN32
-void DE_TUM_QUERY_F2C_NSD_GETQUERYDESCRIPTION(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,int* mids,int* mids_len){
+void DE_TUM_QUERY_F2C_NSD_GETQUERYDESCRIPTION(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,char** mids,int* mids_len){
 #else
-void de_tum_query_f2c_nsd_getquerydescription_(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,int* mids,int* mids_len){
+void de_tum_query_f2c_nsd_getquerydescription_(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,char** mids,int* mids_len){
 #endif
     
-     
-     ((de::tum::QueryNativeSocketDispatcher*)*ref)->getQueryDescription(offset,*offset_len,size,*size_len,resolution,*resolution_len,mids,*mids_len);
+     std::string* mids_str=new std::string[*mids_len];
+for(int i=0;i<*mids_len;i++)
+mids_str[i]=mids[i];
+
+     ((de::tum::QueryNativeSocketDispatcher*)*ref)->getQueryDescription(offset,*offset_len,size,*size_len,resolution,*resolution_len,mids_str,*mids_len);
 }
 #ifdef _WIN32
 void DE_TUM_QUERY_F2C_NSD_FORWARDANSWER(long long* ref,double* data, int* data_len,double* distance, int* distance_len,int* indices,int* indices_len,int* rid){

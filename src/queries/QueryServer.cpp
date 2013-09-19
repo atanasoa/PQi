@@ -29,7 +29,6 @@ queries::QueryServer::QueryServer():
   _managementTag = tarch::parallel::Node::reserveFreeTag( "queries::QueryServer[management-tag]" );
   #endif
   _timestep=0;
-  _queryServer=NULL;
   _sendFlag=false; 	
 }
 
@@ -132,7 +131,8 @@ int queries::QueryServer::getIndexOfQuery( int id ) {
 
 
 void queries::QueryServer::addQuery(
-  queries::records::HeapQuery newQuery
+  queries::records::HeapQuery newQuery,
+  std::string mid
 ) {
   //newQuery.setId( getNumberOfPendingQueries() );
   _pendingQueries.push_back(
@@ -140,6 +140,8 @@ void queries::QueryServer::addQuery(
   );
   _heapIds.push_back(peano::heap::Heap<queries::records::Answer>::getInstance().createData()); 	
   _data.push_back(new __gnu_cxx::hash_map<int,std::pair<double,double> >);
+  _mids.push_back(mid);
+  _queryServer.push_back(NULL);
 }
 
 
@@ -205,10 +207,10 @@ void queries::QueryServer::setSendFlag(bool flag){
 
 
 void queries::QueryServer::close(){
-	if(_queryServer!=NULL){
-		std::cout<<"qs closing"<<std::endl;
- 		delete _queryServer;
-	}
+	//if(_queryServer!=NULL){
+	//	std::cout<<"qs closing"<<std::endl;
+ 	//	delete _queryServer;
+	//}
 }
 void queries::QueryServer::receiveData(
 	const int index,
@@ -251,7 +253,7 @@ void queries::QueryServer::clearQueryBuffer(const int index){
    _data[index]->clear();
 		
 }
-void queries::QueryServer::fireAnswers(const int index){
+void queries::QueryServer::fireAnswers(const int index,int iter){
 	if(_sendFlag){
 	std::vector<queries::records::Answer>& masterAnswer = peano::heap::Heap<queries::records::Answer>::getInstance().getData(_heapIds[index]);
 	unsigned int size=masterAnswer.size();	
@@ -264,21 +266,21 @@ void queries::QueryServer::fireAnswers(const int index){
 			dist[i]=masterAnswer[i].getPosition();
 			indices[i]=masterAnswer[i].getDataIndex();	
 		}
-		if(_queryServer==NULL){
-		      char* hostname = getenv("HPVC_HOSTNAME");
-		    		
-        	     _queryServer=new de::tum::QueryCxx2SocketPlainPort(hostname,50000,8192);
+		if(_queryServer[index]==NULL){
+		     std::string hostname = _mids[index].substr(0,_mids[index].find(":"));
+		     std::string port = _mids[index].substr(_mids[index].find(":")+1);
+	     	     std::cout<<"establish fireworks for:"<<index<<" "<<hostname<<":"<<port<<std::endl;		
+        	     _queryServer[index]=new de::tum::QueryCxx2SocketPlainPort((char*)hostname.c_str(),atoi(port.c_str()),8192);
 	
 		
 		}
-        	_queryServer->forwardAnswer(data,size,dist,size,indices,size,_timestep);
+        	_queryServer[index]->forwardAnswer(data,size,dist,size,indices,size,iter);
 		_timestep++;	
 		delete []data;
 		delete []dist;
 		delete []indices;	
 	}
 	}
-	_sendFlag=false;
 
 }
 void queries::QueryServer::setData(
@@ -295,7 +297,7 @@ void queries::QueryServer::setData(
 	int startj=0;
         int endi=0;
 	int endj=0;
-
+	
         if(_pendingQueries[index].getOffset()[0]<voxelOffset[0])
 		startj=(voxelOffset[0]-_pendingQueries[index].getOffset()[0])/dx;
 	if(_pendingQueries[index].getOffset()[1]<voxelOffset[1])
@@ -315,7 +317,7 @@ void queries::QueryServer::setData(
 					  _pendingQueries[index].getOffset()[1]+(double)i*dy)
 		
                           ){
-			  	ddx=(voxelOffset[0]-_pendingQueries[index].getOffset()[0]-(double)j*dx);
+				ddx=(voxelOffset[0]-_pendingQueries[index].getOffset()[0]-(double)j*dx);
 				ddy=(voxelOffset[1]-_pendingQueries[index].getOffset()[1]-(double)i*dy);
 				dist=ddx*ddx+ddy*ddy;
 				__gnu_cxx::hash_map< int,std::pair<double,double > >::const_iterator got

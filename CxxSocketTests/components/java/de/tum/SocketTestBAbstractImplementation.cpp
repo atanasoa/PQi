@@ -1,4 +1,4 @@
-#include "/work_fast/atanasoa/Programme/runtime-HelloSocketFortran/CxxSocketTests/components/java/de/tum/SocketTestBAbstractImplementation.h"
+#include "de/tum/SocketTestBAbstractImplementation.h"
 
 de::tum::SocketTestBAbstractImplementation::SocketTestBAbstractImplementation(){
      _queryServer = 0;

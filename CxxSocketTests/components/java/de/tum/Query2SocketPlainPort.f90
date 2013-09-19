@@ -80,8 +80,15 @@ subroutine getQueryDescription(this,&
 	integer,intent(in)::size_len
 	integer,intent(inout),dimension(*)::resolution
 	integer,intent(in)::resolution_len
-	integer,intent(inout),dimension(*)::mids
+	character(*),intent(in),dimension(*)::mids
 	integer,intent(in)::mids_len
+	type(c_ptr),dimension(mids_len) :: midsPtrArray
+	integer::mids_ns
+	character(255), dimension(mids_len), target :: midsFSArray
+	do mids_ns = 1, mids_len
+		midsFSArray(mids_ns) = mids(mids_ns)// C_NULL_CHAR
+		midsPtrArray(mids_ns) = C_LOC(midsFSArray(mids_ns))
+	end do
 
      
      call de_tum_queryc2socket_plain_port_getQueryDescription(this%reference,&

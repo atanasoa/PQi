@@ -24,7 +24,7 @@ public class QueryPlainJavaPort extends QueryAbstractPort {
   }
   
 
-  public void getQueryDescription(double offset[],double size[],int resolution[],int mids[]) {
+  public void getQueryDescription(double offset[],double size[],int resolution[],String mids[]) {
    // if (_destination!=null) {
       //_destination.lock();
       _destination.getQueryDescription(offset,size,resolution,mids);

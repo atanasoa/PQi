@@ -26,11 +26,6 @@ de::tum::QueryCxx2SocketPlainPort::QueryCxx2SocketPlainPort(char* host,int port,
      _buffer_size(buffer_size){
      _rcvBuffer=new char[_buffer_size];
      _sendBuffer=new char[_buffer_size];
-     int rank;
-     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-     std::stringstream stream;
-     stream<<"log_client_"<<rank<<".txt";
-     _logFile.open(stream.str().c_str() );
      de::tum::QueryCxx2SocketPlainPort::open_client(host,port,_sockfd,_newsockfd);
      
 }
@@ -50,8 +45,7 @@ de::tum::QueryCxx2SocketPlainPort::~QueryCxx2SocketPlainPort(){
      delete [] _sendBuffer;
      
      de::tum::QueryCxx2SocketPlainPort::close(_sockfd,_newsockfd);
-     _logFile.flush();
-     _logFile.close();	     
+     
 }
 
 
@@ -248,19 +242,15 @@ void de::tum::QueryCxx2SocketPlainPort::getNumberOfParts(int& parts){
      #ifdef _WIN32
 #else
 #endif
-    int methodId=5;
-    int flags;
-flags = fcntl(_newsockfd, F_GETFL, 0);
-flags ^= O_NONBLOCK;
-fcntl(_newsockfd, F_SETFL, flags);
-	
+
+     int methodId=5;
      sendData((char*) &methodId, sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
      sendData((char*)&parts,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
 
      readData((char*)&parts,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
 
 }
-void de::tum::QueryCxx2SocketPlainPort::getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len){
+void de::tum::QueryCxx2SocketPlainPort::getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,std::string* mids, const int mids_len){
      //assert(_destination!=NULL);
      #ifdef _WIN32
 #else
@@ -275,7 +265,11 @@ sendData((char*)size,sizeof(double)*size_len,_sendBuffer,_newsockfd,_buffer_size
 sendData((char*)&resolution_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)resolution,sizeof(int)*resolution_len,_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)&mids_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
-sendData((char*)mids,sizeof(int)*mids_len,_sendBuffer,_newsockfd,_buffer_size);
+for(int i=0;i<mids_len;i++){
+	int data_size=mids[i].size();
+	sendData((char*)&data_size,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
+	sendData((char*)mids[i].c_str(),mids[i].size()<255?mids[i].size():255,_sendBuffer,_newsockfd,_buffer_size);
+}
 
      readData((char*)&offset_len,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
 readData((char*)offset,sizeof(double)*offset_len,_rcvBuffer,_newsockfd,_buffer_size);
@@ -284,28 +278,24 @@ readData((char*)size,sizeof(double)*size_len,_rcvBuffer,_newsockfd,_buffer_size)
 readData((char*)&resolution_len,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
 readData((char*)resolution,sizeof(int)*resolution_len,_rcvBuffer,_newsockfd,_buffer_size);
 readData((char*)&mids_len,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
-readData((char*)mids,sizeof(int)*mids_len,_rcvBuffer,_newsockfd,_buffer_size);
-
+for(int i=0;i<mids_len;i++){
+	int mids_data_len=0;
+	readData((char*)&mids_data_len,sizeof(int),_rcvBuffer,_newsockfd,_buffer_size);
+	char* mid_data = new char[mids_data_len<255?mids_data_len:255];
+	readData((char*)mid_data,mids_data_len<255?mids_data_len:255,_rcvBuffer,_newsockfd,_buffer_size);
+	mids[i]=mid_data;
+	delete [] mid_data;
 }
 
-//includes used for logging
-#include <mpi.h>
-#include <sys/time.h>
-#include <fstream>
-
+}
 void de::tum::QueryCxx2SocketPlainPort::forwardAnswer(const double* data, const int data_len,const double* distance, const int distance_len,const int* indices, const int indices_len,const int rid){
      //assert(_destination!=NULL);
      #ifdef _WIN32
 #else
 #endif
 
-//time logging before send
      int methodId=7;
-    int flags;
-flags = fcntl(_newsockfd, F_GETFL, 0);
-flags |= O_NONBLOCK;
-fcntl(_newsockfd, F_SETFL, flags);
-sendData((char*) &methodId, sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
+     sendData((char*) &methodId, sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
      sendData((char*)&data_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)data,sizeof(double)*data_len,_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)&distance_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
@@ -313,6 +303,6 @@ sendData((char*)distance,sizeof(double)*distance_len,_sendBuffer,_newsockfd,_buf
 sendData((char*)&indices_len,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)indices,sizeof(int)*indices_len,_sendBuffer,_newsockfd,_buffer_size);
 sendData((char*)&rid,sizeof(int),_sendBuffer,_newsockfd,_buffer_size);
-  
+
      
 }

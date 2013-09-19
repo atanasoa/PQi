@@ -30,7 +30,7 @@ public interface Query  {
 
   public void getNumberOfParts(int parts[]);
 
-  public void getQueryDescription(double offset[],double size[],int resolution[],int mids[]);
+  public void getQueryDescription(double offset[],double size[],int resolution[],String mids[]);
 
   public void forwardAnswer(final double data[],final double distance[],final int indices[],final int rid);
 

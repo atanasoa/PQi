@@ -1,10 +1,9 @@
 #ifndef DE_TUM_QUERYCXX2SOCKETPLAINPORT_H_
 #define DE_TUM_QUERYCXX2SOCKETPLAINPORT_H_ 
-#include <mpi.h>
+
 #include "de/tum/Query.h"
 #include <iostream>
 #include <string>
-#include <fstream>
 #ifdef _WIN32
 #include <winsock2.h>
 #endif
@@ -73,7 +72,6 @@ class de::tum::QueryCxx2SocketPlainPort: public de::tum::Query{
     int
     #endif 
     &newsockfd);
-    std::ofstream _logFile;
   public:
     QueryCxx2SocketPlainPort(char* host,int port,int buffer_size);
      QueryCxx2SocketPlainPort(int port,int buffer_size);
@@ -82,7 +80,7 @@ class de::tum::QueryCxx2SocketPlainPort: public de::tum::Query{
     //int getNewsockfd();
     
     void getNumberOfParts(int& parts);
-    void getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len);
+    void getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,std::string* mids, const int mids_len);
     void forwardAnswer(const double* data, const int data_len,const double* distance, const int distance_len,const int* indices, const int indices_len,const int rid);
 };
 

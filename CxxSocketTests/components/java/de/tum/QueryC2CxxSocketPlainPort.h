@@ -21,10 +21,10 @@ void DE_TUM_QUERYC2SOCKET_PLAIN_PORT_GETNUMBEROFPARTS(long long* ref,int* parts)
 void de_tum_queryc2socket_plain_port_getnumberofparts_(long long* ref,int* parts);
 #endif
 #ifdef _WIN32
-void DE_TUM_QUERYC2SOCKET_PLAIN_PORT_GETQUERYDESCRIPTION(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,int* mids,int* mids_len);
+void DE_TUM_QUERYC2SOCKET_PLAIN_PORT_GETQUERYDESCRIPTION(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,char** mids,int* mids_len);
 
 #else
-void de_tum_queryc2socket_plain_port_getquerydescription_(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,int* mids,int* mids_len);
+void de_tum_queryc2socket_plain_port_getquerydescription_(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,char** mids,int* mids_len);
 #endif
 #ifdef _WIN32
 void DE_TUM_QUERYC2SOCKET_PLAIN_PORT_FORWARDANSWER(long long* ref,double* data, int* data_len,double* distance, int* distance_len,int* indices,int* indices_len,int* rid);

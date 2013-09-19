@@ -38,7 +38,7 @@ void de::tum::QueryNative2NativePlainPort::getNumberOfParts(int& parts){
      assert(_destination!=NULL);
      _destination->getNumberOfParts(parts);
 }
-void de::tum::QueryNative2NativePlainPort::getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len){
+void de::tum::QueryNative2NativePlainPort::getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,std::string* mids, const int mids_len){
      assert(_destination!=NULL);
      _destination->getQueryDescription(offset,offset_len,size,size_len,resolution,resolution_len,mids,mids_len);
 }

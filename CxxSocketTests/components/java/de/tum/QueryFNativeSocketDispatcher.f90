@@ -105,8 +105,8 @@ subroutine getQueryDescription_internal(this,&
 	integer(kind=c_int),intent(in)::size_len
 	integer(kind=c_int),intent(inout),dimension(*)::resolution
 	integer(kind=c_int),intent(in)::resolution_len
-	integer(kind=c_int),intent(inout),dimension(*)::mids
 	integer(kind=c_int),intent(in)::mids_len
+	type(c_ptr),dimension(*),intent(in)::mids
 
      call de_tum_query_f2c_nsd_getQueryDescription(this%reference,&
 offset,offset_len,&
@@ -128,14 +128,21 @@ subroutine getQueryDescription(this,&
 	integer,intent(in)::size_len
 	integer,intent(inout),dimension(*)::resolution
 	integer,intent(in)::resolution_len
-	integer,intent(inout),dimension(*)::mids
+	character(*),intent(in),dimension(*)::mids
 	integer,intent(in)::mids_len
+	type(c_ptr),dimension(mids_len) :: midsPtrArray
+	integer::mids_ns
+	character(255), dimension(mids_len), target :: midsFSArray
+	do mids_ns = 1, mids_len
+		midsFSArray(mids_ns) = mids(mids_ns)// C_NULL_CHAR
+		midsPtrArray(mids_ns) = C_LOC(midsFSArray(mids_ns))
+	end do
 
      call this%getQueryDescription_internal(&
 offset,offset_len,&
 size,size_len,&
 resolution,resolution_len,&
-mids,mids_len)
+midsPtrArray,mids_len)
 end subroutine getQueryDescription
 subroutine getNumberOfParts_internal(this,&
 	parts)

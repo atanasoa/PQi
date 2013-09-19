@@ -34,8 +34,8 @@ subroutine  de_tum_queryc2socket_plain_port_getQueryDescription(self,&
 	integer(kind=c_int),intent(in)::size_len
 	integer(kind=c_int),intent(inout),dimension(*)::resolution
 	integer(kind=c_int),intent(in)::resolution_len
-	integer(kind=c_int),intent(inout),dimension(*)::mids
 	integer(kind=c_int),intent(in)::mids_len
+	type(c_ptr),dimension(*),intent(in)::mids
 
 end subroutine de_tum_queryc2socket_plain_port_getQueryDescription
 subroutine  de_tum_queryc2socket_plain_port_forwardAnswer(self,&

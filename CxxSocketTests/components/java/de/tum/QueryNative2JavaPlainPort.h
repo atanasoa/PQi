@@ -42,7 +42,7 @@ class de::tum::QueryNative2JavaPlainPort: public de::tum::Query{
     QueryNative2JavaPlainPort(JavaVM* jvm,jobject obj);
     ~QueryNative2JavaPlainPort();
     void getNumberOfParts(int& parts);
-    void getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,int* mids, const int mids_len);
+    void getQueryDescription(double* offset, const int offset_len,double* size, const int size_len,int* resolution, const int resolution_len,std::string* mids, const int mids_len);
     void forwardAnswer(const double* data, const int data_len,const double* distance, const int distance_len,const int* indices, const int indices_len,const int rid);
 };
 #endif

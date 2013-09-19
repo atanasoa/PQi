@@ -60,14 +60,20 @@ void de_tum_queryc2socket_plain_port_getnumberofparts_(long long* ref,int* parts
 }
 #endif
 #ifdef _WIN32
-void DE_TUM_QUERYC2SOCKET_PLAIN_PORT_GETQUERYDESCRIPTION(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,int* mids,int* mids_len){
-     
-     ((de::tum::QueryCxx2SocketPlainPort*)*ref)->getQueryDescription(offset,*offset_len,size,*size_len,resolution,*resolution_len,mids,*mids_len);
+void DE_TUM_QUERYC2SOCKET_PLAIN_PORT_GETQUERYDESCRIPTION(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,char** mids,int* mids_len){
+     std::string* mids_str=new std::string[*mids_len];
+for(int i=0;i<*mids_len;i++)
+mids_str[i]=mids[i];
+
+     ((de::tum::QueryCxx2SocketPlainPort*)*ref)->getQueryDescription(offset,*offset_len,size,*size_len,resolution,*resolution_len,mids_str,*mids_len);
 }
 #else
-void de_tum_queryc2socket_plain_port_getquerydescription_(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,int* mids,int* mids_len){
-     
-     ((de::tum::QueryCxx2SocketPlainPort*)*ref)->getQueryDescription(offset,*offset_len,size,*size_len,resolution,*resolution_len,mids,*mids_len);
+void de_tum_queryc2socket_plain_port_getquerydescription_(long long* ref,double* offset, int* offset_len,double* size, int* size_len,int* resolution,int* resolution_len,char** mids,int* mids_len){
+     std::string* mids_str=new std::string[*mids_len];
+for(int i=0;i<*mids_len;i++)
+mids_str[i]=mids[i];
+
+     ((de::tum::QueryCxx2SocketPlainPort*)*ref)->getQueryDescription(offset,*offset_len,size,*size_len,resolution,*resolution_len,mids_str,*mids_len);
 }
 #endif
 #ifdef _WIN32
